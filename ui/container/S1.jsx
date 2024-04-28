@@ -1,0 +1,21 @@
+import React from 'react'
+
+const S1 = () => {
+    return (
+        <section className="relative isolate overflow-hidden bg-white">
+            <div className="mx-auto max-w-7xl px-6 py-4 lg:px-8">
+                <div className="mx-auto grid gap-10 lg:grid-cols-12">
+                    <div className=" lg:col-span-8">
+                        <div className="bg-stripes-green h-[50vh] w-full rounded-2xl border"></div>
+                    </div>
+
+                    <div className=" lg:col-span-4">
+                        <div className="bg-stripes-blue h-[50vh] w-full rounded-2xl border"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+export default S1
