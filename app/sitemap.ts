@@ -4,6 +4,7 @@ import templates from "@/data/templates";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
+    
     const BASE_URL = process.env.NEXT_PUBLIC_URL
         ? `https://${process.env.NEXT_PUBLIC_URL}`
         : 'http://localhost:3000';
