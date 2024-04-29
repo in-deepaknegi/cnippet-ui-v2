@@ -5,7 +5,7 @@ import { signIn, useSession } from "next-auth/react";
 import Image from "next/image";
 import { useState } from 'react';
 import Hero1 from "@/public/gradient/g4.jpg";
-import GoogleLogo from "@/public/google-logo.svg";
+import GoogleLogo from "@/public/images/svg/google-logo.svg";
 import L1 from '@/public/auth.svg'
 
 const Unauth = ({ components }) => {
@@ -85,7 +85,7 @@ const Unauth = ({ components }) => {
                                             <polyline points="8 6 2 12 8 18" />
                                         </svg>
                                         <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
-                                            Log in
+                                            Log in to view code
                                         </span>
                                     </a>
                                 </div>

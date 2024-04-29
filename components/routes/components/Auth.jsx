@@ -223,7 +223,7 @@ const Auth = ({ components }) => {
                 <>
                     {!pro && (
                         <>
-                            <Payment />
+                            <Payment pro={pro} email={email} />
                         </>
                     )}
                 </>

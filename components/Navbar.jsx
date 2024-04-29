@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
-import fetchPro from "@/atoms/library/getPro";
 import { ChevronDown } from "lucide-react";
 import L1 from "@/public/logo.svg";
 
@@ -65,7 +64,6 @@ const Navbar = () => {
     const { status, session, loading } = GetSession();
     const [profile, setProfile] = useState(false);
     const email = session?.user?.email;
-    const { pro } = fetchPro(email);
 
     const sectionRef = useRef(null);
 
@@ -105,21 +103,6 @@ const Navbar = () => {
                         <div className="hidden text-sm text-white lg:block lg:flex-1">
                             English
                         </div>
-                        {loading ? (
-                            <span className=" animate-pulse text-white">...</span>
-                        ) : (
-                            <>
-                                {!pro && (
-                                    <div className="hidden flex-1 items-center md:flex lg:flex-none">
-                                        <a href="/pro" className="text-sm text-gray-200">
-                                            Get all pro components (first month free){" "}
-                                            <span aria-hidden="true">→</span>
-                                        </a>
-                                    </div>
-                                )}
-                            </>
-                        )}
-
 
                         <div className="ml-auto flex lg:flex-1 lg:items-center lg:justify-end lg:gap-2">
                             {loading ? (

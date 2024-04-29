@@ -17,7 +17,8 @@ const FetchPro = (email) => {
                     headers: { 'Content-Type': 'application/json' },
                 });
                 const res = await result.json();
-
+                console.log(res.message);
+                
                 if (res.pro === true) {
                     setPro(true);
                 } else {
@@ -32,7 +33,7 @@ const FetchPro = (email) => {
 
         setTimeout(() => {
             setLoading(false);
-        }, 2500);
+        }, 1000);
     }, [email]);
 
     return { pro, loading };
