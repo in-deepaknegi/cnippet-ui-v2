@@ -46,7 +46,7 @@ const Hero = () => {
                         />
                     </div>
 
-                    <div className="w-full max-w-xl px-10 py-10 rounded-xl shadow-lg border-t font-swir">
+                    <div className="w-full max-w-xl px-4 py-16 rounded-xl shadow-lg border-t font-swir">
                         <div className="relative flex w-full items-center flex-1 flex-col justify-center ">
                             <div className="relative mr-auto">
                                 <a href="/" className="flex gap-6 items-center text-gray-600 hover:text-gray-900">
