@@ -5,7 +5,7 @@ import User from '@/atoms/models/googleUser';
 
 export async function POST(request: NextRequest) {
     const { email } = await request.json();
-    console.log(email)
+    // console.log(email)
 
     await connectDb();
     const user = await User.findOne({ email });
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
     }
 
     const pro = user.pro;
-    console.log(pro);
+    // console.log(pro);
     
     return NextResponse.json(
         { message: 'pro fetch successfull', pro },

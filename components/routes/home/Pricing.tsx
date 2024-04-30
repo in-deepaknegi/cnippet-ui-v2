@@ -223,13 +223,17 @@ const Pricing = () => {
                                                         Pay once, and it&apos;s yours for a whole year.
                                                     </p>
                                                     <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                                                        <span className="text-5xl font-bold tracking-tight text-gray-900 ">
+                                                        <span className="text-3xl font-bold tracking-tight text-gray-400 w-20 ">
+                                                            <del>&nbsp;₹999&nbsp;</del>
+                                                        </span>
+                                                        <span className="ml-3 text-5xl font-bold tracking-tight text-gray-900 ">
                                                             ₹499
                                                         </span>
                                                         <span className="text-sm font-semibold leading-6 tracking-wide text-slate-800 ">
                                                             Rupee
                                                         </span>
                                                     </p>
+
                                                     {email ? (
                                                         <button
                                                             type="submit"
@@ -290,9 +294,9 @@ const Pricing = () => {
                                                     )}
 
                                                     <p className="mt-6 text-xs leading-5 text-slate-800 ">
-                                                        {email ? 
-                                                        'Invoices and receipts available for easy company reimbursement' 
-                                                        : 'In order to complete your order, please log in first.'}
+                                                        {email ?
+                                                            'Invoices and receipts available for easy company reimbursement'
+                                                            : 'In order to complete your order, please log in first.'}
                                                     </p>
                                                 </form>
                                             </div>

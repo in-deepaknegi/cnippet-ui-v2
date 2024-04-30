@@ -1,15 +1,21 @@
 "use client"
 import React from 'react'
-import { signIn, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
+import GetSession from '@/atoms/library/getSession';
+import toSection from '@/atoms/library/toSection';
 
 import Image from "next/image";
 import { useState } from 'react';
 import Hero1 from "@/public/gradient/g4.jpg";
 import GoogleLogo from "@/public/images/svg/google-logo.svg";
+import Github from "@/public/images/svg/github.svg";
 import L1 from '@/public/auth.svg'
 
 const Unauth = ({ components }) => {
     const [load, setLoad] = useState(false);
+    const [load1, setLoad1] = useState(false);
+    const { status, session, loading } = GetSession();
+
     const [activeTab, setActiveTab] = useState([0, 0, 0, 0, 0]);
 
     const changeTab = (index, tabIndex) => {
@@ -23,6 +29,13 @@ const Unauth = ({ components }) => {
 
         await signIn("google");
     };
+
+    const handleLogingit = async () => {
+        setLoad1(true);
+
+        await signIn("github");
+    }
+
 
     return (
         <>
@@ -66,8 +79,8 @@ const Unauth = ({ components }) => {
                                             Preview
                                         </span>
                                     </button>
-                                    <a
-                                        href='#login'
+                                    <button
+                                        onClick={() => toSection('login')}
                                         className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
                                     >
                                         <svg
@@ -87,7 +100,7 @@ const Unauth = ({ components }) => {
                                         <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
                                             Log in to view code
                                         </span>
-                                    </a>
+                                    </button>
                                 </div>
                             </div>
 
@@ -117,12 +130,12 @@ const Unauth = ({ components }) => {
                                 your business to the next level of success and growth.
                             </p>
 
-                            <div className="h-full w-full pt-16">
+                            <div className="h-full w-full pt-8">
                                 <div className="relative flex flex-1 flex-col items-center justify-center">
                                     <div className="w-full max-w-sm">
                                         <button
                                             onClick={handleLogin}
-                                            className="border-olive-300 inline-flex w-full justify-center rounded-lg border border-gray-300 px-4 py-2.5 text-base text-black"
+                                            className="border-olive-300 inline-flex w-full justify-center rounded-lg border border-gray-300 px-4 py-2.5 text-base text-black hover:bg-gray-100 transition-all duration-500 ease-in"
                                         >
                                             {load && (
                                                 <svg
@@ -156,23 +169,40 @@ const Unauth = ({ components }) => {
                                             Log in with Google
                                         </button>
                                     </div>
-                                    <div className="my-4 flex  max-w-sm items-center">
-                                        <div className="bg-dusk-300 h-[0.025rem] w-[24rem]"></div>
-                                        <div className="mx-2 text-dusk-300">or</div>
-                                        <div className="bg-dusk-300 h-[0.025rem] w-full"></div>
+                                    
+                                    <div className="mt-3 w-full max-w-sm">
+                                        <button
+                                            onClick={handleLogingit}
+                                            className="inline-flex w-full items-center justify-center rounded-lg border px-4 py-2.5 text-base hover:bg-gray-100 transition-all duration-500 ease-in">
+                                            {load1 && (
+                                                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                </svg>
+                                            )}
+                                            <Image
+                                                src={Github}
+                                                alt="google-logo"
+                                                width={24}
+                                                height={24}
+                                                className="mx-3"
+                                            />
+                                            {status === 'authenticated' ? `Welcome back` : 'Log in with GitHub'}
+                                        </button>
                                     </div>
+                                    
                                 </div>
-                                <div className="relative shrink-0">
+                                <div className="mt-6 relative shrink-0">
                                     <div className="space-y-4 text-sm text-dusk-700 sm:flex sm:items-center sm:justify-center sm:space-x-4 sm:space-y-0">
                                         <p className="text-center sm:text-left">
-                                            Don&apos;t have an account?
+                                        Having trouble logging in?
                                         </p>
                                         <a
                                             className="inline-flex justify-center rounded-lg px-4 py-2.5 text-sm text-dusk-900 ring-1 ring-dusk-300 hover:bg-black hover:ring-dusk-300 hover:text-dusk-200"
-                                            href="/signup"
+                                            href="/contacts"
                                         >
                                             <span>
-                                                Create an Account
+                                                Contact us
                                                 <span aria-hidden="true"></span>
                                             </span>
                                         </a>
@@ -183,7 +213,7 @@ const Unauth = ({ components }) => {
                         </div>
                         <div className=" p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
                             <div className="rounded-2xl bg-gray-50 py-10 px-4 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
-                                <Image 
+                                <Image
                                     src={L1}
                                     alt='login-logo'
                                 />
@@ -192,7 +222,7 @@ const Unauth = ({ components }) => {
                     </div>
                 </div>
             </section>
-            
+
         </>
     )
 }

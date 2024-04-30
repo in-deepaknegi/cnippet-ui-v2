@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react';
 
 import fetchPro from '@/atoms/library/getPro';
-
+import toSection from '@/atoms/library/toSection';
 import Payment from '@/components/routes/home/Pricing';
 
 const Auth = ({ components }) => {
@@ -32,6 +32,11 @@ const Auth = ({ components }) => {
 
     const proComponents = components.filter(component => component.pro === true);
     // console.log(proComponents)
+
+    // const scrollToSection = (id) => {
+    //     const section = document.getElementById(id);
+    //     section.scrollIntoView({ behavior: 'smooth' });
+    // };
 
     return (
         <div className="mt-10 space-y-28 bg-white pb-px">
@@ -175,8 +180,8 @@ const Auth = ({ components }) => {
                                         </span>
                                     </button>
                                 ) : (
-                                    <a
-                                        href='#payment'
+                                    <button
+                                        onClick={()=> toSection('payment')}
                                         className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
                                     >
                                         <svg
@@ -196,7 +201,7 @@ const Auth = ({ components }) => {
                                         <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
                                             Upgrade
                                         </span>
-                                    </a>
+                                    </button>
                                 )}
 
                             </div>
@@ -223,7 +228,7 @@ const Auth = ({ components }) => {
                 <>
                     {!pro && (
                         <>
-                            <Payment pro={pro} email={email} />
+                            <Payment />
                         </>
                     )}
                 </>
