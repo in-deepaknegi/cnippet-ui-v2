@@ -4,18 +4,16 @@ import components from "@/data/components";
 
 const Components = () => {
     return (
-        <section className="relative isolate z-10 bg-white py-10 lg:py-20">
+        <section className="relative isolate z-10 bg-white py-10 lg:py-6 font-swir">
             <div className="mx-auto max-w-[90%] px-6 lg:px-7">
                 <div className="max-w-2xl">
-                    <h2 className="text-base font-semibold leading-7 text-indigo-600">
-                        Components
-                    </h2>
-                    <p className="mt-4 text-4xl font-extrabold tracking-tight text-slate-900 ">
+                    
+                    <h2 className="mt-4 text-4xl md:text-5xl font-swim text-slate-900 ">
                         Beautifully crafted UI components, ready for your next project.
-                    </p>
+                    </h2>
                 </div>
                 <div className="max-w-xl">
-                    <p className="mt-4 text-base leading-7 text-slate-700 ">
+                    <p className="mt-4 text-lg text-slate-700 ">
                         Over 500+ professionally designed, fully responsive, expertly crafted
                         component examples you can drop into your Tailwind projects and
                         customize to your heart&apos;s content.
@@ -35,13 +33,13 @@ const Components = () => {
                                             className="absolute inset-0 h-full w-full"
                                         />
                                     </div>
-                                    <h4 className="mt-4 text-sm font-medium text-slate-800 group-hover:text-indigo-600 ">
+                                    <h4 className="mt-4 text-md font-swim text-slate-800 group-hover:text-indigo-600">
                                         <a href={`components/${component.slug}`}>
                                             <span className="absolute -inset-2.5 z-10"></span>
                                             <span className="relative">{component.name}</span>
                                         </a>
                                     </h4>
-                                    <p className="relative mt-1.5 text-xs font-medium text-slate-500 ">
+                                    <p className="relative mt-1.5 text-sm font-medium text-slate-500 ">
                                         {component.number}
                                     </p>
                                 </div>
@@ -53,7 +51,7 @@ const Components = () => {
                 </div>
                 <div className="pointer-events-none relative z-10 -mt-5 flex justify-center">
                     <a
-                        className="bg-primary pointer-events-auto inline-flex justify-center rounded-lg px-4 py-3 text-sm font-semibold text-black "
+                        className="bg-primary pointer-events-auto inline-flex justify-center rounded-lg px-4 py-3 text-md font-swim text-black "
                         href="/components"
                     >
                         <span>Show more...</span>

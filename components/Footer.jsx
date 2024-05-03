@@ -21,22 +21,17 @@ const links = [
         title: "Terms",
         href: "/terms",
     },
-    // {
-    //     id: 5,
-    //     title: "Shipping",
-    //     href: "/shipping",
-    // },
 ];
 
 const Footer = () => {
     return (
-        <footer className="bg-white pt-20">
+        <footer className="bg-white pt-20 font-swim">
             <div className="py-10 ">
                 <div className="px-6 sm:flex sm:items-center sm:justify-between lg:px-8">
-                    <a href="/" className="-m-1.5 p-1.5 text-2xl text-black">
+                    <a href="/" className="-m-1.5 p-1.5 text-2xl font-swir text-black">
                         Cnippet <span className="text-base">Ui.</span>
                     </a>
-                    <ul className="mb-6 flex flex-wrap items-center text-sm font-medium  sm:mb-0">
+                    <ul className="mb-6 flex flex-wrap items-center text-md sm:mb-0">
                         {links.map((link) => (
                             <li key={link.id}>
                                 <a
@@ -51,16 +46,16 @@ const Footer = () => {
                 </div>
                 <hr className="my-6 w-full border-gray-300 lg:my-8" />
 
-                <div className="flex justify-between px-6 lg:px-8">
+                <div className="flex justify-between px-6 lg:px-8 font-swir">
                     <div>
-                        <span className="block text-sm text-gray-800 ">
+                        <span className="block text-md text-black">
                             A product of:{" "}
                             <a target="_blank" href="https://www.cnippet.com/">
                                 Cnippet
                             </a>
                         </span>
 
-                        <span className="mt-2 block text-sm text-gray-700   sm:text-center">
+                        <span className="mt-2 block text-md text-black sm:text-center">
                             © 2024{" "}
                             <a href="/" className="hover:underline">
                                 CnippetUi™

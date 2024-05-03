@@ -98,9 +98,9 @@ const Navbar = () => {
     return (
         <>
             <nav>
-                <div className="bg-black">
+                <div className="bg-black font-swir">
                     <div className="mx-auto flex h-10 max-w-[95%] items-center justify-between px-4 sm:px-6 lg:px-8">
-                        <div className="hidden text-sm text-white lg:block lg:flex-1">
+                        <div className="hidden text-md text-white lg:block lg:flex-1">
                             English
                         </div>
 
@@ -111,17 +111,17 @@ const Navbar = () => {
                                 <>
                                     {status === "authenticated" ? (
                                         <>
-                                            <span className="text-sm text-gray-100">
+                                            <span className="text-md text-gray-100">
                                                 Welcome {session.user.name}
                                             </span>
                                         </>
                                     ) : (
                                         <>
-                                            <a href="/login" className="text-sm text-gray-100">
+                                            <a href="/login" className="text-md text-gray-100">
                                                 Sign In
                                             </a>
                                             <span className="mx-2 h-4 w-[1px] bg-gray-200"></span>
-                                            <a href="/signup" className="text-sm text-gray-100">
+                                            <a href="/signup" className="text-md text-gray-100">
                                                 Create an account
                                             </a>
                                         </>
@@ -197,7 +197,7 @@ const Navbar = () => {
                                 <button
                                     onMouseEnter={() => toggleOpen(i)}
                                     onMouseLeave={() => toggleOpen(i)}
-                                    className="inline-flex items-center justify-center gap-x-1 text-md text-black hover:text-purple-800/95"
+                                    className="inline-flex items-center justify-center gap-x-1 text-md text-black hover:text-indigo-800"
                                 >
                                     <span>{item.title}</span>
 
@@ -240,7 +240,7 @@ const Navbar = () => {
                             <a
                                 key={i}
                                 href={link.url}
-                                className="text-md text-black hover:text-purple-800"
+                                className="text-md text-black hover:text-indigo-800"
                             >
                                 {link.title}
                             </a>
