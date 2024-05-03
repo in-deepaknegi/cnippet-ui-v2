@@ -317,7 +317,7 @@ const components = [
                 title: "Simple fly-out menu 1",
                 component: <FM1 />,
                 code: <CFM1 />,
-                pro: false,
+                pro: true,
             },
             {
                 title: "Simple fly-out menu 2",

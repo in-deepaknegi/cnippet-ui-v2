@@ -4,7 +4,7 @@ import { signIn, signOut } from "next-auth/react";
 import Image from "next/image";
 
 import { ChevronDown } from "lucide-react";
-import L1 from "@/public/logo.svg";
+import L1 from "@/public/c.svg";
 
 import GetSession from '@/atoms/library/getSession';
 
@@ -133,15 +133,15 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            <header className="sticky top-0 z-20 border-b border-gray-100 bg-white shadow-lg shadow-purple-100/50">
+            <header className="sticky top-0 z-20 border-b border-gray-100 bg-white shadow-lg shadow-purple-100/50 font-swim">
                 <div className="mx-auto flex w-[95%] items-center justify-between px-6 py-6 lg:px-8">
                     <div className="flex lg:flex-none">
                         <a
                             href="/"
                             className="-m-1.5 flex items-center gap-x-2 font-swir p-1.5 text-3xl text-black"
                         >
-                            <Image src={L1} alt="site-logo" className="w-7" />
-                            Cnippet <span className="text-lg mt-auto">Ui.</span>
+                            <Image src={L1} alt="site-logo" className="w-32" />
+                            <span className="sr-only">Cnippet Ui.</span>
                         </a>
                     </div>
                     <div className="flex lg:hidden">
@@ -197,7 +197,7 @@ const Navbar = () => {
                                 <button
                                     onMouseEnter={() => toggleOpen(i)}
                                     onMouseLeave={() => toggleOpen(i)}
-                                    className="inline-flex items-center justify-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-purple-800/95"
+                                    className="inline-flex items-center justify-center gap-x-1 text-md text-black hover:text-purple-800/95"
                                 >
                                     <span>{item.title}</span>
 
@@ -208,7 +208,7 @@ const Navbar = () => {
 
                                     {open === i && (
                                         <div className="absolute -left-5 top-1 z-10 mt-5 flex w-screen max-w-max px-4 pt-2">
-                                            <div className="min-w-fit flex-auto overflow-hidden rounded-xl bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5">
+                                            <div className="min-w-fit flex-auto overflow-hidden rounded-xl bg-white text-md shadow-lg ring-1 ring-gray-900/5">
                                                 <div className="p-2">
                                                     <div className="grid grid-cols-1">
                                                         {item.solutions.map((item, j) => (
@@ -219,7 +219,7 @@ const Navbar = () => {
                                                                 <div>
                                                                     <a
                                                                         href={item.href}
-                                                                        className="font-semibold text-gray-900"
+                                                                        className="text-black"
                                                                     >
                                                                         {item.name}
                                                                         <span className="absolute inset-0" />
@@ -240,7 +240,7 @@ const Navbar = () => {
                             <a
                                 key={i}
                                 href={link.url}
-                                className="text-sm font-semibold leading-6 text-gray-900 hover:text-purple-800"
+                                className="text-md text-black hover:text-purple-800"
                             >
                                 {link.title}
                             </a>

@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       fontSize: {
-        md: '1.085rem',
+        md: '0.9375rem',
       },
       fontFamily: {
         swim: ["switzer-med"],

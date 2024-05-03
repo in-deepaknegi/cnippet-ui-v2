@@ -6,7 +6,7 @@ const Projects = () => {
     return (
         <section id="product-catalyst" className="mt-28 ">
             <div className="mx-auto max-w-[90%] px-6 lg:px-8">
-                
+
                 <p className="mt-4 text-3xl font-extrabold tracking-[-0.04em] text-black sm:text-5xl sm:leading-[3.5rem]">
                     Modern website templates, crafted with Tailwind CSS.
                 </p>
@@ -40,10 +40,10 @@ const Projects = () => {
                             </p>
                         </div>
 
-                        <div className="lg:relative lg:flex">
+                        <div className="lg:relative lg:flex items-center w-full">
                             <div className="sticky left-0 z-10 hidden w-8 flex-none bg-gradient-to-r from-white lg:block"></div>
 
-                            <div className="space-x-10 lg:relative lg:flex lg:flex-none lg:items-start">
+                            <div className="space-x-10 lg:flex w-full lg:items-start">
                                 <a
                                     tabIndex="-1"
                                     className="hidden lg:absolute lg:inset-y-0 lg:-left-8 lg:right-8 lg:z-10 lg:block"
@@ -52,16 +52,22 @@ const Projects = () => {
                                     <span className="sr-only">View {item.title} template</span>
                                 </a>
 
-                                {item.gallery.map((sub, j) => (
-                                    <Image
-                                        key={j}
-                                        src={sub.href}
-                                        alt=""
-                                        height={380}
-                                        width={560}
-                                        className="h-[14rem] w-full rounded-xl border bg-slate-100 object-cover object-top lg:w-[19.1666666rem] lg:flex-none"
-                                    />
-                                ))}
+                                <ul className="flex gap-5 ">
+                                    {item.gallery.slice(0, 3).map((sub, j) => (
+                                        <li key={j}>
+                                            <Image
+                                                src={sub.href}
+                                                alt=""
+                                                height={380}
+                                                width={560}
+                                                className="rounded-xl border bg-slate-100 aspect-video object-cover shadow-lg"
+                                            />
+                                        </li>
+
+                                    ))}
+                                </ul>
+
+
                             </div>
                         </div>
                     </div>

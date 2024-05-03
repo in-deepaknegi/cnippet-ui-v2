@@ -18,5 +18,5 @@ const userSchema = new Schema(
     { timestamps: true }
 )
 
-const april_data = models.april_data || mongoose.model("april_data", userSchema);
-export default april_data;
+const user_data = models.user_data || mongoose.model("user_data", userSchema);
+export default user_data;

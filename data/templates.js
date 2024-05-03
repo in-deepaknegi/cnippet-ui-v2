@@ -1,6 +1,6 @@
-import H1 from "@/public/images/home/T1.webp";
-import H2 from "@/public/images/home/T4.webp";
-import H3 from "@/public/images/home/T3.webp";
+import H1 from "@/public/images/templates/exp/s1.png";
+import H2 from "@/public/images/templates/exp/s2.png";
+import H3 from "@/public/images/templates/exp/exp3.png";
 
 const templates = [
     {
