@@ -12,6 +12,12 @@
   font-style: normal;
   src: url(/fonts/swi-reg.woff2) format("woff2");
 }
+@font-face {
+  font-family: "blanka-reg";
+  font-style: normal;
+  src: url(/fonts/blanka-reg.woff2) format("woff2");
+}
+
 
 
 @layer base {

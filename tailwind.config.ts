@@ -17,6 +17,7 @@ const config: Config = {
         swim: ["switzer-med"],
         swir: ["switzer-reg"],
         paris: ["paris-reg"],
+        blanka: ["blanka-reg"]
       },
       colors: {
         'dusk': {

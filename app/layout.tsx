@@ -8,43 +8,33 @@ import { AuthProvider } from "@/atoms/context/authProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ui.cnippet.com/"),
+  metadataBase: new URL("https://cnippet.com/"),
 
-  title: "Cnippet Ui",
+  title: {
+    default: "Cnippet Ui",
+    template: `%s | Cnippet Ui`
+  },
   description:
-    "Elevate your web projects effortlessly with Cnippet UI - your go-to source for premium React, Next.js, and Tailwind CSS components and templates. Craft captivating designs and streamline development with our meticulously designed building blocks. Dive into a world of innovation and efficiency, revolutionizing your web experience one snippet at a time.",
+    "Welcome to Cnippet UI - your go-to source for premium React, Next.js, and Tailwind CSS components and templates.",
   applicationName: "Cnippet Ui",
 
   openGraph: {
     title: "Cnippet Ui",
     description:
-      "Elevate your web projects effortlessly with Cnippet UI - your go-to source for premium React, Next.js, and Tailwind CSS components and templates. Craft captivating designs and streamline development with our meticulously designed building blocks. Dive into a world of innovation and efficiency, revolutionizing your web experience one snippet at a time.",
-    url: "https://ui.cnippet.com/",
-    images: [
-      {
-        url: "/images/meta/home.png",
-        width: 1080,
-        height: 680,
-        alt: "cnippet-ui",
-      },
-    ],
+      "Welcome to Cnippet UI - your go-to source for premium React, Next.js, and Tailwind CSS components and templates.",
+    url: "https://cnippet.com/",
+    images: ["/images/meta/site.png"],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "Cnippet Ui",
     description:
-      "Elevate your web projects effortlessly with Cnippet UI - your go-to source for premium React, Next.js, and Tailwind CSS components and templates. Craft captivating designs and streamline development with our meticulously designed building blocks. Dive into a world of innovation and efficiency, revolutionizing your web experience one snippet at a time.",
-    images: [
-      {
-        url: "/images/meta/home.png",
-        width: 1080,
-        height: 680,
-        alt: "cnippet-ui",
-      },
-    ],
+      "Welcome to Cnippet UI - your go-to source for premium React, Next.js, and Tailwind CSS components and templates.",
+    images: ["/images/meta/site.png"],
   },
 };
+
 
 export default function RootLayout({
   children,
