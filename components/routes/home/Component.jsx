@@ -4,8 +4,8 @@ import components from "@/data/components";
 
 const Components = () => {
     return (
-        <section className="relative isolate z-10 bg-white py-10 lg:py-16 font-swir">
-            <div className="mx-auto max-w-[90%] px-6 lg:px-7">
+        <section className="relative isolate z-10 bg-white py-10 lg:py-20 font-swir">
+            <div className="mx-auto max-w-full md:max-w-[90%] px-6 lg:px-8">
 
                 <div className="mx-auto w-full max-w-3xl flex flex-col items-center justify-center">
                     <p

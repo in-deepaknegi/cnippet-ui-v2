@@ -39,7 +39,7 @@ const config: Config = {
         },
         marquee: {
           '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' }
+          '100%': { transform: 'translateX(calc(-100% - 20px))' }
         },
         blink: {
           '0%': { opacity: '0.2' },
@@ -49,7 +49,7 @@ const config: Config = {
       },
       animation: {
         fadeIn: 'fadein 1s ease-in-out',
-        carousel: 'marquee 30s linear infinite',
+        carousel: 'marquee 40s linear infinite',
         blink: 'blink 1.4s both infinite'
       }
     },

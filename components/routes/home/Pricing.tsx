@@ -126,7 +126,7 @@ const Pricing = () => {
                                 src="https://checkout.razorpay.com/v1/checkout.js"
                             />
                             <section id='payment' className="bg-white py-24 sm:py-28 font-swim">
-                                <div className="mx-auto max-w-[90%] px-6 lg:px-8">
+                                <div className="mx-auto max-w-full md:max-w-[90%] px-6 lg:px-8">
                                     
                                     <div className="mx-auto max-w-2xl rounded-3xl ring-1 ring-gray-200 lg:mx-0 lg:flex lg:max-w-none">
                                         <div className="p-8 sm:p-10 lg:flex-auto">
