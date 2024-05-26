@@ -4,22 +4,30 @@ import components from "@/data/components";
 
 const Components = () => {
     return (
-        <section className="relative isolate z-10 bg-white py-10 lg:py-6 font-swir">
+        <section className="relative isolate z-10 bg-white py-10 lg:py-16 font-swir">
             <div className="mx-auto max-w-[90%] px-6 lg:px-7">
-                <div className="max-w-2xl">
-                    
-                    <h2 className="mt-4 text-4xl md:text-5xl font-swim text-slate-900 ">
-                        Beautifully crafted UI components, ready for your next project.
-                    </h2>
-                </div>
-                <div className="max-w-xl">
-                    <p className="mt-4 text-lg text-slate-700 ">
-                        Over 500+ professionally designed, fully responsive, expertly crafted
-                        component examples you can drop into your Tailwind projects and
-                        customize to your heart&apos;s content.
-                    </p>
 
+                <div className="mx-auto w-full max-w-3xl flex flex-col items-center justify-center">
+                    <p
+                        className="flex flex-col items-center justify-center gap-4 text-center text-lg text-gray-700 md:flex-row"
+                        data-aos="fade-right"
+                        data-aos-duration="500"
+                    >
+                        <span className="h-0.5 w-16 bg-black"></span>
+                        Components
+                    </p>
+                    <h1
+                        className="mt-6 text-center text-4xl text-black md:text-5xl"
+                        data-aos="fade-left"
+                        data-aos-duration="500"
+                    >
+                        Beautifully crafted UI components
+                    </h1>
+                    <p className="mt-6 text-center text-lg text-gray-600 md:text-lg">
+                        Over 500+ professionally designed, fully responsive, expertly crafted component examples you can drop into your Tailwind projects and customize to your heart&apos;s content.
+                    </p>
                 </div>
+
 
                 <div className="relative mt-10 md:mt-8">
                     <ul className="grid-cols-[repeat(auto-fill,minmax(12rem, 1fr))] grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

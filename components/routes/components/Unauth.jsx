@@ -6,7 +6,6 @@ import toSection from '@/atoms/library/toSection';
 
 import Image from "next/image";
 import { useState } from 'react';
-import Hero1 from "@/public/gradient/g4.jpg";
 import GoogleLogo from "@/public/images/svg/google-logo.svg";
 import Github from "@/public/images/svg/github.svg";
 import L1 from '@/public/auth.svg'

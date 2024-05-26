@@ -130,7 +130,7 @@ const Pricing = () => {
                                     
                                     <div className="mx-auto max-w-2xl rounded-3xl ring-1 ring-gray-200 lg:mx-0 lg:flex lg:max-w-none">
                                         <div className="p-8 sm:p-10 lg:flex-auto">
-                                            <h2 className="text-3xl text-gray-900 sm:text-4xl">
+                                            <h2 className="text-3xl text-gray-900 sm:text-4xl font-swim">
                                                 Yearly membership
                                             </h2>
 
@@ -230,7 +230,7 @@ const Pricing = () => {
                                                     {email ? (
                                                         <button
                                                             type="submit"
-                                                            className="mt-10 flex items-center justify-center w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-md text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                                            className="mt-10 flex items-center justify-center w-full rounded-full bg-black px-3 py-2 text-center text-md text-white shadow-sm hover:bg-black/85"
                                                         >
                                                             {load && (
                                                                 <svg
@@ -258,7 +258,7 @@ const Pricing = () => {
                                                         </button>
                                                     ) : (
                                                         <a href='/login'
-                                                            className="mt-10 flex items-center justify-center w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-md text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                                            className="mt-10 flex items-center justify-center w-full rounded-full bg-black px-3 py-2 text-center text-md text-white shadow-sm hover:bg-black/85"
                                                         >
                                                             {load && (
                                                                 <svg
