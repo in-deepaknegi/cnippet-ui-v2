@@ -104,7 +104,7 @@ const Footer = () => {
 
                 <div className="mx-auto mt-8 flex max-w-full flex-col justify-between gap-10 md:mt-16 md:max-w-[85%] md:flex-row md:gap-20">
                     <div className="">
-                        <h3 className="text-5xl md:text-6xl text-white">
+                        <h3 className="text-5xl text-white md:text-6xl">
                             Let&apos;s <span className=" text-yellow-400">work</span>{" "}
                             together.
                         </h3>

@@ -33,7 +33,7 @@ const logos = [
 const Logos = () => {
     const data = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
     return (
-        <section className=" isolate bg-white py-10 sm:py-20">
+        <section className=" isolate bg-white py-16 sm:py-20">
             <div className="relative mx-auto max-w-full overflow-hidden px-0 lg:max-w-[85%] lg:px-7">
                 <div className="absolute right-0 top-0 z-10 h-full w-16 bg-gradient-to-l from-white to-white/5 md:w-24"></div>
                 <div className="absolute left-0 top-0 z-10 h-full w-16 bg-gradient-to-r from-white to-white/5 md:w-24"></div>
