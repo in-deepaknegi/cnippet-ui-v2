@@ -45,13 +45,15 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .form input,
+  select,
+  textarea {
+    @apply w-full px-2 py-2 text-gray-600 outline-none placeholder:text-base placeholder:text-gray-600;
+  }
   .form label {
     @apply mb-2 block text-sm font-medium text-gray-900;
   }
-  .form input,
-  textarea {
-    @apply block w-full rounded-lg border border-gray-300 bg-gray-50 p-2 text-sm text-gray-900 shadow-sm;
-  }
+
   .gradient-cool {
     background: url("/gradient/g4.jpg");
     background-size: 100% 100%;

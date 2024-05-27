@@ -24,10 +24,6 @@ const links = [
         url: "/layouts",
     },
     {
-        title: "About us",
-        url: "/about",
-    },
-    {
         title: "Contact us",
         url: "/contacts",
     },
