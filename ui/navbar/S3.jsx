@@ -3,31 +3,28 @@ import Link from "next/link";
 
 const links = [
     {
-        id: 1,
         title: "Components",
         url: "#",
     },
     {
-        id: 2,
         title: "Templates",
         url: "#",
     },
     {
-        id: 3,
-        title: "About",
+        title: "About us",
         url: "#",
     },
     {
-        id: 4,
-        title: "Contacts",
+        title: "Contact us",
         url: "#",
     },
+    // moidfy data according to your website
 ];
 
 const Navbar3 = () => {
     return (
         <header className="relative isolate overflow-hidden bg-black  ">
-            <div className="mx-auto max-w-full md:max-w-[97%]">
+            <div className="mx-auto max-w-full md:max-w-[95%]">
                 <div className="mx-auto flex h-10 items-center justify-between px-4 sm:px-6 lg:px-8">
                     <div className="hidden text-sm text-white lg:block lg:flex-1">
                         English
@@ -50,18 +47,18 @@ const Navbar3 = () => {
             </div>
 
             <div className="border-gray-300 bg-white py-6">
-                <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8 ">
+                <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[95%] lg:px-8 ">
                     <div className="flex">
                         <Link href="/" className="-m-1.5 p-1.5 text-2xl">
-                            Cnippet <span className="text-sm">Ui.</span>
+                            Cnippet
                         </Link>
                     </div>
-                    <div className="hidden lg:flex lg:gap-x-12">
-                        {links.map((link) => (
+                    <div className="hidden uppercase lg:flex lg:gap-x-12">
+                        {links.map((link, i) => (
                             <Link
                                 key={link.id}
                                 href={link.url}
-                                className="text-sm font-semibold leading-6 text-gray-800 hover:text-gray-950"
+                                className="text-sm font-medium leading-6 text-gray-700 hover:text-black"
                             >
                                 {link.title}
                             </Link>
@@ -83,7 +80,7 @@ const Navbar3 = () => {
                                 strokeWidth="1.5"
                                 stroke="currentColor"
                                 aria-hidden="true"
-                                className="h-6 w-6 text-gray-400"
+                                className="h-6 w-6 text-gray-600"
                             >
                                 <path
                                     strokeLinecap="round"

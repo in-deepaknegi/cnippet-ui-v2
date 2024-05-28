@@ -43,13 +43,13 @@ const Navbar = () => {
                 <div className="ml-5 hidden border-l-2 border-black pl-5 lg:flex lg:items-center">
                     <Link
                         href="#"
-                        className="text-base font-medium uppercase text-gray-600 hover:text-black"
+                        className="text-sm font-medium uppercase text-gray-600 hover:text-black"
                     >
                         Sign up
                     </Link>
                     <Link
                         href="#"
-                        className="-my-2.5 ml-8 inline-flex items-center justify-center rounded-full bg-slate-950 px-4 py-1.5 text-base font-medium uppercase text-white hover:bg-slate-800"
+                        className="-my-2.5 ml-8 inline-flex items-center justify-center rounded-full bg-slate-950 px-4 py-2 text-sm font-medium uppercase text-white hover:bg-slate-800"
                     >
                         <span>
                             Log in<span aria-hidden="true">→</span>

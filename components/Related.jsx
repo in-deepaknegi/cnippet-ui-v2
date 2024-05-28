@@ -19,7 +19,7 @@ const Related = ({ slug }) => {
 
     return (
         <>
-            <div className="mx-auto max-w-[95%] px-6 lg:px-7 pt-28">
+            <div className="mx-auto max-w-[95%] px-6 lg:px-7 py-16">
                 <div className="max-w-2xl">
                     <h2 className="text-base font-semibold leading-7 text-indigo-600">
                         Components

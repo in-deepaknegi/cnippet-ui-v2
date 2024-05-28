@@ -3,25 +3,22 @@ import Link from "next/link";
 
 const links = [
     {
-        id: 1,
         title: "Components",
-        url: "/components",
+        url: "#",
     },
     {
-        id: 2,
         title: "Templates",
-        url: "/templates",
+        url: "#",
     },
     {
-        id: 3,
-        title: "Contacts",
-        url: "/contacts",
+        title: "About us",
+        url: "#",
     },
     {
-        id: 4,
-        title: "About",
-        url: "/about",
+        title: "Contact us",
+        url: "#",
     },
+    // moidfy data according to your website
 ];
 
 const Navbar4 = () => {
@@ -51,20 +48,20 @@ const Navbar4 = () => {
                 </div>
             </div>
 
-            <header className="sticky top-0 z-20 border-b border-gray-100 bg-white py-6">
+            <header className="sticky top-0 z-20 border-gray-100 bg-white py-6">
                 <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8">
                     <div className="flex lg:flex-none">
                         <Link href="/" className="-m-1.5 p-1.5 text-2xl text-black">
-                            Cnippet <span className="text-base">Ui.</span>
+                            Cnippet
                         </Link>
                     </div>
 
-                    <div className="ml-10 hidden lg:flex lg:gap-x-12">
-                        {links.map((link) => (
+                    <div className="hidden uppercase lg:flex lg:gap-x-12">
+                        {links.map((link, i) => (
                             <Link
-                                key={link.id}
+                                key={i}
                                 href={link.url}
-                                className="text-sm font-semibold leading-6 text-gray-900"
+                                className="text-sm font-medium leading-6 text-gray-700 hover:text-black"
                             >
                                 {link.title}
                             </Link>

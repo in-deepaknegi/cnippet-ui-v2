@@ -4,14 +4,25 @@ import Link from "next/link";
 
 const links = [
     {
-        id: 1,
         title: "Components",
-        url: "/components",
+        url: "#",
     },
-    // add more data here ...
+    {
+        title: "Templates",
+        url: "#",
+    },
+    {
+        title: "About us",
+        url: "#",
+    },
+    {
+        title: "Contact us",
+        url: "#",
+    },
+    // moidfy data according to your website
 ];
 
-const Navbar = () => {
+const Navbar4 = () => {
     return (
         <>
             <div className="relative isolate overflow-hidden bg-black ">
@@ -42,16 +53,16 @@ const Navbar = () => {
                 <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8">
                     <div className="flex lg:flex-none">
                         <Link href="/" className="-m-1.5 p-1.5 text-2xl text-black">
-                            Cnippet <span className="text-base">Ui.</span>
+                            Cnippet
                         </Link>
                     </div>
 
-                    <div className="ml-10 hidden lg:flex lg:gap-x-12">
-                        {links.map((link) => (
+                    <div className="hidden uppercase lg:flex lg:gap-x-12">
+                        {links.map((link, i) => (
                             <Link
-                                key={link.id}
+                                key={i}
                                 href={link.url}
-                                className="text-sm font-semibold leading-6 text-gray-900"
+                                className="text-sm font-medium leading-6 text-gray-700 hover:text-black"
                             >
                                 {link.title}
                             </Link>
@@ -107,5 +118,5 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Navbar4;
 ```
