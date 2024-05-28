@@ -1,15 +1,15 @@
 "use client"
 import React, { useEffect, useState } from "react";
-import { signIn, signOut, useSession } from 'next-auth/react'
+import { signIn, useSession } from 'next-auth/react'
 import { useRouter } from "next/navigation";
 
 import Image from "next/image";
-import H1 from '@/public/images/svg/login.svg';
+import H1 from '@/public/images/svg/sapiens.svg';
 import GoogleLogo from "@/public/images/svg/google-logo.svg";
 import Github from "@/public/images/svg/github.svg";
 
 
-const Hero = () => {
+const Hero = ({ layout }) => {
 
     const { status, data: session } = useSession();
     const [loading, setLoading] = useState(false);
@@ -35,20 +35,22 @@ const Hero = () => {
     }, [status, router]);
 
     return (
-        <section className="relative flex flex-1 flex-col overflow-hidden px-4 py-1 sm:px-6 lg:px-8">
-            <div className="mx-auto max-w-full md:max-w-[80%]">
-                <div className="flex gap-20 items-center justify-center h-screen mx-auto">
-                    <div className="w-full md:block hidden">
+        <section className={`relative flex flex-1 flex-col overflow-hidden px-4 ${layout === 'full' ? 'py-0' : ' py-20'}`}>
+            <div className={`mx-auto max-w-full ${layout === 'full' ? 'md:max-w-[80%] sm:px-6 lg:px-8' : 'md:max-w-[95%] sm:px-6 lg:px-12   '}`}>
+                <div className={`flex gap-20 items-center justify-center mx-auto
+                ${layout === 'full' ? ' h-screen' : ' flex-row-reverse border rounded-3xl'}`}>
+                    <div className="w-full max-w-full md:block hidden">
                         <Image
                             src={H1}
                             alt=""
-                            className="w-full"
+                            className={`${layout === 'full' ? 'w-full' : 'w-[80%]'}`}
                         />
                     </div>
 
-                    <div className="w-full max-w-xl px-4 py-16 rounded-xl shadow-lg border-t font-swir">
-                        <div className="relative flex w-full items-center flex-1 flex-col justify-center ">
-                            <div className="relative mr-auto">
+                    <div className={`w-full font-swir
+                    ${layout === 'full' ? 'max-w-xl px-4 rounded-xl shadow-lg border py-16' : 'max-w-3xl py-10 px-10'}`}>
+                        <div className="relative flex w-full items-center flex-1 flex-col">
+                            <div className={`relative mr-auto  ${layout === 'full' ? 'block' : 'hidden'}`}>
                                 <a href="/" className="flex gap-6 items-center text-gray-600 hover:text-gray-900">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +58,7 @@ const Hero = () => {
                                         height="22"
                                         viewBox="0 0 24 24"
                                         fill="none"
-                                        className="text-blue-700"
+                                        className="text-black"
                                         stroke="currentColor"
                                         strokeWidth="2"
                                         strokeLinecap="round"
@@ -69,11 +71,11 @@ const Hero = () => {
                                 </a>
                             </div>
 
-                            <div className="mt-24 text-center text-4xl">
-                                Welcome Back to Cnippet Ui
+                            <div className={` w-full  ${layout === 'full' ? 'mt-24 text-center text-4xl' : 'text-left text-3xl'}`}>
+                                {layout === 'full' ? 'Welcome Back to Cnippet Ui' : 'Login to view all the components'}
                             </div>
-                            <p className="mt-8 text-center text-gray-600">
-                                Lorem ipsum dolor sit amet consectetur. Velit eget turpis mi facilisis pellentesque sit bibendum sed in.
+                            <p className={`mt-8 text-gray-600 ${layout === 'full' ? 'text-center ' : 'text-left'}`}>
+                                Experience the reliability and excellence of our services today to propel your business towards success and expansion.
                             </p>
 
                             <div className="mt-8 w-full max-w-sm">
@@ -124,14 +126,14 @@ const Hero = () => {
                             </div>
                         </div>
 
-                        <div className="mt-16 relative shrink-0">
+                        <div className={`relative shrink-0 ${layout === 'full' ? 'mt-16 ' : 'mt-5'}`}>
                             <div className="space-y-4 text-sm text-gray-900 sm:flex sm:items-center sm:justify-center sm:space-x-4 sm:space-y-0">
                                 <p className="text-center sm:text-left">
                                     Having trouble logging in?
                                 </p>
                                 <a
                                     className="items-center inline-flex justify-center rounded-lg px-4 py-2.5 text-sm text-slate-900 ring-1 ring-slate-900/10 hover:ring-slate-900/20"
-                                    href="/contacts"
+                                    href="/contacts#contact"
                                 >
                                     <span>
                                         Contact us
