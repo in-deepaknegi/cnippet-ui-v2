@@ -35,10 +35,10 @@ const Hero = ({ layout }) => {
     }, [status, router]);
 
     return (
-        <section className={`relative flex flex-1 flex-col overflow-hidden px-4 ${layout === 'full' ? 'py-0' : ' py-20'}`}>
-            <div className={`mx-auto max-w-full ${layout === 'full' ? 'md:max-w-[80%] sm:px-6 lg:px-8' : 'md:max-w-[95%] sm:px-6 lg:px-12   '}`}>
+        <section className={`relative flex flex-1 flex-col overflow-hidden md:px-4 ${layout === 'full' ? 'py-0' : ' py-20'}`}>
+            <div className={`mx-auto max-w-full ${layout === 'full' ? 'md:max-w-[80%] px-6 lg:px-8' : 'md:max-w-[95%] px-0 md:px-12'}`}>
                 <div className={`flex gap-20 items-center justify-center mx-auto
-                ${layout === 'full' ? ' h-screen' : ' flex-row-reverse border rounded-3xl'}`}>
+                ${layout === 'full' ? 'md:h-screen' : ' flex-row-reverse border rounded-3xl'}`}>
                     <div className="w-full max-w-full md:block hidden">
                         <Image
                             src={H1}
@@ -48,7 +48,7 @@ const Hero = ({ layout }) => {
                     </div>
 
                     <div className={`w-full font-swir
-                    ${layout === 'full' ? 'max-w-xl px-4 rounded-xl shadow-lg border py-16' : 'max-w-3xl py-10 px-10'}`}>
+                    ${layout === 'full' ? 'max-w-xl px-4 rounded-xl shadow-lg border py-10 mt-16 md:mt-0 md:py-16' : 'max-w-3xl py-10 px-10'}`}>
                         <div className="relative flex w-full items-center flex-1 flex-col">
                             <div className={`relative mr-auto  ${layout === 'full' ? 'block' : 'hidden'}`}>
                                 <a href="/" className="flex gap-6 items-center text-gray-600 hover:text-gray-900">
@@ -71,14 +71,14 @@ const Hero = ({ layout }) => {
                                 </a>
                             </div>
 
-                            <div className={` w-full  ${layout === 'full' ? 'mt-24 text-center text-4xl' : 'text-left text-3xl'}`}>
+                            <div className={` w-full  ${layout === 'full' ? 'mt-16 md:mt-24 text-center text-4xl' : 'text-left text-2xl md:text-3xl'}`}>
                                 {layout === 'full' ? 'Welcome Back to Cnippet Ui' : 'Login to view all the components'}
                             </div>
-                            <p className={`mt-8 text-gray-600 ${layout === 'full' ? 'text-center ' : 'text-left'}`}>
+                            <p className={`mt-6 text-gray-600 ${layout === 'full' ? 'text-center ' : 'text-left'}`}>
                                 Experience the reliability and excellence of our services today to propel your business towards success and expansion.
                             </p>
 
-                            <div className="mt-8 w-full max-w-sm">
+                            <div className="mt-6 w-full max-w-sm">
                                 <button
                                     onClick={handleLogin}
                                     className="flex w-full items-center justify-center rounded-lg border px-4 py-2.5 text-base hover:bg-gray-100 transition-all duration-500 ease-in">
@@ -132,7 +132,7 @@ const Hero = ({ layout }) => {
                                     Having trouble logging in?
                                 </p>
                                 <a
-                                    className="items-center inline-flex justify-center rounded-lg px-4 py-2.5 text-sm text-slate-900 ring-1 ring-slate-900/10 hover:ring-slate-900/20"
+                                    className="items-center w-fit mx-auto flex justify-center rounded-lg px-4 py-2.5 text-sm text-slate-900 ring-1 ring-slate-900/10 hover:ring-slate-900/20"
                                     href="/contacts#contact"
                                 >
                                     <span>
