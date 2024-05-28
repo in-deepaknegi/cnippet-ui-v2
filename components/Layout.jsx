@@ -14,8 +14,8 @@ const Layout = ({ components, slug }) => {
 
     if (loading) {
         return (
-            <div className=" mt-10 max-w-4xl">
-                <span className="text-xl">Loading ...</span>
+            <div className=" mx-auto mt-10 max-w-[90%] py-20 flex items-center justify-center">
+                <div className="loader"></div>
             </div>
         );
     }
@@ -24,7 +24,7 @@ const Layout = ({ components, slug }) => {
         return (
             <>
                 <AuthContent components={components} />
-                <Related components={components}  slug={slug}/>
+                <Related components={components} slug={slug} />
             </>
         )
     }

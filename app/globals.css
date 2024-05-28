@@ -18,8 +18,6 @@
   src: url(/fonts/blanka-reg.woff2) format("woff2");
 }
 
-
-
 @layer base {
   ::-webkit-scrollbar {
     width: 8px; /* width of the scrollbar */
@@ -127,5 +125,28 @@
       #0000
     );
     background-size: 7.07px 7.07px;
+  }
+
+  /* HTML: <div class="loader"></div> */
+  .loader {
+    width: 35px;
+    aspect-ratio: 1;
+    --_g: no-repeat radial-gradient(farthest-side, #facc15 94%, #0000);
+    background:
+      var(--_g) 0 0,
+      var(--_g) 100% 0,
+      var(--_g) 100% 100%,
+      var(--_g) 0 100%;
+    background-size: 40% 40%;
+    animation: l38 0.5s infinite;
+  }
+  @keyframes l38 {
+    100% {
+      background-position:
+        100% 0,
+        100% 100%,
+        0 100%,
+        0 0;
+    }
   }
 }

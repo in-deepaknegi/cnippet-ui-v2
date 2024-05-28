@@ -1,8 +1,30 @@
-import Footer from '@/components/Footer'
-import Navbar from '@/components/Navbar'
-import Hero from '@/components/routes/templates/Hero'
-import Projects from '@/components/routes/templates/Projects';
-import React from 'react'
+import React from "react";
+import { Metadata } from "next";
+
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/routes/templates/Hero";
+import Projects from "@/components/routes/templates/Projects";
+
+export const metadata: Metadata = {
+    title: "Templates",
+    description: "",
+    applicationName: "Cnippet Ui",
+
+    openGraph: {
+        title: "Templates",
+        description: "",
+        url: "http://ui.cnippet.com/templates",
+        images: ["/images/meta/site.png"],
+    },
+
+    twitter: {
+        card: "summary_large_image",
+        title: "Templates",
+        description: "",
+        images: ["/images/meta/site.png"],
+    },
+};
 
 const page = () => {
     return (
@@ -14,7 +36,7 @@ const page = () => {
             </main>
             <Footer />
         </>
-    )
-}
+    );
+};
 
-export default page
+export default page;

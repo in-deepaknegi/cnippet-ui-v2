@@ -45,7 +45,7 @@ const page = () => {
                                 <span className="h-0.5 w-16 bg-black"></span>
                                 Components
                             </p>
-                            <h1 className="mt-6 text-center text-4xl text-black md:text-5xl">
+                            <h1 className="mt-6 text-center text-4xl text-black md:text-6xl">
                                 Beautifully crafted UI components
                             </h1>
                             <p className="mt-6 text-center text-lg text-gray-600 md:text-lg">

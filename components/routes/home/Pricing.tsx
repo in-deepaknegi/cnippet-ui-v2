@@ -108,8 +108,8 @@ const Pricing = () => {
     return (
         <>
             {loading ? (
-                <div className=" mx-auto mt-10 max-w-[90%]">
-                    <span className="text-xl">Loading ...</span>
+                <div className=" mx-auto mt-10 max-w-[90%] py-20 flex items-center justify-center">
+                    <div className="loader"></div>
                 </div>
             ) : (
                 <>

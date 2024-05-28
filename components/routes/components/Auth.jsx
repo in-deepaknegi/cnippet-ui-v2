@@ -181,7 +181,7 @@ const Auth = ({ components }) => {
                                     </button>
                                 ) : (
                                     <button
-                                        onClick={()=> toSection('payment')}
+                                        onClick={() => toSection('payment')}
                                         className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
                                     >
                                         <svg
@@ -220,17 +220,10 @@ const Auth = ({ components }) => {
                 </section>
             ))}
 
-            {loading ? (
-                <div className=" mt-10 max-w-4xl">
-                    <span className="text-xl">Loading ...</span>
-                </div>
-            ) : (
+
+            {!pro && (
                 <>
-                    {!pro && (
-                        <>
-                            <Payment />
-                        </>
-                    )}
+                    <Payment />
                 </>
             )}
         </div>

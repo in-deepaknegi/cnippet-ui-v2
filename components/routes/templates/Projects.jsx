@@ -4,13 +4,8 @@ import templates from "@/data/templates";
 
 const Projects = () => {
     return (
-        <section id="product-catalyst" className="mt-28 ">
+        <section id="templates" className=" relative isolate py-10 md:py-16 font-swir">
             <div className="mx-auto max-w-[90%] px-6 lg:px-8">
-
-                <p className="mt-4 text-3xl font-extrabold tracking-[-0.04em] text-black sm:text-5xl sm:leading-[3.5rem]">
-                    Modern website templates, crafted with Tailwind CSS.
-                </p>
-
                 {templates.map((item, i) => (
                     <div
                         key={i}
@@ -18,14 +13,14 @@ const Projects = () => {
                     >
                         <div className="sm:pt-2 lg:relative lg:w-[15.5rem] lg:flex-none">
                             <div className="flex items-center gap-2">
-                                <h2 className="text-base font-semibold text-slate-900">
+                                <h2 className="text-2xl font-swim">
                                     <a href={`templates/${item.slug}`}>
                                         <span className="absolute inset-0 lg:left-8"></span>
                                         {item.title}
                                     </a>
                                 </h2>
                             </div>
-                            <p className="text-sm capitalize leading-6 text-slate-600">
+                            <p className="text-sm mt-2 text-slate-700">
                                 {item.sub}
                             </p>
                             <p className="mt-3 text-sm leading-6 text-slate-600">
@@ -60,7 +55,7 @@ const Projects = () => {
                                                 alt=""
                                                 height={380}
                                                 width={560}
-                                                className="rounded-xl border bg-slate-100 aspect-video object-cover shadow-lg"
+                                                className="rounded-xl border bg-slate-100 object-cover shadow-lg"
                                             />
                                         </li>
 

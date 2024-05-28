@@ -1,77 +1,64 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import T1 from "@/public/t1.webp";
 import T2 from "@/public/t2.webp";
+import Link from "next/link";
+
+import toSection from "@/atoms/library/toSection";
+
+import { FaArrowRight } from "react-icons/fa6";
 
 const Hero = () => {
     return (
-        <div className="max-w-[90%] mx-auto px-4 pt-4 sm:px-6 lg:flex lg:px-8 overflow-hidden">
-            <div className="relative mx-auto max-w-[40rem] pb-16 pt-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4 lg:pt-20">
-                <h1 className="text-base font-semibold leading-7 text-sky-500">
-                    By the makers of Tailwind CSS
-                </h1>
-
-                <p className="mt-4 text-3xl font-extrabold tracking-[-0.04em] text-black sm:text-5xl sm:leading-[3.5rem]">
-                    Modern website templates, crafted with Tailwind CSS.
-                </p>
-
-                <div className="mt-4 flex flex-wrap gap-6">
-                    <div className="flex items-center text-sm font-medium text-slate-500">
-                        
-                        <span className="ml-2.5">React</span>
-                    </div>
-                    <div className="flex items-center text-sm font-medium text-slate-500">
-                        
-                        <span className="ml-2.5">Next.js</span>
-                    </div>
-                </div>
-                <p className="mt-4 text-base leading-7 text-slate-600">
-                    Visually-stunning, easy to customize site templates built with React
-                    and Next.js. The perfect starting point for your next project and the
-                    ultimate resource for learning how experts build real websites with
-                    Tailwind CSS.
-                </p>
-                <div className="mt-8 flex gap-4">
-                    <a
-                        href="#browse"
-                        className="inline-flex justify-center rounded-lg bg-slate-900 px-4 py-3 text-sm font-semibold text-white hover:bg-slate-700"
+        <section className="relative isolate z-10 bg-white py-16 font-swir lg:py-20">
+            <div className="mx-auto max-w-full px-6 md:max-w-[90%] lg:px-8">
+                <div className="mx-auto flex w-full max-w-3xl flex-col items-center justify-center">
+                    <p
+                        className="flex flex-row items-center justify-center gap-4 text-center text-lg text-gray-700"
+                        data-aos="fade-right"
+                        data-aos-duration="500"
                     >
-                        <span>
-                            Browse <span className="hidden sm:inline">templates</span>
-                            <span aria-hidden="true" className="text-slate-400 sm:inline">
-                                →
-                            </span>
-                        </span>
-                    </a>
-                    <a
-                        className="inline-flex justify-center rounded-lg bg-white/0 px-4 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 "
-                        href="/all-access"
+                        <span className="h-0.5 w-16 bg-black"></span>
+                        Templates
+                    </p>
+                    <h1
+                        className="mt-6 text-center text-4xl text-black md:text-6xl"
+                        data-aos="fade-left"
+                        data-aos-duration="500"
                     >
-                        <span>
-                            Get <span className="hidden sm:inline">everything</span>
-                            with all-access{" "}
-                            <span aria-hidden="true" className="text-black/25 sm:inline">
-                                →
-                            </span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div className="relative z-10 hidden lg:block overflow-visible">
-                <div className="mt-6 flex">
-                    <div className="relative flex-shrink-0 p-4">
-                        <div className="relative z-10 overflow-hidden rounded-2xl shadow-xl ring-1 ring-slate-900/5">
-                            <Image alt="" className="h-fit w-[316px]" src={T1} />
+                        Modern website templates, crafted with Tailwind CSS.
+                    </h1>
+                    <div className="mt-4 flex flex-wrap gap-6">
+                        <div className="flex items-center text-sm text-white bg-black px-3 py-0.5 rounded-full">
+                            <span className="">React</span>
+                        </div>
+                        <div className="flex items-center text-sm text-white bg-black px-3 py-0.5 rounded-full">
+                            <span>Next.js</span>
                         </div>
                     </div>
-                    <div className="relative mt-14 flex-shrink-0 p-4">
-                        <div className="relative z-10 overflow-hidden rounded-2xl shadow-xl ring-1 ring-slate-900/5">
-                            <Image alt="" className="h-fit w-[316px]" src={T2} />
-                        </div>
+                    <p className="mt-6 text-center text-lg text-gray-600 md:text-lg">
+                        Visually-stunning, easy to customize site templates built with React and Next.js. The perfect starting point for your next project and the ultimate resource for learning how experts build real websites with Tailwind CSS.
+                    </p>
+                    <div className="mt-6 mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 md:flex-row">
+                        <button
+                            onClick={() => toSection('templates')}
+                            className="flex items-center gap-2 rounded-full bg-black text-white px-5 py-2 text-sm font-swim uppercase"
+                        >
+                            Browse templates
+                            <FaArrowRight className="h-3 w-3" />
+                        </button>
+                        <Link
+                            href=""
+                            className="flex items-center gap-2 rounded-full text-black px-5 py-2 text-sm font-swim uppercase"
+                        >
+                            Get access to everything
+                            <FaArrowRight className="h-3 w-3" />
+                        </Link>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
