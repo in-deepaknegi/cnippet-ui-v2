@@ -3,7 +3,7 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 /** @type {import('rehype-pretty-code').Options} */
 const options = {
-  theme: "github-dark",
+  theme: "night-owl",
 };
 
 const withMDX = nextMDX({

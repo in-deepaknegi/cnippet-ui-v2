@@ -196,7 +196,7 @@ const Navbar = () => {
                         )}
 
                         {profile && (
-                            <div className="absolute right-0 top-3 z-50 mt-6 w-56 rounded-lg bg-white px-6 py-3 shadow-xl">
+                            <div className="absolute right-0 z-50 w-56 rounded-lg bg-white px-6 py-3 shadow-xl">
                                 {status === "authenticated" ? (
                                     <div className="relative inset-0 isolate">
                                         <div className="flex flex-col items-center justify-center space-y-2">

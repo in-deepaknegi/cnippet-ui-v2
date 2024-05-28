@@ -1,70 +1,83 @@
 import React from "react";
-import Image from "next/image";
-import P1 from "@/public/images/profile/profile1.jpg";
-import P2 from "@/public/images/profile/profile2.jpg";
-import P3 from "@/public/images/profile/profile3.jpg";
-import P4 from "@/public/images/profile/profile4.jpg";
-import P5 from "@/public/images/profile/profile5.jpg";
-import P6 from "@/public/images/profile/profile6.jpg";
+import Link from "next/link";
 
-const people = [
+const links = [
     {
-        name: "Leslie Alexander",
-        role: "Co-Founder / CEO",
-        imageUrl: P6,
+        title: "Components",
+        url: "#",
     },
     {
-        name: "Michael Foster",
-        role: "Co-Founder / CTO",
-        imageUrl: P5,
+        title: "Templates",
+        url: "#",
     },
     {
-        name: "Lindsay Walton",
-        role: "Front-end Developer",
-        imageUrl: P2,
+        title: "About us",
+        url: "#",
     },
     {
-        name: "Courtney Henry",
-        role: "Designer",
-        imageUrl: P3,
+        title: "Contact us",
+        url: "#",
     },
 ];
 
-const S2 = () => {
+const Navbar = () => {
     return (
-        <section className="relative isolate bg-white py-24 sm:py-24">
-            <div className="mx-auto max-w-[90%] px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl lg:mx-0">
-                    <h2 className="text-5xl font-semibold">Our Team</h2>
-                    <p className="mt-5 text-lg text-gray-700">
-                        We&apos;re a dynamic group of individuals who are passionate about
-                        what we do and dedicated to delivering the best results for our
-                        clients.
-                    </p>
+        <header className="relative isolate overflow-hidden border-b bg-white py-6">
+            <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[95%] lg:px-8">
+                <div className="flex">
+                    <Link href="/" className="-m-1.5 p-1.5 text-2xl">
+                        Cnippet
+                    </Link>
                 </div>
-                <ul
-                    role="list"
-                    className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 md:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
-                >
-                    {people.map((person, i) => (
-                        <li key={i}>
-                            <Image
-                                src={person.imageUrl}
-                                alt="person"
-                                className="aspect-[3/2] w-full rounded-2xl object-cover"
-                            />
-                            <h3 className="mt-6 text-lg font-semibold leading-7 tracking-tight text-gray-900">
-                                {person.name}
-                            </h3>
-                            <p className="text-sm font-semibold leading-6 text-blue-700">
-                                {person.role}
-                            </p>
-                        </li>
+                <nav className="ml-auto hidden uppercase lg:flex lg:gap-x-12">
+                    {links.map((link, i) => (
+                        <Link
+                            key={i}
+                            href={link.url}
+                            className="text-sm font-medium leading-6 text-gray-700 hover:text-black"
+                        >
+                            {link.title}
+                        </Link>
                     ))}
-                </ul>
+                </nav>
+                <div className="ml-5 hidden border-l-2 border-black pl-5 lg:flex lg:items-center">
+                    <Link
+                        href="#"
+                        className="text-base font-medium uppercase text-gray-600 hover:text-black"
+                    >
+                        Sign up
+                    </Link>
+                    <Link
+                        href="#"
+                        className="-my-2.5 ml-8 inline-flex items-center justify-center rounded-full bg-slate-950 px-4 py-1.5 text-base font-medium uppercase text-white hover:bg-slate-800"
+                    >
+                        <span>
+                            Log in<span aria-hidden="true">→</span>
+                        </span>
+                    </Link>
+                </div>
+                <div className="flex lg:hidden">
+                    <button type="button" className="-m-2.5 rounded-md p-4 text-gray-900">
+                        <span className="sr-only">Open main menu</span>
+                        <svg
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth="1.5"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                            />
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </section>
+        </header>
     );
 };
 
-export default S2;
+export default Navbar;

@@ -3,55 +3,56 @@ import Link from "next/link";
 
 const links = [
     {
-        id: 1,
         title: "Components",
         url: "#",
     },
     {
-        id: 2,
         title: "Templates",
         url: "#",
     },
     {
-        id: 3,
-        title: "About",
+        title: "About us",
         url: "#",
     },
     {
-        id: 4,
-        title: "Contacts",
+        title: "Contact us",
         url: "#",
     },
 ];
 
-const Navbar2 = () => {
+const Navbar = () => {
     return (
         <header className="relative isolate overflow-hidden bg-white py-6">
-            <nav className="mx-auto flex max-w-full flex-1 items-center justify-between px-6 md:max-w-[97%] lg:px-8">
+            <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[95%] lg:px-8">
                 <div className="flex">
                     <Link href="/" className="-m-1.5 p-1.5 text-2xl">
-                        Cnippet <span className="text-sm">Ui.</span>
+                        Cnippet
                     </Link>
                 </div>
-                <div className="ml-auto hidden lg:flex lg:gap-x-12">
-                    {links.map((link) => (
+                <nav className="ml-auto hidden uppercase lg:flex lg:gap-x-12">
+                    {links.map((link, i) => (
                         <Link
-                            key={link.id}
+                            key={i}
                             href={link.url}
-                            className="text-sm font-semibold leading-6 text-gray-800 hover:text-gray-950"
+                            className="text-sm font-medium leading-6 text-gray-700 hover:text-black"
                         >
                             {link.title}
                         </Link>
                     ))}
-                </div>
-                <div className="hidden border-l border-gray-700 lg:ml-4 lg:flex lg:items-center lg:pl-4">
-                    <Link href="#">Sign in</Link>
+                </nav>
+                <div className="ml-5 hidden border-l-2 border-black pl-5 lg:flex lg:items-center">
                     <Link
                         href="#"
-                        className="-my-2.5 ml-8 inline-flex justify-center rounded-lg bg-slate-950 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800"
+                        className="text-base font-medium uppercase text-gray-600 hover:text-black"
+                    >
+                        Sign up
+                    </Link>
+                    <Link
+                        href="#"
+                        className="-my-2.5 ml-8 inline-flex items-center justify-center rounded-full bg-slate-950 px-4 py-1.5 text-base font-medium uppercase text-white hover:bg-slate-800"
                     >
                         <span>
-                            Get pro <span aria-hidden="true">→</span>
+                            Log in<span aria-hidden="true">→</span>
                         </span>
                     </Link>
                 </div>
@@ -74,9 +75,9 @@ const Navbar2 = () => {
                         </svg>
                     </button>
                 </div>
-            </nav>
+            </div>
         </header>
     );
 };
 
-export default Navbar2;
+export default Navbar;
