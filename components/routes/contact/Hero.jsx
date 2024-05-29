@@ -72,7 +72,7 @@ const Hero = () => {
                                         className="rounded-full bg-white p-2 shadow-lg"
                                     >
                                         <span className="sr-only">{item.title}</span>
-                                        <Image src={item.svg} alt={item.title} className="h-6 w-6" />
+                                        <Image src={item.svg} alt={`${item.title}-icon`} className="h-6 w-6" />
                                     </a>
                                 ))}
                             </div>

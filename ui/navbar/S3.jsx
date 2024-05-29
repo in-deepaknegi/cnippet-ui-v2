@@ -56,7 +56,7 @@ const Navbar3 = () => {
                     <div className="hidden uppercase lg:flex lg:gap-x-12">
                         {links.map((link, i) => (
                             <Link
-                                key={link.id}
+                                key={i}
                                 href={link.url}
                                 className="text-sm font-medium leading-6 text-gray-700 hover:text-black"
                             >

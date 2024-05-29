@@ -60,7 +60,7 @@ const page = () => {
                                 {components.map((component, i) => (
                                     <li key={i}>
                                         <div className="group relative font-swim before:absolute before:-inset-2.5 before:rounded-[20px] before:bg-gray-50 before:opacity-0 hover:before:opacity-100">
-                                            <div className="relative aspect-[2/1] overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10">
+                                            <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-100 ring-1 ring-gray-900/10">
                                                 <Image
                                                     src={component.image}
                                                     alt="navbar-img"
