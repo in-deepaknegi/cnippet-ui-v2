@@ -136,9 +136,9 @@ const Pricing = () => {
                                                 growth.
                                             </p>
                                             <div className="mt-10 flex items-center gap-x-4">
-                                                <h4 className="flex-none text-md text-blue-700">
+                                                <h3 className="flex-none text-md text-blue-700">
                                                     What&apos;s included
-                                                </h4>
+                                                </h3>
                                                 <div className="h-px flex-auto bg-gray-100"></div>
                                             </div>
                                             <ul
@@ -217,7 +217,7 @@ const Pricing = () => {
                                                         Pay once, and it&apos;s yours for a whole year.
                                                     </p>
                                                     <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                                                        <span className="w-20  text-3xl text-gray-400 ">
+                                                        <span className="text-3xl text-gray-600 ">
                                                             <del>&nbsp;₹999&nbsp;</del>
                                                         </span>
                                                         <span className="ml-3 text-5xl text-gray-900 ">

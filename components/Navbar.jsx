@@ -59,7 +59,7 @@ const menu = [
 
 const Navbar = () => {
     const pathname = usePathname();
-    const [mobilemenu, setMobileMenu] = useState(false);
+    const [mobilemenu, setMobileMenu] = useState(true);
     const { status, session, loading } = GetSession();
     const [profile, setProfile] = useState(false);
     const [scroll, setScroll] = useState(false);
@@ -351,20 +351,53 @@ const Navbar = () => {
                                     ))}
                                 </div>
 
-                                <div className="py-6">
-                                    <a
-                                        href="/login"
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base text-gray-700 hover:bg-gray-50 uppercase"
-                                    >
-                                        Log in
-                                    </a>
-                                </div>
+
+                                {status === 'authenticated' ? (
+                                    <div className="flex flex-col gap-4">
+                                        <div className="flex mt-10 flex-row gap-10 items-center space-y-2">
+                                            <Image
+                                                src={session.user.image}
+                                                alt="profile-image"
+                                                width={40}
+                                                height={40}
+                                                className=" rounded-full"
+                                            />
+                                            <span className="text-base text-gray-900">
+                                                {session.user.name}
+                                            </span>
+                                        </div>
+                                        <div className="text-base text-gray-600">
+                                            {session.user.email}
+                                        </div>
+                                        <ul className="mt-3 flex w-full cursor-pointer flex-col gap-y-2 text-sm text-gray-600">
+                                            <li className="flex w-full items-start border-l-2 pl-3 hover:border-gray-600 hover:text-black">
+                                                <a href="#">Account</a>
+                                            </li>
+                                            <li className="flex w-full items-start border-l-2 pl-3 hover:border-gray-600 hover:text-black">
+                                                <a href="#" onClick={() => signOut()}>
+                                                    Sign Out
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                ) : (
+                                    <div className="py-6">
+                                        <a
+                                            href="/login"
+                                            className="-mx-3 block rounded-lg px-3 py-2.5 text-base text-gray-700 hover:bg-gray-50 uppercase"
+                                        >
+                                            Log in
+                                        </a>
+                                    </div>
+                                )}
+
+
                             </div>
                         </div>
                     </div>
-                </div>
+                </div >
             )}
-        </header>
+        </header >
     );
 };
 
