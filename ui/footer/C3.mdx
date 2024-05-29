@@ -1,3 +1,4 @@
+```tsx
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
@@ -34,12 +35,12 @@ const links = [
                 href: "tel:+91 97566 20538",
             },
             {
-                name: "info@travelo.com",
-                href: "mailto:info@travelo.com",
+                name: "info@ui.cnippet.com",
+                href: "mailto:info@ui.cnippet.com",
             },
             {
-                name: "office@travelo.com",
-                href: "mailto:office@travelo.com",
+                name: "office@ui.cnippet.com",
+                href: "mailto:office@ui.cnippet.com",
             },
         ],
     },
@@ -81,11 +82,11 @@ const links = [
 
 const Footer = () => {
     return (
-        <footer className="relative isolate bg-black/95 font-swir">
-            <div className=" mx-auto max-w-full px-6 md:max-w-[90%] lg:px-8">
+        <footer className="relative isolate bg-black/95 py-8">
+            <div className=" mx-auto max-w-full px-6 md:max-w-[95%] lg:px-8">
                 <div className="flex flex-col border-gray-300 md:flex-row md:border-b">
                     <div className="flex w-full flex-col gap-2 py-10 pr-8 md:flex-row md:items-center md:justify-between">
-                        <h3 className="font-swim text-4xl text-gray-50 md:w-[45%]">
+                        <h3 className="text-3xl text-gray-50 md:w-[45%]">
                             Leading the way in adventure
                         </h3>
                         <div className="flex gap-x-3">
@@ -103,7 +104,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex w-full flex-col justify-between gap-3 border-t border-gray-300 pt-5 md:flex-row md:items-center md:border-l md:border-t-0 md:pl-8 md:pt-0">
-                        <h3 className="font-swim text-4xl text-gray-50 md:w-[40%]">
+                        <h3 className="text-3xl text-gray-50 md:w-[40%]">
                             Join our Newsletter
                         </h3>
 
@@ -134,13 +135,13 @@ const Footer = () => {
                 </div>
 
                 <div className="my-16 flex flex-col justify-between md:flex-row">
-                    <div className=" w-full">
+                    <div className="w-full">
                         <a
                             href="/"
                             className="mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse"
                         >
-                            <span className="self-center whitespace-nowrap font-swim text-4xl text-white">
-                                Cnippet
+                            <span className="self-center whitespace-nowrap text-3xl text-white">
+                                Cnippet Ui
                             </span>
                         </a>
                         <p className="mt-3 text-gray-400 md:w-[50%]">
@@ -151,10 +152,10 @@ const Footer = () => {
                     <div className="mt-10 flex w-full max-w-md flex-wrap justify-between gap-10 md:mt-5 md:max-w-none md:gap-x-32">
                         {links.map((link, i) => (
                             <div key={i}>
-                                <h3 className="mb-3 font-swim text-base uppercase text-white">
+                                <h3 className="mb-3 text-base uppercase text-white">
                                     {link.title}
                                 </h3>
-                                <ul className="flex flex-col flex-wrap space-y-2 text-sm font-medium uppercase text-gray-400">
+                                <ul className="flex flex-col flex-wrap space-y-2 text-sm uppercase text-gray-400">
                                     {link.sub.map((item, j) => (
                                         <li key={j}>
                                             <a
@@ -219,3 +220,4 @@ const Footer = () => {
 };
 
 export default Footer;
+```

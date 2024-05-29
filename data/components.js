@@ -27,8 +27,10 @@ import CN4 from "@/ui/navbar/C4.mdx";
 
 import F1 from "@/ui/footer/S1";
 import F2 from "@/ui/footer/S2";
+import F3 from "@/ui/footer/S3";
 import CF1 from "@/ui/footer/C1.mdx";
 import CF2 from "@/ui/footer/C2.mdx";
+import CF3 from "@/ui/footer/C3.mdx";
 
 import H1 from "@/ui/hero/S1";
 import H2 from "@/ui/hero/S2";
@@ -173,7 +175,7 @@ const components = [
         description: "The Footer section consists of two footer components designed to enhance web interfaces.",
         image: Footer,
         imgurl: "/images/components/footer.png",
-        number: "2 components",
+        number: "3 components",
         data: [
             {
                 title: "Simple footer 1",
@@ -186,6 +188,12 @@ const components = [
                 component: <F2 />,
                 code: <CF2 />,
                 pro: false,
+            },
+            {
+                title: "Simple footer 3",
+                component: <F3 />,
+                code: <CF3 />,
+                pro: true,
             },
         ],
     },
