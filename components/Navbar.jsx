@@ -59,7 +59,7 @@ const menu = [
 
 const Navbar = () => {
     const pathname = usePathname();
-    const [mobilemenu, setMobileMenu] = useState(true);
+    const [mobilemenu, setMobileMenu] = useState(false);
     const { status, session, loading } = GetSession();
     const [profile, setProfile] = useState(false);
     const [scroll, setScroll] = useState(false);
