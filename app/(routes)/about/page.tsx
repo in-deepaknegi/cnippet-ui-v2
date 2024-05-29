@@ -6,12 +6,13 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: "About us",
-    description: "Discover the story behind Cnippet UI on our About page. Learn about our mission, values, and the team driving innovation in web development. Get to know us better as we empower you to create exceptional digital experiences.",
+    description: "Explore the immersive and inspiring story of Cnippet UI, the perfect place for top-notch React, Next.js, and Tailwind CSS components. Our mission is to empower developers with unparalleled, high-quality templates that prioritize flexibility, ultimately enhancing and simplifying the web development process.",
     applicationName: 'Cnippet Ui',
 
     openGraph: {
         title: "About us",
-        description: "Discover the story behind Cnippet UI on our About page. Learn about our mission, values, and the team driving innovation in web development. Get to know us better as we empower you to create exceptional digital experiences.",
+        siteName: "Cnippet Ui",
+        description: "Explore the immersive and inspiring story of Cnippet UI, the ultimate destination for top-notch React, Next.js, and Tailwind CSS components. Our mission is to empower developers with unparalleled, high-quality templates that prioritize flexibility, ultimately enhancing and simplifying the web development process.",
         url: "https://ui.cnippet.com/about",
         images: ["/images/meta/site.png"],
     },
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: "Contact us",
-        description: "Discover the story behind Cnippet UI on our About page. Learn about our mission, values, and the team driving innovation in web development. Get to know us better as we empower you to create exceptional digital experiences.",
+        description: "Explore the immersive and inspiring story of Cnippet UI, the ultimate destination for top-notch React, Next.js, and Tailwind CSS components. Our mission is to empower developers with unparalleled, high-quality templates that prioritize flexibility, ultimately enhancing and simplifying the web development process.",
         images: ["/images/meta/site.png"],
     },
 };

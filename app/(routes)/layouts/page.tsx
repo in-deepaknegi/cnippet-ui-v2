@@ -8,12 +8,13 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
     title: "Layouts",
-    description: "Discover the story behind Cnippet UI on our Layout page. Learn Layout our mission, values, and the team driving innovation in web development. Get to know us better as we empower you to create exceptional digital experiences.",
+    description: "Discover a range of carefully designed layouts at Cnippet UI. Uncover the ideal page designs to elevate your web development projects, showcasing layouts created with React, Next.js, and Tailwind CSS. Find the perfect template for your requirements and simplify your design workflow.",
     applicationName: 'Cnippet Ui',
 
     openGraph: {
         title: "Layouts",
-        description: "Discover the story behind Cnippet UI on our Layout page. Learn Layout our mission, values, and the team driving innovation in web development. Get to know us better as we empower you to create exceptional digital experiences.",
+        siteName: "Cnippet Ui",
+        description: "Discover a range of carefully designed layouts at Cnippet UI. Uncover the ideal page designs to elevate your web development projects, showcasing layouts created with React, Next.js, and Tailwind CSS. Find the perfect template for your requirements and simplify your design workflow.",
         url: "https://ui.cnippet.com/layout",
         images: ["/images/meta/site.png"],
     },
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: "Layouts",
-        description: "Discover the story behind Cnippet UI on our Layout page. Learn Layout our mission, values, and the team driving innovation in web development. Get to know us better as we empower you to create exceptional digital experiences.",
+        description: "Discover a range of carefully designed layouts at Cnippet UI. Uncover the ideal page designs to elevate your web development projects, showcasing layouts created with React, Next.js, and Tailwind CSS. Find the perfect template for your requirements and simplify your design workflow.",
         images: ["/images/meta/site.png"],
     },
 };

@@ -9,13 +9,14 @@ import Form from "@/components/routes/contact/Form";
 export const metadata: Metadata = {
     title: "Contact us",
     description:
-        "Connect effortlessly with Cnippet UI's contact page. Reach out for inquiries, collaborations, or just to say hello. We're here to support your web development journey every step of the way.",
+        "Reach out to Cnippet UI for any inquiries, assistance, or to share your ideas. Our dedicated team is ready to support you. Contact us today and let's collaborate to enhance your web development endeavors. We look forward to hearing from you.",
     applicationName: "Cnippet Ui",
 
     openGraph: {
         title: "Contact us",
+        siteName: "Cnippet Ui",
         description:
-            "Connect effortlessly with Cnippet UI's contact page. Reach out for inquiries, collaborations, or just to say hello. We're here to support your web development journey every step of the way.",
+            "Reach out to Cnippet UI for any inquiries, assistance, or to share your ideas. Our dedicated team is ready to support you. Contact us today and let's collaborate to enhance your web development endeavors. We look forward to hearing from you.",
         url: "https://ui.cnippet.com/contacts",
         images: ["/images/meta/site.png"],
     },
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     twitter: {
         title: "Contact us",
         description:
-            "Connect effortlessly with Cnippet UI's contact page. Reach out for inquiries, collaborations, or just to say hello. We're here to support your web development journey every step of the way.",
+            "Reach out to Cnippet UI for any inquiries, assistance, or to share your ideas. Our dedicated team is ready to support you. Contact us today and let's collaborate to enhance your web development endeavors. We look forward to hearing from you.",
         images: ["/images/meta/site.png"],
     },
 };

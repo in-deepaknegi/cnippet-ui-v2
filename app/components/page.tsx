@@ -9,13 +9,14 @@ import components from "@/data/components";
 export const metadata: Metadata = {
     title: "Components",
     description:
-        "Dive into our curated collection of React, Next.js, and Tailwind CSS components at Cnippet UI. Elevate your web projects with ease and efficiency.",
+        "Explore our wide range of components at Cnippet UI. Uncover professionally crafted navigation bars, footers, hero sections, and additional features, all constructed with React, Next.js, and Tailwind CSS to elevate your web development endeavors.",
     applicationName: "Cnippet Ui",
 
     openGraph: {
         title: "Components",
+        siteName: "Cnippet Ui",
         description:
-            "Dive into our curated collection of React, Next.js, and Tailwind CSS components at Cnippet UI. Elevate your web projects with ease and efficiency.",
+            "Explore our wide range of components at Cnippet UI. Uncover professionally crafted navigation bars, footers, hero sections, and additional features, all constructed with React, Next.js, and Tailwind CSS to elevate your web development endeavors.",
         url: "http://ui.cnippet.com/components",
         images: ["/images/meta/site.png"],
     },
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Components",
         description:
-            "Dive into our curated collection of React, Next.js, and Tailwind CSS components at Cnippet UI. Elevate your web projects with ease and efficiency.",
+            "Explore our wide range of components at Cnippet UI. Uncover professionally crafted navigation bars, footers, hero sections, and additional features, all constructed with React, Next.js, and Tailwind CSS to elevate your web development endeavors.",
         images: ["/images/meta/site.png"],
     },
 };
