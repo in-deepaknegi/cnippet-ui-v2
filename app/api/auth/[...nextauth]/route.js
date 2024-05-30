@@ -42,6 +42,8 @@ const authOptions = {
                     console.error("Error:", error);
                 }
 
+
+                
                 if (!userExists) {
                     await User.create({ name, email });
 
