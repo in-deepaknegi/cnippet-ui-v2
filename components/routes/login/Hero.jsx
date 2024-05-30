@@ -15,6 +15,7 @@ const Hero = ({ layout }) => {
     const [loading, setLoading] = useState(false);
     const [loading1, setLoading1] = useState(false);
     const router = useRouter();
+    const email = session?.user?.email;
 
     const handleLogin = async () => {
         setLoading(true);
@@ -28,10 +29,34 @@ const Hero = ({ layout }) => {
         await signIn("github");
     }
 
+
+
     useEffect(() => {
         if (status === "authenticated") {
             router.push('/');
         }
+
+        // const handleResend = async () => {
+        //     if (email) {
+        //         try {
+        //             const res = await fetch("/api/resend", {
+        //                 method: "POST",
+        //                 headers: {
+        //                     "Content-Type": "application/json",
+        //                 },
+        //                 body: JSON.stringify({ email }),
+        //             });
+
+        //             const json = await res.json();
+        //             console.log(json);
+
+        //         } catch (error) {
+        //             console.error("Error:", error);
+        //         }
+        //     }
+        // }
+
+        // handleResend();
     }, [status, router]);
 
     return (

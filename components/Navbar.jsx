@@ -215,11 +215,11 @@ const Navbar = () => {
                                             </span>
                                         </div>
                                         <ul className="mt-3 flex w-full cursor-pointer flex-col gap-y-2 text-sm text-gray-600">
-                                            <li className="flex w-full items-start border-l-2 pl-3 hover:border-gray-600 hover:text-black">
-                                                <a href="#">Account</a>
+                                            <li className="w-full border-l-2 pl-3 hover:border-gray-600 hover:text-black">
+                                                <a href="#" className="w-full flex items-start">Account</a>
                                             </li>
-                                            <li className="flex w-full items-start border-l-2 pl-3 hover:border-gray-600 hover:text-black">
-                                                <a href="#" onClick={() => signOut()}>
+                                            <li className="w-full border-l-2 pl-3 hover:border-gray-600 hover:text-black">
+                                                <a href="#" onClick={() => signOut()} className="w-full flex items-start">
                                                     Sign Out
                                                 </a>
                                             </li>
@@ -227,10 +227,10 @@ const Navbar = () => {
                                     </div>
                                 ) : (
                                     <div>
-                                        <ul className="flex cursor-pointer flex-col items-start gap-y-2 py-1 text-sm text-gray-600">
-                                            <li className="border-l-2 pl-3 hover:border-gray-600 hover:text-black">
-                                                <a href="/login" className="">
-                                                    Sign in
+                                        <ul className="mt-3 flex w-full cursor-pointer flex-col gap-y-2 text-sm text-gray-600">
+                                            <li className="w-full border-l-2 pl-3 hover:border-gray-600 hover:text-black">
+                                                <a href="login" className="w-full flex items-start">
+                                                    Sign In
                                                 </a>
                                             </li>
                                         </ul>

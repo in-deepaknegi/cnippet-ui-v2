@@ -26,8 +26,26 @@ const authOptions = {
 
                 const userExists = await User.findOne({ email });
 
+                try {
+                    const res = await fetch(`${process.env.NEXTAUTH_URL}/api/resend/`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({ name, email }),
+                    });
+
+                    const json = await res.json();
+                    console.log(json);
+
+                } catch (error) {
+                    console.error("Error:", error);
+                }
+
                 if (!userExists) {
                     await User.create({ name, email });
+
+
 
                     return NextResponse.json(
                         { message: "User Registered" },

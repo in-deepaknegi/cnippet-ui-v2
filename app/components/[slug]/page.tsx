@@ -74,6 +74,7 @@ export async function generateMetadata({
         openGraph: component?.imgurl
             ? {
                 title: name,
+                siteName: "Cnippet Ui",
                 description: component?.description,
                 url: `/components/${component.slug}`,
                 images: [component?.imgurl],
