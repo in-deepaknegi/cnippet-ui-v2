@@ -11,10 +11,9 @@ declare global {
     }
 }
 
-const Pricing = () => {
+const Pricing = ({ pro, loading }: { pro: boolean, loading: boolean }) => {
     const { status, data: session } = useSession();
     const email = session?.user?.email;
-    const { pro, loading } = FetchPro(email);
     const [msg, setMsg] = useState("Get Access");
 
     const router = useRouter();
