@@ -13,7 +13,7 @@ const Auth = ({ components }) => {
 
     const email = session?.user?.email;
     // console.log(email);
-    const { pro, loading } = fetchPro(email);
+    const { pro } = fetchPro(email);
 
     // console.log(pro); //displayed in browser
 
@@ -223,7 +223,7 @@ const Auth = ({ components }) => {
 
             {!pro && (
                 <>
-                    <Payment pro={pro} loading={loading} />
+                    <Payment />
                 </>
             )}
         </div>
