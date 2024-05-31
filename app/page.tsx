@@ -4,6 +4,7 @@ import Hero from '@/components/routes/home/Hero';
 import Logos from '@/components/routes/home/Logos';
 import Components from '@/components/routes/home/Component';
 import Pricing from '@/components/routes/home/Pricing';
+import T1 from '@/components/EmailMessage';
 
 export default function Home() {
   const siteJsonLd = {
@@ -27,6 +28,7 @@ export default function Home() {
         <meta itemProp="name" content="Cnippet Ui" />
       </div>
 
+      <T1 name='Deepak negi' email='negideepak@' />
       <Navbar />
       <main>
         <Hero />

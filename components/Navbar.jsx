@@ -229,7 +229,7 @@ const Navbar = () => {
                                     <div>
                                         <ul className="mt-3 flex w-full cursor-pointer flex-col gap-y-2 text-sm text-gray-600">
                                             <li className="w-full border-l-2 pl-3 hover:border-gray-600 hover:text-black">
-                                                <a href="login" className="w-full flex items-start">
+                                                <a href="/login" className="w-full flex items-start">
                                                     Sign In
                                                 </a>
                                             </li>
