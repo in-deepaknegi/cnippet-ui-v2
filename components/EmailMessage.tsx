@@ -147,20 +147,20 @@ interface WelcomeEmailProps {
 export const WelcomeEmail = ({ name, email }: WelcomeEmailProps) => (
     <Html>
         <Head />
-        <Preview>Confirm your email address</Preview>
+        <Preview>Thanks for joining us at Cnippet Ui. Hi {name}</Preview>
         <Tailwind>
             <Body className="mx-auto font-swir">
                 <Container className=" max-w-[60%] mx-auto">
                     <Section className="mt-8 flex flex-row">
                         <Img
-                            src={`https://ui.cnippet.com/images/meta/site-full.png`}
+                            src={`https://ui.cnippet.com/images/meta/logo-full.png`}
                             width="160"
                             height="40"
                             alt="Cnippet Ui"
                         />
                     </Section>
                     <Heading className="text-2xl my-7 text-black font-swim">
-                        Thanks for joining us at Cnippet Ui
+                        Thanks for joining us at Cnippet Ui.
                     </Heading>
                     <Text className="text-base text-black my-5">
                         Hi {name}
@@ -194,7 +194,7 @@ export const WelcomeEmail = ({ name, email }: WelcomeEmailProps) => (
                         Exclusive Offer for You!
                     </Heading>
                     <Text className="text-base text-black my-5">
-                        As a thank you for joining us, we’re happy to give you a 50% discount on our Pro section. You can get premium parts and templates to boost your projects. Just use the code WELCOME50 when you buy to get this deal.
+                        As a thank you for joining us, we&apos;re happy to give you a 50% discount on our Pro section. You can get premium parts and templates to boost your projects. Just use the code WELCOME50 when you buy to get this deal.
                     </Text>
 
 
@@ -213,12 +213,12 @@ export const WelcomeEmail = ({ name, email }: WelcomeEmailProps) => (
                     </Text>
 
                     <Section>
-                        <Row className="w-full px-2 mb-8">
+                        <Row className="w-full px-2 mt-4 mb-8">
                             <Column style={{ width: "66%" }}>
                                 <Img
-                                    src={`https://ui.cnippet.com/images/meta/site-full.png`}
-                                   width="160"
-                            height="40"
+                                    src={`https://ui.cnippet.com/images/meta/logo-full.png`}
+                                    width="160"
+                                    height="40"
                                     alt="Cnippet Ui"
                                 />
                             </Column>
