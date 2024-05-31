@@ -154,8 +154,8 @@ export const WelcomeEmail = ({ name, email }: WelcomeEmailProps) => (
                     <Section className="mt-8 flex flex-row">
                         <Img
                             src={`https://ui.cnippet.com/images/meta/site-full.png`}
-                            width="180"
-                            height="35"
+                            width="160"
+                            height="40"
                             alt="Cnippet Ui"
                         />
                     </Section>
@@ -217,8 +217,8 @@ export const WelcomeEmail = ({ name, email }: WelcomeEmailProps) => (
                             <Column style={{ width: "66%" }}>
                                 <Img
                                     src={`https://ui.cnippet.com/images/meta/site-full.png`}
-                                    width="180"
-                                    height="35"
+                                   width="160"
+                            height="40"
                                     alt="Cnippet Ui"
                                 />
                             </Column>
@@ -228,7 +228,7 @@ export const WelcomeEmail = ({ name, email }: WelcomeEmailProps) => (
                                         <Column>
                                             <Link href="/">
                                                 <Img
-                                                    src={`https://ui.cnippet.com/images/svg/github.svg`}
+                                                    src={`https://ui.cnippet.com/images/meta/github.png`}
                                                     width="32"
                                                     height="32"
                                                     alt="github"
@@ -239,7 +239,7 @@ export const WelcomeEmail = ({ name, email }: WelcomeEmailProps) => (
                                         <Column>
                                             <Link href="/">
                                                 <Img
-                                                    src={`https://ui.cnippet.com/images/svg/instagram.svg`}
+                                                    src={`https://ui.cnippet.com/images/meta/instagram.png`}
                                                     width="32"
                                                     height="32"
                                                     alt="Instagram"
