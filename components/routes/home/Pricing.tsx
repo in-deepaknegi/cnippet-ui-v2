@@ -19,9 +19,12 @@ const Pricing = () => {
 
     const router = useRouter();
 
-    const [amount, setAmount] = useState("499");
+    const [amount, setAmount] = useState("10");
     const [currency, setCurrency] = useState("INR");
     const [load, setLoad] = useState(false);
+    const [coupon, setCoupon] = useState("");
+    const [discountedAmount, setDiscountedAmount] = useState(amount);
+    const [cmsg, setCmsg] = useState("");
 
     const createOrderId = async () => {
         setLoad(true);
@@ -33,7 +36,7 @@ const Pricing = () => {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    amount: parseFloat(amount) * 100,
+                    amount: parseFloat(discountedAmount) * 100,
                 }),
             });
 
@@ -56,7 +59,7 @@ const Pricing = () => {
             const orderId: string = await createOrderId();
             const options = {
                 key: process.env.key_id,
-                amount: parseFloat(amount) * 100,
+                amount: parseFloat(discountedAmount) * 100,
                 currency: currency,
                 name: "Cnippet",
                 description: "description",
@@ -102,6 +105,16 @@ const Pricing = () => {
             paymentObject.open();
         } catch (error) {
             console.log(error);
+        }
+    };
+
+    const applyCoupon = () => {
+        if (coupon === "WELCOME50") {
+            setDiscountedAmount((parseFloat(amount) / 2).toString());
+            setCmsg('Coupon applied successfully! You got a 50% discount.');
+        } else {
+            setDiscountedAmount(amount);
+            setCmsg('Invalid coupon');
         }
     };
 
@@ -208,30 +221,51 @@ const Pricing = () => {
                                             </ul>
                                         </div>
                                         <div className="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
-                                            <div className="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16">
+                                            <div className="rounded-2xl bg-gray-50 py-8 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-10">
                                                 <form
                                                     onSubmit={processPayment}
-                                                    className="mx-auto max-w-xs px-8"
+                                                    className="mx-auto max-w-full px-10"
                                                 >
                                                     <p className="text-lg text-black">
                                                         Pay once, and it&apos;s yours for a whole year.
                                                     </p>
                                                     <p className="mt-6 flex items-baseline justify-center gap-x-2">
-                                                        <span className="text-3xl text-gray-600 ">
+                                                        {/* <span className="text-3xl text-gray-600 ">
                                                             <del>&nbsp;₹999&nbsp;</del>
-                                                        </span>
+                                                        </span> */}
                                                         <span className="ml-3 text-5xl text-gray-900 ">
-                                                            ₹499
+                                                            ₹{discountedAmount}
                                                         </span>
                                                         <span className="text-md  tracking-wide text-slate-800 ">
                                                             Rupee
                                                         </span>
                                                     </p>
 
+                                                    <div className="mt-10 flex flex-col md:flex-row gap-2 w-full">
+                                                        <input
+                                                            type="text"
+                                                            value={coupon}
+                                                            onChange={(e) => setCoupon(e.target.value)}
+                                                            placeholder="Enter Coupon Code"
+                                                            className=" max-w-xl rounded-full placeholder:text-sm px-3 py-2 outline-none text-center text-md text-gray-900 shadow-sm"
+                                                        />
+                                                        <button
+                                                            type="button"
+                                                            onClick={applyCoupon}
+                                                            className="w-full max-w-full rounded-full border px-1 py-2 text-center text-sm text-black shadow-sm hover:bg-black hover:text-white"
+                                                        >
+                                                            Apply Coupon
+                                                        </button>
+
+                                                    </div>
+                                                    <div className="mt-4 text-sm font-swir">
+                                                        {cmsg}
+                                                    </div>
+
                                                     {email ? (
                                                         <button
                                                             type="submit"
-                                                            className="mt-10 flex w-full items-center justify-center rounded-full bg-black px-3 py-2 text-center text-md text-white shadow-sm hover:bg-black/85"
+                                                            className="mt-6 flex w-fit items-center justify-center rounded-full bg-black px-20 py-2 text-center text-md text-white shadow-sm mx-auto hover:bg-black/85"
                                                         >
                                                             {load && (
                                                                 <svg
@@ -260,7 +294,7 @@ const Pricing = () => {
                                                     ) : (
                                                         <a
                                                             href="/login"
-                                                            className="mt-10 flex w-full items-center justify-center rounded-full bg-black px-3 py-2 text-center text-md text-white shadow-sm hover:bg-black/85"
+                                                            className="mt-10 flex w-fit items-center justify-center rounded-full bg-black px-20 py-2 text-center text-md text-white shadow-sm mx-auto hover:bg-black/85"
                                                         >
                                                             {load && (
                                                                 <svg
