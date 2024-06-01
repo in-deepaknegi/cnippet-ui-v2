@@ -19,7 +19,7 @@ const Pricing = () => {
 
     const router = useRouter();
 
-    const [amount, setAmount] = useState("10");
+    const [amount, setAmount] = useState("1000");
     const [currency, setCurrency] = useState("INR");
     const [load, setLoad] = useState(false);
     const [coupon, setCoupon] = useState("");
