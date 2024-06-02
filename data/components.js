@@ -40,6 +40,8 @@ import H5 from "@/ui/hero/S5";
 import CH1 from "@/ui/hero/C1.mdx";
 import CH2 from "@/ui/hero/C2.mdx";
 import CH3 from "@/ui/hero/C3.mdx";
+import CH4 from "@/ui/hero/C4.mdx";
+import CH5 from "@/ui/hero/C5.mdx";
 
 import HE1 from "@/ui/header/S1";
 import HE2 from "@/ui/header/S2";
@@ -225,12 +227,14 @@ const components = [
             },
             {
                 title: "Simple hero 4",
-                component: <H5 />,
-                pro: true,
+                component: <H4 />,
+                code: <CH4 />,
+                pro: false,
             },
             {
                 title: "Simple hero 5",
-                component: <H4 />,
+                component: <H5 />,
+                code: <CH5 />,
                 pro: true,
             },
         ],
