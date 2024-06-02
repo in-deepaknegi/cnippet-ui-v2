@@ -1,54 +1,120 @@
 import React from "react";
 import Image from "next/image";
-import Hero1 from "@/public/images/hero/hero4.jpg";
-import Button from "@/components/ui/Button";
+import Hero1 from "@/public/images/hero/hero5.jpg";
+import Hero2 from "@/public/images/hero/hero6.jpg";
+import Hero3 from "@/public/images/hero/hero7.jpg";
+import Hero4 from "@/public/images/hero/hero8.jpg";
+import Hero5 from "@/public/images/hero/hero9.jpg";
+import Hero6 from "@/public/images/hero/hero10.jpg";
+import Hero7 from "@/public/images/hero/hero11.jpg";
 
-const C2 = () => {
+const S1 = () => {
     return (
-        <section className="relative isolate overflow-hidden bg-white">
-            <div className="mx-auto">
-                <div className="mx-auto space-x-0 space-y-10 md:flex md:space-x-6 md:space-y-0 lg:mx-0 lg:max-w-none">
-                    <div className="mx-auto my-auto w-full max-w-full py-16 pl-16 md:py-0 lg:max-w-2xl lg:flex-shrink">
-                        <div className="hidden sm:mb-8 sm:flex">
-                            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-                                Announcing our next round of funding.
-                                <a href="#" className="font-semibold text-black">
-                                    <span className="absolute inset-0" aria-hidden="true"></span>{" "}
-                                    Read more <span aria-hidden="true">&rarr;</span>
-                                </a>
+        <section className="relative isolate overflow-hidden py-16 md:py-20">
+            <div className=" mx-auto max-h-full px-6 md:max-w-[80%] md:px-8">
+                <div className="mx-auto max-w-full md:max-w-[80%]">
+                    <h1 className="text-center text-5xl font-semibold text-black md:text-6xl">
+                        The only source of knowledge is experience
+                    </h1>
+                    <p className="mt-6 text-center text-lg text-gray-600">
+                        Our emphasis lies in delivering valuable insights, imparting fresh
+                        information, and presenting distinctive viewpoints that contribute
+                        to daily life.
+                    </p>
+                    <div className="mx-auto mt-10 flex items-center justify-center gap-x-6">
+                        <form action="" className=" mx-auto w-full max-w-xl lg:mx-0">
+                            <div className="flex gap-x-3">
+                                <label htmlFor="email-address" className="sr-only">
+                                    Email address
+                                </label>
+                                <input
+                                    id="email-address"
+                                    name="email"
+                                    type="email"
+                                    autoComplete="email"
+                                    required
+                                    className="min-w-0 flex-auto rounded-full border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black/10 focus:ring-inset sm:text-sm sm:leading-6"
+                                    placeholder="Enter your email"
+                                />
+                                <button
+                                    type="submit"
+                                    className="mx-auto max-w-md rounded-full bg-black px-4 py-2 text-base text-white shadow-sm"
+                                >
+                                    Subscribe
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div className="relative mx-auto mt-8 flex max-w-5xl flex-row items-center justify-center md:mt-16">
+                    <div className="mt-4 flex justify-end gap-4 sm:justify-start md:mt-16 xl:mt-0">
+                        <div className="mt-16 hidden w-full lg:block">
+                            <div className="relative">
+                                <Image
+                                    src={Hero1}
+                                    alt="hero image 2"
+                                    priority={false}
+                                    className="aspect-[2/2.25] rounded-2xl bg-gray-50 object-cover shadow-xl"
+                                />
                             </div>
                         </div>
-                        <h1 className="text-5xl font-semibold md:text-6xl">
-                            Data to enrich your online bussiness
-                        </h1>
-                        <p className="mt-6 text-base text-gray-600 lg:text-lg">
-                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                            fugiat aliqua.
-                        </p>
-                        <div className="mt-10 flex gap-x-6">
-                            <a
-                                href="#"
-                                className="max-w-md rounded-md bg-gradient-to-br from-black to-purple-600 px-3.5 py-2.5 text-sm font-semibold tracking-wide text-white shadow-sm"
-                            >
-                                Get started
-                            </a>
-                            <a
-                                href="#"
-                                className="my-auto text-sm font-semibold leading-6 text-gray-900"
-                            >
-                                Read more <span aria-hidden="true">→</span>
-                            </a>
+                        <div className="hidden w-full sm:block">
+                            <div className="relative">
+                                <Image
+                                    src={Hero2}
+                                    alt="hero image 2"
+                                    priority={false}
+                                    className="aspect-[3/2] rounded-2xl bg-gray-50 object-cover shadow-xl"
+                                />
+                            </div>
+                            <div className="relative">
+                                <Image
+                                    src={Hero3}
+                                    alt="hero image 2"
+                                    priority={false}
+                                    className="mt-4 aspect-[2/2.25] rounded-2xl bg-gray-50 object-cover shadow-xl"
+                                />
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="flex w-full justify-end sm:justify-start sm:gap-8 md:h-screen lg:max-w-full lg:gap-6">
-                        <Image
-                            src={Hero1}
-                            alt="hero image 1"
-                            priority={true}
-                            className="aspect-video h-full w-full object-cover object-bottom md:aspect-auto"
-                        />
+                        <div className="mt-16 hidden w-full md:block">
+                            <div className="relative">
+                                <Image
+                                    src={Hero4}
+                                    alt="hero image 2"
+                                    priority={false}
+                                    className="aspect-[2/2.25] rounded-2xl bg-gray-50 object-cover shadow-xl"
+                                />
+                            </div>
+                        </div>
+                        <div className="w-full">
+                            <div className="relative">
+                                <Image
+                                    src={Hero5}
+                                    alt="hero image 2"
+                                    priority={false}
+                                    className="aspect-video rounded-2xl bg-gray-50 object-cover shadow-xl md:aspect-[3/2]"
+                                />
+                            </div>
+                            <div className="relative">
+                                <Image
+                                    src={Hero6}
+                                    alt="hero image 2"
+                                    priority={false}
+                                    className="mt-4 aspect-video rounded-2xl bg-gray-50 object-cover shadow-xl md:aspect-[2/2.25]"
+                                />
+                            </div>
+                        </div>
+                        <div className="mt-16 hidden w-full lg:block">
+                            <div className="relative">
+                                <Image
+                                    src={Hero7}
+                                    alt="hero image 2"
+                                    priority={false}
+                                    className="aspect-[2/2.25] rounded-2xl bg-gray-50 object-cover shadow-xl"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,4 +122,4 @@ const C2 = () => {
     );
 };
 
-export default C2;
+export default S1;
