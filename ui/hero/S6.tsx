@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Hero1 from "@/public/images/hero/h13.jpg";
+import Hero1 from "@/public/images/hero/hero7.jpg";
 
 const Hero = () => {
     return (
@@ -45,7 +45,7 @@ const Hero = () => {
                             src={Hero1}
                             alt="hero image 1"
                             priority={true}
-                            className="aspect-video h-[50vh] w-full origin-right object-cover object-center md:aspect-auto md:h-[95vh]"
+                            className="aspect-video h-[50vh] w-full origin-right object-cover object-center md:aspect-auto md:h-[100vh]"
                         />
                     </div>
                 </div>

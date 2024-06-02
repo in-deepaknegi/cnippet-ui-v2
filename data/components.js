@@ -37,11 +37,13 @@ import H2 from "@/ui/hero/S2";
 import H3 from "@/ui/hero/S3";
 import H4 from "@/ui/hero/S4";
 import H5 from "@/ui/hero/S5";
+import H6 from "@/ui/hero/S6";
 import CH1 from "@/ui/hero/C1.mdx";
 import CH2 from "@/ui/hero/C2.mdx";
 import CH3 from "@/ui/hero/C3.mdx";
 import CH4 from "@/ui/hero/C4.mdx";
 import CH5 from "@/ui/hero/C5.mdx";
+import CH6 from "@/ui/hero/C6.mdx";
 
 import HE1 from "@/ui/header/S1";
 import HE2 from "@/ui/header/S2";
@@ -205,7 +207,7 @@ const components = [
         description: "The hero section showcases five dynamic hero components, designed to elevate the visual appeal of web pages.",
         image: Hero,
         imgurl: "/images/components/hero.png",
-        number: "5 components",
+        number: "6 components",
         data: [
             {
                 title: "Simple hero 1",
@@ -232,9 +234,15 @@ const components = [
                 pro: false,
             },
             {
-                title: "Simple hero 5",
+                title: "Pro hero 1",
                 component: <H5 />,
                 code: <CH5 />,
+                pro: true,
+            },
+            {
+                title: "Pro hero 2",
+                component: <H6 />,
+                code: <CH6 />,
                 pro: true,
             },
         ],
