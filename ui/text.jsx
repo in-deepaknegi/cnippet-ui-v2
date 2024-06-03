@@ -1,52 +1,28 @@
 import React from "react";
-import Image from "next/image";
-import Hero1 from "@/public/images/hero/h13.jpg";
 
-const Hero = () => {
+const S3 = () => {
     return (
-        <section className="relative isolate mb-20 bg-black/95">
-            <div className="mx-auto max-w-full px-6 md:max-w-[90%] md:px-8">
-                <div className="mx-auto space-x-0 space-y-10 md:flex md:space-x-6 md:space-y-0 lg:mx-0 lg:max-w-none">
-                    <div className="z-20 flex items-center overflow-visible pt-36 md:h-[87vh] md:pt-0">
-                        <div className="">
-                            <div className="relative z-50 max-w-full items-center text-3xl text-white md:text-7xl">
-                                <span> The only source of </span>
+        <section className="py-8 lg:py-16">
+            <div className="mx-auto max-w-full px-4 md:max-w-[95%] lg:px-8">
+                <div
+                    className="relative isolate overflow-hidden rounded-2xl bg-white shadow-xl shadow-gray-400"
+                    style={{
+                        backgroundImage: "url('/images/hero/h13.jpg')",
+                        backgroundPosition: "center",
+                        backgroundSize: "cover",
+                    }}
+                >
+                    <div className="absolute z-[-9] h-full w-full bg-gradient-to-t from-black/30 to-black/40"></div>
 
-                                <div className=" inline-flex items-center gap-6">
-                                    knowledge is experience
-                                    <span className="h-1 w-32 border bg-white md:w-48"></span>
-                                </div>
-                            </div>
-
-                            <p className="mt-8 max-w-xl text-base text-gray-300 lg:text-xl">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco.
-                            </p>
-                            <div className="mt-10 flex gap-x-6">
-                                <a
-                                    href="#"
-                                    className="max-w-md rounded-full bg-white px-5 py-2 font-swim text-base text-black shadow-sm"
-                                >
-                                    Get started
-                                </a>
-                                <a
-                                    href="#"
-                                    className="my-auto rounded-full border-gray-500 px-5 py-2 text-base text-white ring-1 ring-gray-500"
-                                >
-                                    Read more <span aria-hidden="true">→</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="right-0 flex h-full justify-end sm:justify-start md:absolute md:h-screen md:w-[50%] lg:max-w-full lg:gap-6">
-                        <Image
-                            src={Hero1}
-                            alt="hero image 1"
-                            priority={true}
-                            className="aspect-video h-[50vh] w-full origin-right object-cover object-center md:aspect-auto md:h-[95vh]"
-                        />
+                    <div className="mx-auto flex flex-col justify-between gap-y-5 px-6 py-8 text-center md:gap-x-10 md:py-20 lg:flex-row lg:px-8 lg:text-left">
+                        <h2 className="text-4xl font-semibold text-white md:text-6xl">
+                            Support center
+                        </h2>
+                        <p className="mt-auto max-w-xl text-center text-base text-gray-100 md:text-right md:text-lg">
+                            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+                            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+                            fugiat aliqua.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -54,4 +30,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default S3;
