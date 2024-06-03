@@ -49,10 +49,12 @@ import HE1 from "@/ui/header/S1";
 import HE2 from "@/ui/header/S2";
 import HE3 from "@/ui/header/S3";
 import HE4 from "@/ui/header/S4";
+import HE5 from "@/ui/header/S5";
 import CHE1 from "@/ui/header/C1.mdx";
 import CHE2 from "@/ui/header/C2.mdx";
 import CHE3 from "@/ui/header/C3.mdx";
 import CHE4 from "@/ui/header/C4.mdx";
+import CHE5 from "@/ui/header/C5.mdx";
 
 
 import FE1 from "@/ui/feature/S1";
@@ -256,7 +258,7 @@ const components = [
         description: "The header section offers three sleek header components designed to enhance web page aesthetics and functionality.",
         image: Header,
         imgurl: "/images/components/header.png",
-        number: "4 components",
+        number: "5 components",
         data: [
             {
                 title: "Simple header 1",
@@ -280,6 +282,12 @@ const components = [
                 title: "Pro header 2",
                 component: <HE4 />,
                 code: <CHE4 />,
+                pro: true,
+            },
+            {
+                title: "Pro header 3",
+                component: <HE5 />,
+                code: <CHE5 />,
                 pro: true,
             },
         ],

@@ -1,4 +1,6 @@
-"use client";
+```tsx
+// npm i react-icons 
+
 import React from "react";
 import Link from "next/link";
 
@@ -18,7 +20,7 @@ const social = [
     },
 ];
 
-const Hero = () => {
+const Header = () => {
     return (
         <section className="relative isolate bg-white py-8 font-swir lg:py-16">
             <div className="mx-auto max-w-full px-4 md:max-w-[90%] lg:px-8 ">
@@ -28,7 +30,7 @@ const Hero = () => {
                             <span className="h-0.5 w-16 bg-black"></span>
                             The web is the world&apos;s largest library
                         </p>
-                        <h1 className="mt-6 text-center text-4xl text-black md:text-left md:text-7xl">
+                        <h1 className="mt-6 text-center text-4xl text-black md:text-left md:text-6xl">
                             Website Development
                         </h1>
                         <p className="mt-8 max-w-xl text-center text-lg text-gray-700 md:text-left md:text-lg">
@@ -71,4 +73,5 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Header;
+```
