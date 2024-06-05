@@ -38,6 +38,8 @@ const Auth = ({ components }) => {
     //     section.scrollIntoView({ behavior: 'smooth' });
     // };
 
+    console.log(nonComponents);
+
     return (
         <div className="mt-10 space-y-28 bg-white pb-px">
             {nonComponents.map((component, index) => (
@@ -47,12 +49,18 @@ const Auth = ({ components }) => {
                             <h2 className="truncate text-base font-medium leading-7 text-slate-900">
                                 {component.title}
                             </h2>
-                            <p className="ml-3 hidden whitespace-nowrap rounded-lg bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block">
-                                TailwindCss
-                            </p>
-                            <p className="ml-3 hidden whitespace-nowrap rounded-lg bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
-                                React
-                            </p>
+
+                            {component.tech.slice(0, 2).map((p, q) => (
+                                <p key={q} className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block">
+                                    {p}
+                                </p>
+                            ))}
+
+                            {component.tech.slice(2).map((p, q) => (
+                                <p key={q} className="ml-3 hidden whitespace-nowrap rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
+                                    {p}
+                                </p>
+                            ))}
                         </div>
                         <div className="p-0.5">
                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
@@ -124,12 +132,17 @@ const Auth = ({ components }) => {
                             <h2 className="truncate text-base font-medium leading-7 text-slate-900">
                                 {component.title}
                             </h2>
-                            <p className="ml-3 hidden whitespace-nowrap rounded-lg bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block">
-                                TailwindCss
-                            </p>
-                            <p className="ml-3 hidden whitespace-nowrap rounded-lg bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
-                                React
-                            </p>
+                            {component.tech.slice(0, 2).map((p, q) => (
+                                <p key={q} className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block">
+                                    {p}
+                                </p>
+                            ))}
+
+                            {component.tech.slice(2).map((p, q) => (
+                                <p key={q} className="ml-3 hidden whitespace-nowrap rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
+                                    {p}
+                                </p>
+                            ))}
                         </div>
                         <div className="p-0.5">
                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">

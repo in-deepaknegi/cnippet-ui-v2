@@ -26,9 +26,12 @@ const authOptions = {
 
                 const userExists = await User.findOne({ email });
 
-                
+                // resend email schema for everyone
+
                 if (!userExists) {
                     await User.create({ name, email });
+
+                    // resend email schema for first time user only
 
                     try {
                         const res = await fetch(`${process.env.NEXTAUTH_URL}/api/resend/`, {
@@ -38,10 +41,10 @@ const authOptions = {
                             },
                             body: JSON.stringify({ name, email }),
                         });
-    
+
                         const json = await res.json();
                         console.log(json);
-    
+
                     } catch (error) {
                         console.error("Error:", error);
                     }

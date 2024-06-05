@@ -1,14 +1,24 @@
 ```tsx
 import React from "react";
 import Image from "next/image";
-import Hero1 from "@/public/images/hero/hero8.jpg";
+import Hero1 from "@/public/images/hero/hero1.jpg";
 
 const features = [
     {
-        name: "Push to deploy",
-        description: "Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.",
+        name: "Short heading here",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
     },
-    // add more data here ...
+    {
+        name: "Short heading here",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    },
+    {
+        name: "Short heading here",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    },
 ];
 
 const Feature = () => {
@@ -17,18 +27,19 @@ const Feature = () => {
             <div className="mx-auto max-w-full px-6 md:max-w-[90%] lg:px-8">
                 <div className="mx-auto flex h-full flex-col gap-x-0 gap-y-10 lg:flex-row lg:gap-x-10 lg:gap-y-0">
                     <div className="order-last max-w-full lg:order-first">
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                            Everything you need to deploy your app
-                        </h2>
-                        <p className="mt-6 text-base text-gray-700 md:text-lg">
-                            Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-                            Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-                            at. In mi viverra elit nunc.
+                        <h1 className="max-w-3xl text-center text-5xl font-semibold text-black md:text-left md:text-5xl">
+                            The only source of knowledge is experience
+                        </h1>
+                        <p className="mt-6 max-w-3xl text-base text-gray-700 md:text-lg">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Vulputate eu scelerisque felis imperdiet proin fermentum. Aenean
+                            et tortor at risus.
                         </p>
 
-                        <ul className="ml-5 mt-10 max-w-xl space-y-2 text-base leading-7 text-gray-700 lg:max-w-none">
+                        <ul className="ml-5 mt-8 max-w-full space-y-2">
                             {features.map((feature, i) => (
-                                <li key={i} className="list-disc">
+                                <li key={i} className="list-disc text-base text-gray-700">
                                     <span className="font-semibold text-black">
                                         {feature.name}:{" "}
                                     </span>
@@ -37,18 +48,20 @@ const Feature = () => {
                             ))}
                         </ul>
 
-                        <div className="mt-10 flex gap-x-6">
+                        <div className="mt-8 flex gap-x-6">
                             <a
                                 href="#"
-                                className="rounded-full bg-black px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800"
+                                type="submit"
+                                className="max-w-md rounded-full bg-black px-4 py-2 text-base text-white shadow-sm"
                             >
-                                Discover more
+                                Get started
                             </a>
                             <a
                                 href="#"
-                                className="my-auto text-sm font-semibold leading-6 text-gray-900"
+                                type="submit"
+                                className="max-w-md py-2 text-base text-black"
                             >
-                                Join us <span aria-hidden="true">→</span>
+                                Read more <span aria-hidden="true">→</span>
                             </a>
                         </div>
                     </div>
