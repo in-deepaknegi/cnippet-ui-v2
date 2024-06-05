@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Hero1 from "@/public/images/hero/h12.jpg";
+import Hero1 from "@/public/images/hero/h13.jpg";
 
 const tracks = [
     {
@@ -19,10 +19,10 @@ const tracks = [
 
 const Features = () => {
     return (
-        <section className="isolate mb-20 bg-white font-swir md:h-screen">
+        <section className="relative isolate bg-white md:h-screen">
             <div className="absolute h-full w-1/2 bg-slate-100 md:w-1/3"></div>
-            <div className="relative mx-auto max-w-full px-6 md:max-w-[90%] lg:px-8">
-                <div className="mx-auto flex flex-col space-x-0 space-y-10 md:space-x-6 md:space-y-0 lg:mx-0 lg:max-w-none">
+            <div className="relative isolate mx-auto max-w-full px-6 md:max-w-[97%] lg:px-8">
+                <div className="mx-auto flex flex-col">
                     <div className="top-32 flex flex-col justify-end sm:justify-start sm:gap-2 md:absolute md:h-screen md:flex-row lg:max-w-full lg:gap-10">
                         <ul className="flex flex-row flex-wrap gap-4 md:flex-col md:gap-10">
                             {tracks.map((item, i) => (
@@ -45,20 +45,21 @@ const Features = () => {
                         />
                     </div>
 
-                    <div className="z-20 order-first flex w-full items-center justify-center overflow-visible text-left md:ml-auto md:h-screen md:justify-end md:text-right">
+                    <div className="z-20 order-first flex w-full items-center justify-center overflow-visible text-left md:h-screen md:justify-end md:text-right">
                         <div className="">
-                            <h1 className="relative max-w-2xl font-swim text-5xl text-black md:text-6xl">
-                                The best combination of modernity & simplicity
+                            <h1 className="relative max-w-2xl text-5xl font-semibold text-black md:text-5xl">
+                                The only source of knowledge is experience
                             </h1>
-                            <p className="ml-auto mt-6 max-w-lg text-base text-gray-900 lg:text-xl">
+                            <p className="ml-auto mt-6 max-w-lg text-base text-gray-900 lg:text-lg">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco.
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Vulputate eu scelerisque felis imperdiet proin fermentum. Aenean
+                                et tortor at risus.
                             </p>
                             <div className="mt-10 flex justify-start gap-x-6 md:justify-end">
                                 <a
                                     href="#"
-                                    className="max-w-md rounded-full bg-black px-5 py-2 font-swim text-base text-white shadow-sm"
+                                    className="max-w-md rounded-full bg-black px-5 py-2 text-base text-white shadow-sm"
                                 >
                                     Get started
                                 </a>

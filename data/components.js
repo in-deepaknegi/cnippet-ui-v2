@@ -58,11 +58,12 @@ import CHE3 from "@/ui/header/C3.mdx";
 import CHE4 from "@/ui/header/C4.mdx";
 import CHE5 from "@/ui/header/C5.mdx";
 
-
 import FE1 from "@/ui/feature/S1";
 import FE2 from "@/ui/feature/S2";
+import FE3 from "@/ui/feature/S3";
 import CFE1 from "@/ui/feature/C1.mdx";
 import CFE2 from "@/ui/feature/C2.mdx";
+import CFE3 from "@/ui/feature/C3.mdx";
 
 import FL1 from "@/ui/feature-list/S1";
 import FL2 from "@/ui/feature-list/S2";
@@ -340,6 +341,13 @@ const components = [
                 code: <CFE2 />,
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: false,
+            },
+            {
+                title: "Pro feature section 1",
+                component: <FE3 />,
+                code: <CFE3 />,
+                tech: ["React", "Tailwindcss", "JavaScript"],
+                pro: true,
             },
         ],
     },

@@ -48,7 +48,7 @@ const Feature1 = () => {
                         <div className="mt-8 flex gap-x-6">
                             <a
                                 href="#"
-                                className="max-w-md rounded-full bg-black px-4 py-2 text-base text-white shadow-sm"
+                                className="max-w-md rounded-full bg-black px-5 py-2 text-base text-white shadow-sm"
                             >
                                 Get started
                             </a>
