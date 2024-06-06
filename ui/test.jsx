@@ -1,81 +1,73 @@
 import React from "react";
-import Image from "next/image";
-import Hero1 from "@/public/images/hero/h13.jpg";
+import { FaBuffer, FaCheckToSlot, FaArrowRightLong } from "react-icons/fa6";
+import { MdOutlineGraphicEq } from "react-icons/md";
 
-const tracks = [
+const features = [
     {
-        title: "Succesfull projects",
-        value: "340+",
+        name: "Short heading here",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        svg: <FaBuffer className="h-6 w-6 text-black" />,
     },
     {
-        title: "Team members",
-        value: "65+",
+        name: "Short heading here",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        svg: <FaCheckToSlot className="h-6 w-6 text-black" />,
     },
     {
-        title: "Happy clients",
-        value: "80+",
+        name: "Short heading here",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        svg: <MdOutlineGraphicEq className="h-6 w-6 text-black" />,
     },
 ];
 
-const Features = () => {
+const List1 = () => {
     return (
-        <section className="relative isolate bg-white md:h-screen">
-            <div className="absolute h-full w-1/2 bg-slate-100 md:w-1/3"></div>
-            <div className="relative isolate mx-auto max-w-full px-6 md:max-w-[90%] lg:px-8">
-                <div className="mx-auto flex flex-col">
-                    <div className="top-32 flex flex-col justify-end sm:justify-start sm:gap-2 md:absolute md:h-screen md:flex-row lg:max-w-full lg:gap-10">
-                        <ul className="flex flex-row flex-wrap gap-4 md:flex-col md:gap-10">
-                            {tracks.map((item, i) => (
-                                <li
-                                    key={i}
-                                    className="items-left flex flex-col border-gray-300 py-8 text-4xl font-semibold tracking-wider md:border-b md:text-6xl"
-                                >
-                                    {item.value}
-                                    <span className="text-sm font-medium tracking-normal md:text-lg">
-                                        {item.title}
-                                    </span>
-                                </li>
-                            ))}
-                        </ul>
-                        <Image
-                            src={Hero1}
-                            alt="hero image 1"
-                            priority={true}
-                            className="h-[40vh] w-full max-w-xl object-cover object-center md:h-[75vh]"
-                        />
-                    </div>
-
-                    <div className="z-20 order-first flex w-full items-center justify-center overflow-visible text-left md:h-screen md:justify-end md:text-right">
-                        <div className="">
-                            <h1 className="relative max-w-2xl text-5xl font-semibold text-black md:text-5xl">
-                                The only source of knowledge is experience
-                            </h1>
-                            <p className="ml-auto mt-6 max-w-lg text-base text-gray-900 lg:text-lg">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Vulputate eu scelerisque felis imperdiet proin fermentum. Aenean
-                                et tortor at risus.
-                            </p>
-                            <div className="mt-10 flex justify-start gap-x-6 md:justify-end">
-                                <a
-                                    href="#"
-                                    className="max-w-md rounded-full bg-black px-5 py-2 text-base text-white shadow-sm"
-                                >
-                                    Get started
-                                </a>
-                                <a
-                                    href="#"
-                                    className="my-auto rounded-full border-gray-500 px-5 py-2 text-base text-black ring-1 ring-gray-500"
-                                >
-                                    Read more <span aria-hidden="true">→</span>
-                                </a>
+        <section className="relative isolate bg-white py-24 sm:py-28">
+            <div className="mx-auto max-w-full px-6 md:max-w-[90%] lg:px-8">
+                <div className="mx-auto max-w-3xl text-center">
+                    <h2 className="mt-2 text-3xl font-semibold text-gray-900 sm:text-5xl">
+                        The only source of knowledge is experience
+                    </h2>
+                    <p className="mt-6 max-w-3xl text-base text-gray-700 md:text-lg">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Vulputate eu scelerisque felis imperdiet proin fermentum. Aenean et
+                        tortor at risus.
+                    </p>
+                </div>
+                <div className="mx-auto max-w-2xl sm:mt-10 lg:mt-20 lg:max-w-none">
+                    <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
+                        {features.map((feature, i) => (
+                            <div key={i} className="flex flex-col">
+                                <dt className="flex gap-x-3 text-center text-lg font-semibold">
+                                    {feature.svg}
+                                    {feature.name}
+                                </dt>
+                                <dd className="relative mt-4 flex flex-auto flex-col">
+                                    <p className="flex-auto text-base text-gray-600">
+                                        {feature.description}
+                                    </p>
+                                    <p className="mt-6 cursor-pointer overflow-hidden">
+                                        <a
+                                            href={feature.href}
+                                            className="group flex items-center gap-3 text-sm font-semibold leading-6 text-gray-800 hover:text-black"
+                                        >
+                                            <span className=" absolute inset-0"></span>
+                                            Learn more
+                                            <FaArrowRightLong className=" -translate-x-36 text-gray-700 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:text-black" />
+                                        </a>
+                                    </p>
+                                </dd>
                             </div>
-                        </div>
-                    </div>
+                        ))}
+                    </dl>
                 </div>
             </div>
         </section>
     );
 };
 
-export default Features;
+export default List1;

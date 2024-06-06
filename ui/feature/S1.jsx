@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Hero1 from "@/public/images/hero/hero8.jpg";
+import Hero1 from "@/public/images/hero/h12.jpg";
 
 const features = [
     {
@@ -64,7 +64,7 @@ const Feature1 = () => {
                             </a>
                         </div>
                     </div>
-                    <div className="relative order-first mx-auto lg:order-last lg:max-w-[40%]">
+                    <div className="relative order-first mx-auto lg:order-last lg:max-w-[45%]">
                         <Image
                             src={Hero1}
                             alt="Product screenshot"
