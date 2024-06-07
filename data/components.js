@@ -4,17 +4,17 @@ import Hero from "@/public/images/components/hero.png";
 import Header from "@/public/images/components/header.png";
 import Feature from "@/public/images/components/feature.png";
 import FeatureList from "@/public/images/components/feature-list.png";
-import FlyoutMenu from '@/public/images/components/flyout.png';
+import FlyoutMenu from "@/public/images/components/flyout.png";
 import Feedback from "@/public/images/components/feedback.png";
 import Newsletter from "@/public/images/components/newsletter.png";
 import Blogs from "@/public/images/components/blogs.png";
-import Pricing from '@/public/images/components/pricing.png';
-import Hiw from '@/public/images/components/hiw.png';
-import Container from '@/public/images/components/container.png';
-import Faq from '@/public/images/components/faq.png';
+import Pricing from "@/public/images/components/pricing.png";
+import Hiw from "@/public/images/components/hiw.png";
+import Container from "@/public/images/components/container.png";
+import Faq from "@/public/images/components/faq.png";
 import Article from "@/public/images/components/article.png";
-import Logo from '@/public/images/components/logo.png';
-import Team from '@/public/images/components/team.png';
+import Logo from "@/public/images/components/logo.png";
+import Team from "@/public/images/components/team.png";
 
 import N1 from "@/ui/navbar/S1";
 import N2 from "@/ui/navbar/S2";
@@ -115,41 +115,41 @@ import HI2 from "@/ui/hiw/S2";
 import CHI1 from "@/ui/hiw/C1.mdx";
 import CHI2 from "@/ui/hiw/C2.mdx";
 
-import CON1 from '@/ui/container/S1';
-import CON2 from '@/ui/container/S2';
-import CCON1 from '@/ui/container/C1.mdx';
-import CCON2 from '@/ui/container/C2.mdx';
+import CON1 from "@/ui/container/S1";
+import CON2 from "@/ui/container/S2";
+import CCON1 from "@/ui/container/C1.mdx";
+import CCON2 from "@/ui/container/C2.mdx";
 
-import FAQ1 from '@/ui/faq/S1';
-import FAQ2 from '@/ui/faq/S2';
-import CFAQ1 from '@/ui/faq/C1.mdx';
-import CFAQ2 from '@/ui/faq/C2.mdx';
+import FAQ1 from "@/ui/faq/S1";
+import FAQ2 from "@/ui/faq/S2";
+import CFAQ1 from "@/ui/faq/C1.mdx";
+import CFAQ2 from "@/ui/faq/C2.mdx";
 
-import AR1 from '@/ui/article/S1';
-import AR2 from '@/ui/article/S2';
-import AR3 from '@/ui/article/S3';
-import CAR1 from '@/ui/article/C1.mdx';
-import CAR2 from '@/ui/article/C2.mdx';
-import CAR3 from '@/ui/article/C3.mdx';
+import AR1 from "@/ui/article/S1";
+import AR2 from "@/ui/article/S2";
+import AR3 from "@/ui/article/S3";
+import CAR1 from "@/ui/article/C1.mdx";
+import CAR2 from "@/ui/article/C2.mdx";
+import CAR3 from "@/ui/article/C3.mdx";
 
-import LG1 from '@/ui/logo/S1'
-import LG2 from '@/ui/logo/S2'
-import LG3 from '@/ui/logo/S3'
-import CLG1 from '@/ui/logo/C1.mdx'
-import CLG2 from '@/ui/logo/C2.mdx'
-import CLG3 from '@/ui/logo/C3.mdx'
+import LG1 from "@/ui/logo/S1";
+import LG2 from "@/ui/logo/S2";
+import LG3 from "@/ui/logo/S3";
+import CLG1 from "@/ui/logo/C1.mdx";
+import CLG2 from "@/ui/logo/C2.mdx";
+import CLG3 from "@/ui/logo/C3.mdx";
 
-import TE1 from '@/ui/team/S1';
-import TE2 from '@/ui/team/S2';
-import CTE1 from '@/ui/team/C1.mdx';
-import CTE2 from '@/ui/team/C1.mdx';
-
+import TE1 from "@/ui/team/S1";
+import TE2 from "@/ui/team/S2";
+import CTE1 from "@/ui/team/C1.mdx";
+import CTE2 from "@/ui/team/C1.mdx";
 
 const components = [
     {
         slug: "navbar",
         name: "Navbar",
-        description: "The 'Navbar' section provides four variations of navigation bar components, offering simple and sticky navigation options with corresponding code snippets for easy integration.",
+        description:
+            "The 'Navbar' section provides four variations of navigation bar components, offering simple and sticky navigation options with corresponding code snippets for easy integration.",
         image: Navbar,
         imgurl: "/images/components/navbar.png",
         number: "4 components",
@@ -174,7 +174,6 @@ const components = [
                 code: <CN3 />,
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: false,
-
             },
             {
                 title: "Simple sticky navbar 4",
@@ -190,7 +189,8 @@ const components = [
     {
         slug: "footer",
         name: "Footer",
-        description: "The Footer section consists of two footer components designed to enhance web interfaces.",
+        description:
+            "The Footer section consists of two footer components designed to enhance web interfaces.",
         image: Footer,
         imgurl: "/images/components/footer.png",
         number: "3 components",
@@ -223,7 +223,8 @@ const components = [
     {
         slug: "hero",
         name: "Hero",
-        description: "The hero section showcases five dynamic hero components, designed to elevate the visual appeal of web pages.",
+        description:
+            "The hero section showcases five dynamic hero components, designed to elevate the visual appeal of web pages.",
         image: Hero,
         imgurl: "/images/components/hero.png",
         number: "7 components",
@@ -288,7 +289,8 @@ const components = [
     {
         slug: "header",
         name: "Header",
-        description: "The header section offers three sleek header components designed to enhance web page aesthetics and functionality.",
+        description:
+            "The header section offers three sleek header components designed to enhance web page aesthetics and functionality.",
         image: Header,
         imgurl: "/images/components/header.png",
         number: "5 components",
@@ -333,7 +335,8 @@ const components = [
     {
         slug: "feature",
         name: "Feature",
-        description: "The feature section presents two versatile feature components for enhancing web interfaces, each with accompanying code snippets.",
+        description:
+            "The feature section presents two versatile feature components for enhancing web interfaces, each with accompanying code snippets.",
         image: Feature,
         imgurl: "/images/components/feature.png",
         number: "2 components",
@@ -364,7 +367,8 @@ const components = [
     {
         slug: "feature-list",
         name: "Feature List",
-        description: "The feature-list section offers three versatile feature list components for enriching web interfaces, each accompanied by code snippets.",
+        description:
+            "The feature-list section offers three versatile feature list components for enriching web interfaces, each accompanied by code snippets.",
         image: FeatureList,
         imgurl: "/images/components/feature-list.png",
         number: "3 components",
@@ -398,7 +402,8 @@ const components = [
     {
         slug: "flyout-menu",
         name: "Flyout Menu",
-        description: "The flyout-menu section provides three user-friendly fly-out menu components, each designed to enhance navigation experiences on web interfaces. ",
+        description:
+            "The flyout-menu section provides three user-friendly fly-out menu components, each designed to enhance navigation experiences on web interfaces. ",
         image: FlyoutMenu,
         imgurl: "/images/components/flyout.png",
         number: "3 components",
@@ -435,7 +440,8 @@ const components = [
     {
         slug: "feedback",
         name: "Feedback",
-        description: "The feedback section presents four feedback components, simplifying user interactions on web interfaces.",
+        description:
+            "The feedback section presents four feedback components, simplifying user interactions on web interfaces.",
         image: Feedback,
         imgurl: "/images/components/feedback.png",
         number: "4 components",
@@ -464,7 +470,9 @@ const components = [
             {
                 title: "Simple feedback 4",
                 component: <FED4 />,
-                code: <CFED4 />,
+                code: {
+                    javascript: <CFED4 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
@@ -473,7 +481,8 @@ const components = [
     {
         slug: "newsletter",
         name: "Newsletter",
-        description: "The newsletter section features four straightforward newsletter components, facilitating easy integration into web interfaces with accompanying code snippets.",
+        description:
+            "The newsletter section features four straightforward newsletter components, facilitating easy integration into web interfaces with accompanying code snippets.",
         image: Newsletter,
         imgurl: "/images/components/newsletter.png",
         number: "4 components",
@@ -495,14 +504,18 @@ const components = [
             {
                 title: "Simple newsletter 3",
                 component: <NL3 />,
-                code: <CNL3 />,
+                code: {
+                    javascript: <CNL3 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
             {
                 title: "Simple newsletter 3",
                 component: <NL4 />,
-                code: <CNL4 />,
+                code: {
+                    javascript: <CNL4 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
@@ -511,7 +524,8 @@ const components = [
     {
         slug: "blogs",
         name: "Blogs",
-        description: "The blogs section presents four straightforward blog components, each designed for easy integration into web interfaces with accompanying code snippets",
+        description:
+            "The blogs section presents four straightforward blog components, each designed for easy integration into web interfaces with accompanying code snippets",
         image: Blogs,
         imgurl: "/images/components/blogs.png",
         number: "4 components",
@@ -533,15 +547,19 @@ const components = [
             {
                 title: "Simple blog 3",
                 component: <BL3 />,
-                code: <CBL3 />,
-                tech: ["React", "Tailwindcss", "JavaScript"],
+                code: {
+                    javascript: <CBL3 />,
+                },
+                tech: ["React", "Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
             {
                 title: "Simple blog 4",
                 component: <BL4 />,
-                code: <CBL4 />,
-                tech: ["React", "Tailwindcss", "JavaScript"],
+                code: {
+                    javascript: <CBL4 />,
+                },
+                tech: ["React", "Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
         ],
@@ -549,7 +567,8 @@ const components = [
     {
         slug: "pricing",
         name: "Pricing",
-        description: "The pricing section offers two straightforward pricing components, each designed for easy integration into web interfaces with accompanying code snippets.",
+        description:
+            "The pricing section offers two straightforward pricing components, each designed for easy integration into web interfaces with accompanying code snippets.",
         image: Pricing,
         imgurl: "/images/components/pricing.png",
         number: "2 components",
@@ -564,6 +583,9 @@ const components = [
             {
                 title: "Simple pricing 2",
                 component: <PR2 />,
+                code: {
+                    javascript: <CPR1 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
@@ -572,7 +594,8 @@ const components = [
     {
         slug: "hiw",
         name: "How it works",
-        description: "The how-it-works section presents two straightforward components explaining processes, each designed for easy integration into web interfaces with accompanying code snippets",
+        description:
+            "The how-it-works section presents two straightforward components explaining processes, each designed for easy integration into web interfaces with accompanying code snippets",
         image: Hiw,
         imgurl: "/images/components/hiw.png",
         number: "2 components",
@@ -587,8 +610,10 @@ const components = [
             {
                 title: "Simple how-it-works 2",
                 component: <HI2 />,
-                code: <CHI2 />,
-                tech: ["React", "Tailwindcss", "JavaScript"],
+                code: {
+                    javascript: <CHI2 />,
+                },
+                tech: ["React", "Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
         ],
@@ -596,7 +621,8 @@ const components = [
     {
         slug: "container",
         name: "Container",
-        description: "The container section provides two simple container components, one utilizing grid and the other flex, with corresponding code snippets for easy integration into web interfaces",
+        description:
+            "The container section provides two simple container components, one utilizing grid and the other flex, with corresponding code snippets for easy integration into web interfaces",
         image: Container,
         imgurl: "/images/components/container.png",
         number: "2 components",
@@ -620,7 +646,8 @@ const components = [
     {
         slug: "faq",
         name: "FAQ",
-        description: "The frequently-asked-questions section offers two straightforward FAQ components, each designed for easy integration into web interfaces with accompanying code snippets.",
+        description:
+            "The frequently-asked-questions section offers two straightforward FAQ components, each designed for easy integration into web interfaces with accompanying code snippets.",
         image: Faq,
         imgurl: "/images/components/faq.png",
         number: "2 components",
@@ -635,8 +662,10 @@ const components = [
             {
                 title: "Simple faq 2",
                 component: <FAQ2 />,
-                code: <CFAQ2 />,
-                tech: ["React", "Tailwindcss", "JavaScript"],
+                code: {
+                    javascript: <CFAQ2 />,
+                },
+                tech: ["React", "Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
         ],
@@ -644,7 +673,8 @@ const components = [
     {
         slug: "article",
         name: "Article",
-        description: "The article section presents three straightforward article components, each designed for seamless integration into web interfaces with accompanying code snippets.",
+        description:
+            "The article section presents three straightforward article components, each designed for seamless integration into web interfaces with accompanying code snippets.",
         image: Article,
         imgurl: "/images/components/article.png",
         number: "3 components",
@@ -666,8 +696,10 @@ const components = [
             {
                 title: "Simple article 3",
                 component: <AR3 />,
-                code: <CAR3 />,
-                tech: ["React", "Tailwindcss", "JavaScript"],
+                code: {
+                    javascript: <CAR3 />,
+                },
+                tech: ["React", "Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
         ],
@@ -675,7 +707,8 @@ const components = [
     {
         slug: "logo",
         name: "Logo",
-        description: "The logo section features three straightforward logo components, each designed for easy integration into web interfaces with corresponding code snippets.",
+        description:
+            "The logo section features three straightforward logo components, each designed for easy integration into web interfaces with corresponding code snippets.",
         image: Logo,
         imgurl: "/images/components/logo.png",
         number: "3 components",
@@ -697,8 +730,10 @@ const components = [
             {
                 title: "Simple logo section 3",
                 component: <LG3 />,
-                code: <CLG3 />,
-                tech: ["React", "Tailwindcss", "JavaScript"],
+                code: {
+                    javascript: <CLG3 />,
+                },
+                tech: ["React", "Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
         ],
@@ -706,7 +741,8 @@ const components = [
     {
         slug: "team",
         name: "Team",
-        description: "The team section offers three simple team components, each designed for easy integration into web interfaces with corresponding code snippets.",
+        description:
+            "The team section offers three simple team components, each designed for easy integration into web interfaces with corresponding code snippets.",
         image: Team,
         imgurl: "/images/components/team.png",
         number: "3 components",
@@ -721,8 +757,10 @@ const components = [
             {
                 title: "Simple team section 2",
                 component: <TE2 />,
-                code: <CTE2 />,
-                tech: ["React", "Tailwindcss", "JavaScript"],
+                code: {
+                    javascript: <CTE2 />,
+                },
+                tech: ["React", "Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
         ],
