@@ -9,13 +9,13 @@ import Payment from '@/components/routes/home/Pricing';
 const Auth = ({ components }) => {
     const [activeTab, setActiveTab] = useState([0, 0, 0, 0, 0]);
     const [activeTab1, setActiveTab1] = useState([0, 0, 0, 0, 0]);
+    const [language, setLanguage] = useState(components.map(() => 'javascript'));
     const { data: session } = useSession();
 
     const email = session?.user?.email;
     // console.log(email);
     const { pro } = fetchPro(email);
 
-    // console.log(pro); //displayed in browser
 
     const changeTab = (index, tabIndex) => {
         const newActiveTab = [...activeTab];
@@ -28,17 +28,16 @@ const Auth = ({ components }) => {
         setActiveTab1(newActiveTab);
     };
 
+    const handleLanguageChange = (index, value) => {
+        const newSelectedLanguages = [...language];
+        newSelectedLanguages[index] = value;
+        setLanguage(newSelectedLanguages);
+    };
+
     const nonComponents = components.filter(component => component.pro === false);
 
     const proComponents = components.filter(component => component.pro === true);
     // console.log(proComponents)
-
-    // const scrollToSection = (id) => {
-    //     const section = document.getElementById(id);
-    //     section.scrollIntoView({ behavior: 'smooth' });
-    // };
-
-    console.log(nonComponents);
 
     return (
         <div className="mt-10 space-y-28 bg-white pb-px">
@@ -144,7 +143,7 @@ const Auth = ({ components }) => {
                                 </p>
                             ))}
                         </div>
-                        <div className="p-0.5">
+                        <div className="p-0.5 flex gap-10 items-center">
                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
                                 <button
                                     onClick={() => changeTab1(index, 0)}
@@ -216,6 +215,17 @@ const Auth = ({ components }) => {
                                         </span>
                                     </button>
                                 )}
+                            </div>
+
+                            <div className='border-l-2 pl-4'>
+                                <select
+                                  value={language[index]}
+                                  onChange={(e) => handleLanguageChange(index, e.target.value)}
+                                    className="px-2 py-1 text-sm font-semibold text-slate-900"
+                                >
+                                    <option value="javascript">JavaScript</option>
+                                    <option value="typescript">TypeScript</option>
+                                </select>
 
                             </div>
                         </div>
@@ -225,7 +235,7 @@ const Auth = ({ components }) => {
                                 component.component
                             ) : (
                                 <div className="overflow-y-auto break-words text-sm">
-                                    {component.code}
+                                    {component.code[language[index]]}
                                 </div>
                             )}
                         </div>

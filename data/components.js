@@ -179,7 +179,9 @@ const components = [
             {
                 title: "Simple sticky navbar 4",
                 component: <N4 />,
-                code: <CN4 />,
+                code: {
+                    javascript: <CN4 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
@@ -210,7 +212,9 @@ const components = [
             {
                 title: "Simple footer 3",
                 component: <F3 />,
-                code: <CF3 />,
+                code: {
+                    javascript: <CF3 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
@@ -255,21 +259,27 @@ const components = [
             {
                 title: "Pro hero 1",
                 component: <H5 />,
-                code: <CH5 />,
+                code: {
+                    javascript: <CH5 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
             {
                 title: "Pro hero 2",
                 component: <H6 />,
-                code: <CH6 />,
+                code: {
+                    javascript: <CH6 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
             {
                 title: "Pro hero 3",
                 component: <H7 />,
-                code: <CH7 />,
+                code: {
+                    javascript: <CH7 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
@@ -376,7 +386,10 @@ const components = [
             {
                 title: "Pro feature list section 1",
                 component: <FL3 />,
-                code: <CFL3 />,
+                code: {
+                    javascript: <CFL3 />,
+                    typescript: <CN1 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
@@ -393,21 +406,27 @@ const components = [
             {
                 title: "Simple fly-out menu 1",
                 component: <FM1 />,
-                code: <CFM1 />,
+                code: {
+                    javascript: <CFM1 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
             {
                 title: "Simple fly-out menu 2",
                 component: <FM2 />,
-                code: <CFM2 />,
+                code: {
+                    javascript: <CFM2 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
             {
                 title: "Simple fly-out menu 3",
                 component: <FM3 />,
-                code: <CFM3 />,
+                code: {
+                    javascript: <CFM3 />,
+                },
                 tech: ["React", "Tailwindcss", "JavaScript"],
                 pro: true,
             },
