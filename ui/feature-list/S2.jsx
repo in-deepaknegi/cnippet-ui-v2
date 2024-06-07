@@ -1,20 +1,28 @@
 import React from "react";
+import { FaBuffer, FaCheckToSlot, FaArrowRightLong } from "react-icons/fa6";
+import { MdOutlineGraphicEq } from "react-icons/md";
 
 const features = [
     {
-        title: "Push to deploy",
-        para: "Commodo nec sagittis tortor mauris sed. Turpis tortor quis scelerisque diam id accumsan nullam tempus. Pulvinar etiam lacus volutpat eu. Phasellus praesent ligula sit faucibus.",
+        name: "Short heading here",
         href: "#",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        svg: <FaBuffer className="h-6 w-6 text-black" />,
     },
     {
-        title: "SSL certificates",
-        para: "Pellentesque enim a commodo malesuada turpis eleifend risus. Facilisis donec placerat sapien consequat tempor fermentum nibh.",
+        name: "Short heading here",
         href: "#",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        svg: <FaCheckToSlot className="h-6 w-6 text-black" />,
     },
     {
-        title: "Simple queues",
-        para: "Pellentesque sit elit congue ante nec amet. Dolor aenean curabitur viverra suspendisse iaculis eget. Nec mollis placerat ultricies euismod ut condimentum.",
+        name: "Short heading here",
         href: "#",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        svg: <MdOutlineGraphicEq className="h-6 w-6 text-black" />,
     },
 ];
 
@@ -23,51 +31,36 @@ const List2 = () => {
         <section className="bg-white py-24 sm:py-28">
             <div className="mx-auto grid max-w-full px-6 md:max-w-[90%] lg:grid-cols-2 lg:px-8">
                 <div className="mx-auto max-w-2xl text-left">
-                    <h2 className="text-base font-semibold leading-7 text-blue-700">
-                        Deploy faster
+                    <h2 className="text-3xl font-semibold text-gray-900 sm:text-5xl">
+                        The only source of knowledge is experience
                     </h2>
-                    <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Everything you need to deploy your app
-                    </p>
-                    <p className="mt-6 text-lg leading-8 text-gray-600">
-                        Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-                        Suspendisse eget egestas a elementum pulvinar et feugiat blandit at.
-                        In mi viverra elit nunc.
+                    <p className="mt-6 max-w-3xl text-base text-gray-700 md:text-lg">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Vulputate eu scelerisque felis imperdiet proin fermentum. Aenean et
+                        tortor at risus.
                     </p>
                 </div>
                 <div className="mx-auto mt-16 max-w-2xl lg:mt-0 lg:max-w-none lg:px-10">
-                    <dl className="flex flex-col space-y-10">
+                    <dl className="flex max-w-full flex-col gap-10 lg:max-w-none">
                         {features.map((feature, i) => (
-                            <div key={i} className="h-full w-full">
-                                <dt className="flex gap-x-3 text-center text-base font-semibold leading-7">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        className="h-6 w-6 text-black"
-                                    >
-                                        <path d="M20 7h-9" />
-                                        <path d="M14 17H5" />
-                                        <circle cx="17" cy="17" r="3" />
-                                        <circle cx="7" cy="7" r="3" />
-                                    </svg>
-                                    {feature.title}
+                            <div key={i} className="flex flex-col">
+                                <dt className="flex gap-x-3 text-center text-xl font-semibold">
+                                    {feature.svg}
+                                    {feature.name}
                                 </dt>
-                                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
-                                    <p className="">{feature.para}</p>
-                                    <p className="mt-4">
+                                <dd className="relative mt-4 flex flex-auto flex-col">
+                                    <p className="flex-auto text-base text-gray-600">
+                                        {feature.description}
+                                    </p>
+                                    <p className="mt-3 cursor-pointer overflow-hidden">
                                         <a
                                             href={feature.href}
-                                            className="text-sm font-semibold leading-6 text-blue-600"
+                                            className="group flex items-center gap-3 text-sm font-semibold leading-6 text-gray-800 hover:text-black"
                                         >
+                                            <span className=" absolute inset-0"></span>
                                             Learn more
-                                            <span> →</span>
+                                            <FaArrowRightLong className=" -translate-x-36 text-gray-700 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:text-black" />
                                         </a>
                                     </p>
                                 </dd>
