@@ -1,21 +1,20 @@
-"use client"
-import React, { useEffect, useState } from 'react'
-import { useSession } from 'next-auth/react';
+"use client";
+import React, { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 
-import fetchPro from '@/atoms/library/getPro';
-import toSection from '@/atoms/library/toSection';
-import Payment from '@/components/routes/home/Pricing';
+import fetchPro from "@/atoms/library/getPro";
+import toSection from "@/atoms/library/toSection";
+import Payment from "@/components/routes/home/Pricing";
 
 const Auth = ({ components }) => {
     const [activeTab, setActiveTab] = useState([0, 0, 0, 0, 0]);
     const [activeTab1, setActiveTab1] = useState([0, 0, 0, 0, 0]);
-    const [language, setLanguage] = useState(components.map(() => 'javascript'));
+    const [language, setLanguage] = useState(components.map(() => "javascript"));
     const { data: session } = useSession();
 
     const email = session?.user?.email;
     // console.log(email);
     const { pro } = fetchPro(email);
-
 
     const changeTab = (index, tabIndex) => {
         const newActiveTab = [...activeTab];
@@ -34,9 +33,13 @@ const Auth = ({ components }) => {
         setLanguage(newSelectedLanguages);
     };
 
-    const nonComponents = components.filter(component => component.pro === false);
+    const nonComponents = components.filter(
+        (component) => component.pro === false,
+    );
 
-    const proComponents = components.filter(component => component.pro === true);
+    const proComponents = components.filter(
+        (component) => component.pro === true,
+    );
     // console.log(proComponents)
 
     return (
@@ -50,13 +53,19 @@ const Auth = ({ components }) => {
                             </h2>
 
                             {component.tech.slice(0, 2).map((p, q) => (
-                                <p key={q} className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block">
+                                <p
+                                    key={q}
+                                    className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block"
+                                >
                                     {p}
                                 </p>
                             ))}
 
                             {component.tech.slice(2).map((p, q) => (
-                                <p key={q} className="ml-3 hidden whitespace-nowrap rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
+                                <p
+                                    key={q}
+                                    className="ml-3 hidden whitespace-nowrap rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block"
+                                >
                                     {p}
                                 </p>
                             ))}
@@ -65,7 +74,7 @@ const Auth = ({ components }) => {
                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
                                 <button
                                     onClick={() => changeTab(index, 0)}
-                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 0 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 0 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +97,7 @@ const Auth = ({ components }) => {
                                 </button>
                                 <button
                                     onClick={() => changeTab(index, 1)}
-                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -132,22 +141,32 @@ const Auth = ({ components }) => {
                                 {component.title}
                             </h2>
                             {component.tech.slice(0, 2).map((p, q) => (
-                                <p key={q} className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block">
+                                <p
+                                    key={q}
+                                    className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block"
+                                >
                                     {p}
                                 </p>
                             ))}
 
                             {component.tech.slice(2).map((p, q) => (
-                                <p key={q} className="ml-3 hidden whitespace-nowrap rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
-                                    {p}
-                                </p>
+                                <div key={q} className="flex">
+                                    <p key={q} className="ml-3 flex gap-1 whitespace-nowrap">
+                                        <span className="rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
+                                            {p}
+                                        </span>
+                                        <sup className=" mt-2 text-xs font-semibold leading-[0] text-black">
+                                            NEW
+                                        </sup>
+                                    </p>
+                                </div>
                             ))}
                         </div>
-                        <div className="p-0.5 flex gap-10 items-center">
+                        <div className="flex items-center gap-10 p-0.5">
                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
                                 <button
                                     onClick={() => changeTab1(index, 0)}
-                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab1[index] === 0 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab1[index] === 0 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -171,7 +190,7 @@ const Auth = ({ components }) => {
                                 {pro ? (
                                     <button
                                         onClick={() => changeTab1(index, 1)}
-                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab1[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab1[index] === 1 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -193,8 +212,8 @@ const Auth = ({ components }) => {
                                     </button>
                                 ) : (
                                     <button
-                                        onClick={() => toSection('payment')}
-                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                        onClick={() => toSection("payment")}
+                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -217,16 +236,15 @@ const Auth = ({ components }) => {
                                 )}
                             </div>
 
-                            <div className='border-l-2 pl-4'>
+                            <div className="border-l-2 pl-4">
                                 <select
-                                  value={language[index]}
-                                  onChange={(e) => handleLanguageChange(index, e.target.value)}
+                                    value={language[index]}
+                                    onChange={(e) => handleLanguageChange(index, e.target.value)}
                                     className="px-2 py-1 text-sm font-semibold text-slate-900"
                                 >
                                     <option value="javascript">JavaScript</option>
                                     <option value="typescript">TypeScript</option>
                                 </select>
-
                             </div>
                         </div>
 
@@ -243,14 +261,13 @@ const Auth = ({ components }) => {
                 </section>
             ))}
 
-
             {!pro && (
                 <>
                     <Payment />
                 </>
             )}
         </div>
-    )
-}
+    );
+};
 
-export default Auth
+export default Auth;
