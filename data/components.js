@@ -358,7 +358,9 @@ const components = [
             {
                 title: "Pro feature section 1",
                 component: <FE3 />,
-                code: <CFE3 />,
+                code: {
+                    javascript: <CFE3 />,
+                },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
