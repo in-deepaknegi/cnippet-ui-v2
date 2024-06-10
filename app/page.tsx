@@ -1,15 +1,15 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import Hero from '@/components/routes/home/Hero';
-import Logos from '@/components/routes/home/Logos';
-import Components from '@/components/routes/home/Component';
-import Pricing from '@/components/routes/home/Pricing';
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Hero from "@/components/routes/home/Hero";
+import Logos from "@/components/routes/home/Logos";
+import Components from "@/components/routes/home/Component";
+import Pricing from "@/components/routes/home/Pricing";
 
 export default function Home() {
   const siteJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Website',
-    name: 'Cnippet Ui',
+    "@context": "https://schema.org",
+    "@type": "Website",
+    name: "Cnippet Ui",
     url: "https://ui.cnippet.com/",
   };
 
@@ -18,7 +18,7 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(siteJsonLd)
+          __html: JSON.stringify(siteJsonLd),
         }}
       />
 
