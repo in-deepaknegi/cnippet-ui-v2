@@ -1,10 +1,9 @@
-"use client"
-import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import components from '@/data/components';
+"use client";
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import components from "@/data/components";
 
 const Related = ({ slug }) => {
-
     // const cmp = components.filter((item) => item.slug !== slug);
     // // console.log(cmp)
 
@@ -41,34 +40,27 @@ const Related = ({ slug }) => {
         const timer = setTimeout(shuffleAfterDelay, 2000); // 5 seconds delay
 
         return () => clearTimeout(timer); // Cleanup timeout on component unmount
-
     }, [slug]);
 
     return (
         <>
-
-            <div className="mx-auto max-w-[95%] px-6 lg:px-7 py-16">
-                <div className="max-w-2xl">
-                    <p
-                        className="flex flex-row items-center md:justify-start justify-center gap-4 text-center md:text-left text-lg text-gray-700"
-                    >
+            <div className="mx-auto max-w-[95%] px-6 py-16 lg:px-7">
+                <div className="max-w-2xl font-swim">
+                    <p className="flex flex-row items-center justify-center gap-4 text-center text-lg text-gray-700 md:justify-start md:text-left">
                         <span className="h-0.5 w-16 bg-black"></span>
                         Components
                     </p>
-                    <h2
-                        className="mt-3 text-center md:text-left text-4xl text-black md:text-5xl"
-                    >
+                    <h2 className="mt-3 text-center text-4xl text-black md:text-left md:text-4xl">
                         Related Components
                     </h2>
                 </div>
 
                 {loading ? (
-                    <div className=" mx-auto mt-10 max-w-[90%] py-20 flex items-center justify-center">
+                    <div className=" mx-auto mt-10 flex max-w-[90%] items-center justify-center py-20">
                         <div className="loader"></div>
                     </div>
                 ) : (
-
-                    <div className="mx-auto relative pt-10 md:mt-8">
+                    <div className="relative mx-auto mt-6 md:mt-10">
                         <ul className="grid-cols-[repeat(auto-fill,minmax(12rem, 1fr))] grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                             {shuffledComponents.slice(0, 4).map((component, i) => (
                                 <li key={i}>
@@ -95,11 +87,9 @@ const Related = ({ slug }) => {
                         </ul>
                     </div>
                 )}
-
             </div>
-
         </>
-    )
-}
+    );
+};
 
-export default Related
+export default Related;
