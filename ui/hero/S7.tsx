@@ -51,7 +51,7 @@ const Hero = () => {
                             // dynamicBullets: true,
                         }}
                         modules={[Autoplay, EffectFade, Pagination]}
-                        className="rounded-2xl w-full h-full"
+                        className="s7 rounded-2xl w-full h-full"
                     >
                         {images.map((image) => (
                             <SwiperSlide key={image.id}>

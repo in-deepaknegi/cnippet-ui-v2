@@ -1,6 +1,6 @@
 
 
-.swiper-pagination-bullet {
+.s7 .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border-radius: 10px;
@@ -8,8 +8,11 @@
   background: #fcd34d;
   opacity: 1;
 }
-.swiper-pagination-bullet-active {
+.s7 .swiper-pagination-bullet-active {
   color: #fff;
-  height: 40px;
+  width: 40px;
+  height: 10px;
   background: #fcd34d;
 }
+
+

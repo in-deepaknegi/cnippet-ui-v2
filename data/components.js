@@ -465,9 +465,11 @@ const components = [
             {
                 title: "Simple feedback 3",
                 component: <FED3 />,
-                code: <CFED3 />,
-                tech: ["Tailwindcss", "JavaScript"],
-                pro: false,
+                code: {
+                    javascript: <CFED3 />,
+                },
+                tech: ["Tailwindcss", "JavaScript", "TypeScript"],
+                pro: true,
             },
             {
                 title: "Simple feedback 4",
