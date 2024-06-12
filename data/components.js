@@ -24,6 +24,8 @@ import CN1 from "@/ui/navbar/C1.mdx";
 import CN2 from "@/ui/navbar/C2.mdx";
 import CN3 from "@/ui/navbar/C3.mdx";
 import CN4 from "@/ui/navbar/C4.mdx";
+import TCN1 from "@/ui/navbar/T1.mdx";
+
 
 import F1 from "@/ui/footer/S1";
 import F2 from "@/ui/footer/S2";
@@ -180,6 +182,7 @@ const components = [
                 component: <N4 />,
                 code: {
                     javascript: <CN4 />,
+                    typescript: <TCN1 />
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,

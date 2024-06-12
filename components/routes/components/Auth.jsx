@@ -150,19 +150,18 @@ const Auth = ({ components }) => {
                             ))}
 
                             {component.tech.slice(2).map((p, q) => (
-                                <div key={q} className="flex">
-                                    <p key={q} className="ml-3 flex gap-1 whitespace-nowrap">
-                                        <span className="rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
-                                            {p}
-                                        </span>
-                                        <sup className=" mt-2 text-xs font-semibold leading-[0] text-black">
-                                            NEW
-                                        </sup>
-                                    </p>
-                                </div>
+                                <p key={q} className="ml-3 hidden lg:flex gap-1 whitespace-nowrap">
+                                    <span className="rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
+                                        {p}
+                                    </span>
+                                    <sup className=" mt-2 text-xs font-semibold leading-[0] text-black">
+                                        NEW
+                                    </sup>
+                                </p>
                             ))}
                         </div>
-                        <div className="flex items-center gap-10 p-0.5">
+
+                        <div className="flex items-center gap-4 md:gap-10 p-0.5">
                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
                                 <button
                                     onClick={() => changeTab1(index, 0)}
@@ -236,7 +235,7 @@ const Auth = ({ components }) => {
                                 )}
                             </div>
 
-                            <div className="border-l-2 pl-4">
+                            <div className="border-l-2 pl-2 md:pl-4">
                                 <select
                                     value={language[index]}
                                     onChange={(e) => handleLanguageChange(index, e.target.value)}

@@ -1,27 +1,31 @@
+```tsx
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const links = [
-    {
-        title: "link one",
-        url: "#",
-    },
-    {
-        title: "link two",
-        url: "#",
-    },
-    {
-        title: "link three",
-        url: "#",
-    },
-    {
-        title: "link four",
-        url: "#",
-    },
-];
+type ImageProps = {
+    url?: string;
+    src: string;
+    alt?: string;
+};
+type LinkProps = {
+    title: string;
+    url: string;
+};
+type Props = {
+    logo: ImageProps;
+    links: LinkProps[];
+};
 
-const Navbar4 = () => {
+export type NavbarProps = React.ComponentPropsWithoutRef<"section"> &
+    Partial<Props>;
+
+const Navbar = (props: NavbarProps) => {
+    const { logo, links } = {
+        ...NavbarDefaults,
+        ...props,
+    } as Props;
+
     return (
         <>
             <div className="relative isolate overflow-hidden bg-black ">
@@ -48,7 +52,7 @@ const Navbar4 = () => {
                 </div>
             </div>
 
-            <header className="sticky top-0 z-20 border-gray-100 bg-white py-6">
+            <nav className="sticky top-0 z-20 border-gray-100 bg-white py-6">
                 <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8">
                     <div className="flex lg:flex-none">
                         <Link
@@ -56,8 +60,8 @@ const Navbar4 = () => {
                             className="-m-1.5 flex items-center gap-4 p-1.5 text-2xl text-black"
                         >
                             <Image
-                                src="https://www.cnippet.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.2586383c.png&w=640&q=75"
-                                alt="site logo main"
+                                src={logo.src}
+                                alt=""
                                 width={680}
                                 height={400}
                                 className="h-10 w-10"
@@ -122,9 +126,24 @@ const Navbar4 = () => {
                         </button>
                     </div>
                 </div>
-            </header>
+            </nav>
         </>
     );
 };
 
-export default Navbar4;
+export default Navbar;
+
+export const NavbarDefaults: NavbarProps = {
+    logo: {
+        url: "#",
+        src: "https://www.cnippet.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.2586383c.png&w=640&q=75",
+        alt: "Logo image",
+    },
+    links: [
+        { title: "Link One", url: "#" },
+        { title: "Link Two", url: "#" },
+        { title: "Link Three", url: "#" },
+        { title: "Link Four", url: "#" },
+    ],
+};
+```

@@ -1,24 +1,24 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const links = [
     {
-        title: "Components",
+        title: "link one",
         url: "#",
     },
     {
-        title: "Templates",
+        title: "link two",
         url: "#",
     },
     {
-        title: "About us",
+        title: "link three",
         url: "#",
     },
     {
-        title: "Contact us",
+        title: "link four",
         url: "#",
     },
-    // moidfy data according to your website
 ];
 
 const Navbar4 = () => {
@@ -30,7 +30,7 @@ const Navbar4 = () => {
                         <div className="hidden text-sm text-white lg:block lg:flex-1">
                             English
                         </div>
-                        <div className="hidden flex-1 items-center lg:flex">
+                        <div className="hidden flex-1 items-center justify-center lg:flex">
                             <Link href="#" className="text-sm text-gray-200">
                                 Get free delivery on orders over $100
                             </Link>
@@ -51,7 +51,17 @@ const Navbar4 = () => {
             <header className="sticky top-0 z-20 border-gray-100 bg-white py-6">
                 <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8">
                     <div className="flex lg:flex-none">
-                        <Link href="/" className="-m-1.5 p-1.5 text-2xl text-black">
+                        <Link
+                            href="/"
+                            className="-m-1.5 flex items-center gap-4 p-1.5 text-2xl text-black"
+                        >
+                            <Image
+                                src="https://www.cnippet.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.2586383c.png&w=640&q=75"
+                                alt="site logo main"
+                                width={680}
+                                height={400}
+                                className="h-10 w-10"
+                            />
                             Cnippet
                         </Link>
                     </div>
