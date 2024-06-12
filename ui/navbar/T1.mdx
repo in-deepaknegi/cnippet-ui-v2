@@ -3,10 +3,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { FaUser } from "react-icons/fa6";
+import { RiMenu2Fill } from "react-icons/ri";
+
 type ImageProps = {
     url?: string;
     src: string;
-    alt?: string;
+    alt?: string | undefined;
 };
 type LinkProps = {
     title: string;
@@ -20,11 +23,25 @@ type Props = {
 export type NavbarProps = React.ComponentPropsWithoutRef<"section"> &
     Partial<Props>;
 
-const Navbar = (props: NavbarProps) => {
+const NavbarDefaults: Props = {
+    logo: {
+        url: "#",
+        src: "https://www.cnippet.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.2586383c.png&w=640&q=75",
+        alt: "Logo image",
+    },
+    links: [
+        { title: "Link One", url: "#" },
+        { title: "Link Two", url: "#" },
+        { title: "Link Three", url: "#" },
+        { title: "Link Four", url: "#" },
+    ],
+};
+
+const Navbar: React.FC<NavbarProps> = (props) => {
     const { logo, links } = {
         ...NavbarDefaults,
         ...props,
-    } as Props;
+    };
 
     return (
         <>
@@ -61,7 +78,7 @@ const Navbar = (props: NavbarProps) => {
                         >
                             <Image
                                 src={logo.src}
-                                alt=""
+                                alt="site logo main"
                                 width={680}
                                 height={400}
                                 className="h-10 w-10"
@@ -85,21 +102,7 @@ const Navbar = (props: NavbarProps) => {
                     <div className="hidden lg:ml-8 lg:flex lg:flex-none lg:items-center lg:gap-4 lg:pl-8">
                         <Link href="#">
                             <span className="sr-only">profile</span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                aria-hidden="true"
-                                className="h-6 w-6 text-gray-600"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                                ></path>
-                            </svg>
+                            <FaUser className="h-5 w-5 text-slate-700" />
                         </Link>
                     </div>
 
@@ -109,20 +112,7 @@ const Navbar = (props: NavbarProps) => {
                             className="-m-2.5 rounded-md p-4 text-gray-900"
                         >
                             <span className="sr-only">Open main menu</span>
-                            <svg
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                                />
-                            </svg>
+                            <RiMenu2Fill className="h-5 w-5 text-black" />
                         </button>
                     </div>
                 </div>
@@ -132,18 +122,4 @@ const Navbar = (props: NavbarProps) => {
 };
 
 export default Navbar;
-
-export const NavbarDefaults: NavbarProps = {
-    logo: {
-        url: "#",
-        src: "https://www.cnippet.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.2586383c.png&w=640&q=75",
-        alt: "Logo image",
-    },
-    links: [
-        { title: "Link One", url: "#" },
-        { title: "Link Two", url: "#" },
-        { title: "Link Three", url: "#" },
-        { title: "Link Four", url: "#" },
-    ],
-};
 ```

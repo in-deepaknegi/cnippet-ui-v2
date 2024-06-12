@@ -1,110 +1,107 @@
 "use client"
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-fade';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-
-import { FaStar } from "react-icons/fa";
-
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
-import Profile1 from "@/public/images/profile/profile2.jpg";
-import Profile2 from "@/public/images/profile/profile5.jpg";
 
-const feedbacks = [
+import { FaUser } from "react-icons/fa6";
+import { RiMenu2Fill } from "react-icons/ri";
+
+const links = [
     {
-        id: 1,
-        text: "Commodo amet fugiat excepteur sunt qui ea elit cupidatat ullamco consectetur ipsum elit consequat. Elit sunt proident ea nulla ad nulla dolore ad pariatur tempor non. Sint veniam minim et ea.",
-        image: Profile1,
-        author: "Anne Smith",
-        username: "@annesmith",
+        title: "link one",
+        url: "#",
     },
     {
-        id: 2,
-        text: "Commodo amet fugiat excepteur sunt qui ea elit cupidatat ullamco consectetur ipsum elit consequat ea. lit sunt proident ea nulla ad nulla dolore ad pariatur tempor non.",
-        image: Profile2,
-        author: "Jake Webber",
-        username: "@jakewebber",
+        title: "link two",
+        url: "#",
     },
-]
+    {
+        title: "link three",
+        url: "#",
+    },
+    {
+        title: "link four",
+        url: "#",
+    },
+];
 
-const Feedback3 = () => {
+const Navbar = () => {
     return (
-        <section className='relative isolate overflow-hidden'>
-            <Swiper
-                spaceBetween={30}
-                effect={"slide"}
-                loop={true}
-                centeredSlides={false}
-                speed={1500}
-                autoplay={{
-                    delay: 3500,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={false}
-                modules={[Autoplay, Pagination, Navigation]}
-                className="h-full w-full s4"
-            >
-                {feedbacks.map((feedback) => (
-                    <SwiperSlide key={feedback.id}>
-                        <div className='isolate bg-white overflow-hidden px-6 lg:px-8'>
-                            <div className='relative mx-auto max-w-2xl py-16 sm:py-16 lg:max-w-[50%]'>
-                                <div className='flex flex-col size-full'>
-
-                                    <div className='flex items-center gap-2 w-full justify-center mx-auto'>
-                                        <Image
-                                            src={feedback.image}
-                                            alt="profile-1"
-                                            className="h-12 w-12 rounded-full object-cover"
-                                        />
-                                        <div className="ml-2">
-                                            <div className="text-lg font-semibold">{feedback.author}</div>
-                                            <a
-                                                href="#"
-                                                className="text-sm font-semibold tracking-wide text-gray-400"
-                                            >
-                                                {feedback.username}
-                                            </a>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div className='mt-8'>
-                                        <div className='relative'>
-                                            <blockquote className="text-xl text-gray-900 sm:text-xl text-center">
-                                                <p>
-                                                    {feedback.text}
-                                                </p>
-                                            </blockquote>
-                                        </div>
-
-                                        <div className="my-auto hidden md:flex justify-center mt-8">
-                                            {[...Array(4).keys()].map((index) => (
-                                                <div key={index}>
-                                                    <FaStar className="mx-0.5 h-5 w-5 text-black" />
-                                                </div>
-                                            ))}
-                                            {[...Array(1).keys()].map((index) => (
-                                                <div key={index}>
-                                                    <FaStar className="mx-0.5 h-5 w-5 text-gray-300" />
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        <>
+            <div className="relative isolate overflow-hidden bg-black ">
+                <div className="mx-auto max-w-full md:max-w-[97%]">
+                    <div className="mx-auto flex h-10 items-center justify-between px-4 sm:px-6 lg:px-8">
+                        <div className="hidden text-sm text-white lg:block lg:flex-1">
+                            English
                         </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-        </section>
-    )
-}
+                        <div className="hidden flex-1 items-center justify-center lg:flex">
+                            <Link href="#" className="text-sm text-gray-200">
+                                Get free delivery on orders over $100
+                            </Link>
+                        </div>
+                        <div className="ml-auto flex lg:flex-1 lg:items-center lg:justify-end lg:gap-2">
+                            <Link href="#" className="text-sm text-gray-100">
+                                Sign In
+                            </Link>
+                            <span className="mx-2 h-4 w-[1px] bg-gray-200"></span>
+                            <Link href="#" className="text-sm text-gray-100">
+                                Create an account
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-export default Feedback3
+            <header className="sticky top-0 z-20 border-gray-100 bg-white py-6">
+                <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8">
+                    <div className="flex lg:flex-none">
+                        <Link
+                            href="/"
+                            className="-m-1.5 flex items-center gap-4 p-1.5 text-2xl text-black"
+                        >
+                            <Image
+                                src="https://www.cnippet.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.2586383c.png&w=640&q=75"
+                                alt="site logo main"
+                                width={680}
+                                height={400}
+                                className="h-10 w-10"
+                            />
+                            Cnippet
+                        </Link>
+                    </div>
+
+                    <div className="hidden uppercase lg:flex lg:gap-x-12">
+                        {links.map((link, i) => (
+                            <Link
+                                key={i}
+                                href={link.url}
+                                className="text-sm font-medium leading-6 text-gray-700 hover:text-black"
+                            >
+                                {link.title}
+                            </Link>
+                        ))}
+                    </div>
+
+                    <div className="hidden lg:ml-8 lg:flex lg:flex-none lg:items-center lg:gap-4 lg:pl-8">
+                        <Link href="#">
+                            <span className="sr-only">profile</span>
+                            <FaUser className="w-5 h-5 text-slate-700" />
+                        </Link>
+                    </div>
+
+                    <div className="flex lg:hidden">
+                        <button
+                            type="button"
+                            className="-m-2.5 rounded-md p-4 text-gray-900"
+                        >
+                            <span className="sr-only">Open main menu</span>
+                            <RiMenu2Fill className="w-5 h-5 text-black" />
+                        </button>
+                    </div>
+                </div>
+            </header>
+        </>
+    );
+};
+
+export default Navbar;

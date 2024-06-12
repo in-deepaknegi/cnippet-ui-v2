@@ -1,27 +1,64 @@
-import React from "react";
+"use client"
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const links = [
-    {
-        title: "link one",
-        url: "#",
-    },
-    {
-        title: "link two",
-        url: "#",
-    },
-    {
-        title: "link three",
-        url: "#",
-    },
-    {
-        title: "link four",
-        url: "#",
-    },
-];
+import { FaUser } from "react-icons/fa6";
+import { RiMenu2Fill } from "react-icons/ri";
 
-const Navbar4 = () => {
+type ImageProps = {
+    url?: string;
+    src: string;
+    alt?: string | undefined;
+};
+type LinkProps = {
+    title: string;
+    url: string;
+};
+type Props = {
+    logo: ImageProps;
+    links: LinkProps[];
+};
+
+export type NavbarProps = React.ComponentPropsWithoutRef<"section"> &
+    Partial<Props>;
+
+const NavbarDefaults: Props = {
+    logo: {
+        url: "#",
+        src: "https://www.cnippet.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.2586383c.png&w=640&q=75",
+        alt: "Logo image",
+    },
+    links: [
+        { title: "Link One", url: "#" },
+        { title: "Link Two", url: "#" },
+        { title: "Link Three", url: "#" },
+        { title: "Link Four", url: "#" },
+    ],
+};
+
+const Navbar: React.FC<NavbarProps> = (props) => {
+    const { logo, links } = {
+        ...NavbarDefaults,
+        ...props,
+    };
+
+    const [mobileMenu, setMobileMenu] = useState(false);
+
+    useEffect(() => {
+        const setScroll = () => {
+            if (scrollY > 1) {
+                setMobileMenu(false);
+            }
+        }
+
+        document.addEventListener("scroll", setScroll);
+
+        return () => {
+            document.removeEventListener("scroll", setScroll);
+        }
+    })
+
     return (
         <>
             <div className="relative isolate overflow-hidden bg-black ">
@@ -48,7 +85,7 @@ const Navbar4 = () => {
                 </div>
             </div>
 
-            <header className="sticky top-0 z-20 border-gray-100 bg-white py-6">
+            <nav className="sticky top-0 z-20 border-gray-100 bg-white py-6">
                 <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8">
                     <div className="flex lg:flex-none">
                         <Link
@@ -56,7 +93,7 @@ const Navbar4 = () => {
                             className="-m-1.5 flex items-center gap-4 p-1.5 text-2xl text-black"
                         >
                             <Image
-                                src="https://www.cnippet.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ficon.2586383c.png&w=640&q=75"
+                                src={logo.src}
                                 alt="site logo main"
                                 width={680}
                                 height={400}
@@ -81,50 +118,65 @@ const Navbar4 = () => {
                     <div className="hidden lg:ml-8 lg:flex lg:flex-none lg:items-center lg:gap-4 lg:pl-8">
                         <Link href="#">
                             <span className="sr-only">profile</span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                aria-hidden="true"
-                                className="h-6 w-6 text-gray-600"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                                ></path>
-                            </svg>
+                            <FaUser className="h-5 w-5 text-slate-700" />
                         </Link>
                     </div>
 
                     <div className="flex lg:hidden">
                         <button
                             type="button"
+                            onClick={() => setMobileMenu((prev) => !prev)}
                             className="-m-2.5 rounded-md p-4 text-gray-900"
                         >
                             <span className="sr-only">Open main menu</span>
-                            <svg
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                                />
-                            </svg>
+                            <RiMenu2Fill className="h-5 w-5 text-black" />
                         </button>
                     </div>
                 </div>
-            </header>
+
+                {mobileMenu && (
+                    <div className="lg:hidden h-screen" role="dialog" aria-modal="true">
+                        <div className="fixed right-0 mt-4 isolate z-50 h-full w-full overflow-hidden border-t bg-white bg-opacity-80 bg-clip-padding px-6 py-3 backdrop-blur-lg backdrop-filter sm:max-w-sm">
+                            <div className="flex items-center justify-between">
+                                <a href="#" className="-m-1.5 p-1.5">
+                                    <span className="sr-only">Your Company</span>
+                                </a>
+                            </div>
+                            <div className="mt-8 flow-root">
+                                <div className="divide-y divide-gray-500/10">
+                                    <div className="flex flex-col gap-4 uppercase mb-10">
+
+                                        {links.map((link, i) => (
+                                            <Link
+                                                key={i}
+                                                href={link.url}
+                                                className="text-sm font-medium leading-6 text-gray-700 hover:text-black"
+                                            >
+                                                {link.title}
+                                            </Link>
+                                        ))}
+                                    </div>
+
+
+
+                                    <div className="py-6">
+                                        <a
+                                            href="/login"
+                                            className="-mx-3 block rounded-lg px-3 py-2.5 text-base text-gray-700 hover:bg-gray-50 uppercase"
+                                        >
+                                            Log in
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div >
+                )}
+            </nav>
         </>
     );
 };
 
-export default Navbar4;
+export default Navbar;

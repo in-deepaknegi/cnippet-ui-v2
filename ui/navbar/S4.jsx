@@ -2,6 +2,9 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { FaUser } from "react-icons/fa6";
+import { RiMenu2Fill } from "react-icons/ri";
+
 const links = [
     {
         title: "link one",
@@ -21,7 +24,7 @@ const links = [
     },
 ];
 
-const Navbar4 = () => {
+const Navbar = () => {
     return (
         <>
             <div className="relative isolate overflow-hidden bg-black ">
@@ -81,21 +84,7 @@ const Navbar4 = () => {
                     <div className="hidden lg:ml-8 lg:flex lg:flex-none lg:items-center lg:gap-4 lg:pl-8">
                         <Link href="#">
                             <span className="sr-only">profile</span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                aria-hidden="true"
-                                className="h-6 w-6 text-gray-600"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                                ></path>
-                            </svg>
+                            <FaUser className="w-5 h-5 text-slate-700" />
                         </Link>
                     </div>
 
@@ -105,20 +94,7 @@ const Navbar4 = () => {
                             className="-m-2.5 rounded-md p-4 text-gray-900"
                         >
                             <span className="sr-only">Open main menu</span>
-                            <svg
-                                className="h-6 w-6"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                strokeWidth="1.5"
-                                stroke="currentColor"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                                />
-                            </svg>
+                            <RiMenu2Fill className="w-5 h-5 text-black" />
                         </button>
                     </div>
                 </div>
@@ -127,4 +103,4 @@ const Navbar4 = () => {
     );
 };
 
-export default Navbar4;
+export default Navbar;
