@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -50,14 +50,14 @@ const Navbar: React.FC<NavbarProps> = (props) => {
             if (scrollY > 1) {
                 setMobileMenu(false);
             }
-        }
+        };
 
         document.addEventListener("scroll", setScroll);
 
         return () => {
             document.removeEventListener("scroll", setScroll);
-        }
-    })
+        };
+    });
 
     return (
         <>
@@ -135,8 +135,8 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                 </div>
 
                 {mobileMenu && (
-                    <div className="lg:hidden h-screen" role="dialog" aria-modal="true">
-                        <div className="fixed right-0 mt-4 isolate z-50 h-full w-full overflow-hidden border-t bg-white bg-opacity-80 bg-clip-padding px-6 py-3 backdrop-blur-lg backdrop-filter sm:max-w-sm">
+                    <div className="h-screen lg:hidden" role="dialog" aria-modal="true">
+                        <div className="fixed right-0 isolate z-50 mt-4 h-full w-full overflow-hidden border-t bg-white bg-opacity-80 bg-clip-padding px-6 py-3 backdrop-blur-lg backdrop-filter sm:max-w-sm">
                             <div className="flex items-center justify-between">
                                 <a href="#" className="-m-1.5 p-1.5">
                                     <span className="sr-only">Your Company</span>
@@ -144,8 +144,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                             </div>
                             <div className="mt-8 flow-root">
                                 <div className="divide-y divide-gray-500/10">
-                                    <div className="flex flex-col gap-4 uppercase mb-10">
-
+                                    <div className="mb-10 flex flex-col gap-4 uppercase">
                                         {links.map((link, i) => (
                                             <Link
                                                 key={i}
@@ -157,22 +156,18 @@ const Navbar: React.FC<NavbarProps> = (props) => {
                                         ))}
                                     </div>
 
-
-
                                     <div className="py-6">
                                         <a
                                             href="/login"
-                                            className="-mx-3 block rounded-lg px-3 py-2.5 text-base text-gray-700 hover:bg-gray-50 uppercase"
+                                            className="-mx-3 block rounded-lg px-3 py-2.5 text-base uppercase text-gray-700 hover:bg-gray-50"
                                         >
                                             Log in
                                         </a>
                                     </div>
-
-
                                 </div>
                             </div>
                         </div>
-                    </div >
+                    </div>
                 )}
             </nav>
         </>

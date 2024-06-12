@@ -178,7 +178,7 @@ const components = [
                 pro: false,
             },
             {
-                title: "Simple sticky navbar 4",
+                title: "Pro Navbar (including mobile menu)",
                 component: <N4 />,
                 code: {
                     javascript: <CN4 />,

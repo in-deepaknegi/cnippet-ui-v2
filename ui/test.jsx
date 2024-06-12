@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -26,6 +26,22 @@ const links = [
 ];
 
 const Navbar = () => {
+    const [mobileMenu, setMobileMenu] = useState(false);
+
+    useEffect(() => {
+        const setScroll = () => {
+            if (scrollY > 1) {
+                setMobileMenu(false);
+            }
+        };
+
+        document.addEventListener("scroll", setScroll);
+
+        return () => {
+            document.removeEventListener("scroll", setScroll);
+        };
+    });
+
     return (
         <>
             <div className="relative isolate overflow-hidden bg-black ">
@@ -52,7 +68,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <header className="sticky top-0 z-20 border-gray-100 bg-white py-6">
+            <nav className="relative z-20 border-gray-100 bg-white py-6">
                 <div className="mx-auto flex max-w-full items-center justify-between px-6 md:max-w-[97%] lg:px-8">
                     <div className="flex lg:flex-none">
                         <Link
@@ -85,21 +101,57 @@ const Navbar = () => {
                     <div className="hidden lg:ml-8 lg:flex lg:flex-none lg:items-center lg:gap-4 lg:pl-8">
                         <Link href="#">
                             <span className="sr-only">profile</span>
-                            <FaUser className="w-5 h-5 text-slate-700" />
+                            <FaUser className="h-5 w-5 text-slate-700" />
                         </Link>
                     </div>
 
                     <div className="flex lg:hidden">
                         <button
                             type="button"
+                            onClick={() => setMobileMenu((prev) => !prev)}
                             className="-m-2.5 rounded-md p-4 text-gray-900"
                         >
                             <span className="sr-only">Open main menu</span>
-                            <RiMenu2Fill className="w-5 h-5 text-black" />
+                            <RiMenu2Fill className="h-5 w-5 text-black" />
                         </button>
                     </div>
                 </div>
-            </header>
+                {mobileMenu && (
+                    <div className="h-full lg:hidden" role="dialog" aria-modal="true">
+                        <div className="right-0 isolate z-50 mt-4 h-full w-full overflow-hidden border-t bg-white bg-opacity-80 bg-clip-padding px-6 py-3 backdrop-blur-lg backdrop-filter sm:max-w-sm">
+                            <div className="flex items-center justify-between">
+                                <a href="#" className="-m-1.5 p-1.5">
+                                    <span className="sr-only">Your Company</span>
+                                </a>
+                            </div>
+                            <div className="mt-8 flow-root">
+                                <div className="divide-y divide-gray-500/10">
+                                    <div className="mb-10 flex flex-col gap-4 uppercase">
+                                        {links.map((link, i) => (
+                                            <Link
+                                                key={i}
+                                                href={link.url}
+                                                className="text-sm font-medium leading-6 text-gray-700 hover:text-black"
+                                            >
+                                                {link.title}
+                                            </Link>
+                                        ))}
+                                    </div>
+
+                                    <div className="py-6">
+                                        <a
+                                            href="/login"
+                                            className="-mx-3 block rounded-lg px-3 py-2.5 text-base uppercase text-gray-700 hover:bg-gray-50"
+                                        >
+                                            Log in
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </nav>
         </>
     );
 };
