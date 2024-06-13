@@ -215,7 +215,7 @@ const Footer2 = () => {
                         </span>
                         <span className="mt-2 block text-xs text-gray-700 sm:text-right">
                             Designed and Maintained by:
-                            <a target="_blank" href="https://www.deepaknegi.in/">
+                            <a target="_blank" href="https://www.cnippet.com/">
                                 Cnipept
                             </a>
                         </span>

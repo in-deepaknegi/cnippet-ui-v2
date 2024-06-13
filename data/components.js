@@ -26,13 +26,13 @@ import CN3 from "@/ui/navbar/C3.mdx";
 import CN4 from "@/ui/navbar/C4.mdx";
 import TCN1 from "@/ui/navbar/T1.mdx";
 
-
 import F1 from "@/ui/footer/S1";
 import F2 from "@/ui/footer/S2";
 import F3 from "@/ui/footer/S3";
 import CF1 from "@/ui/footer/C1.mdx";
 import CF2 from "@/ui/footer/C2.mdx";
 import CF3 from "@/ui/footer/C3.mdx";
+import TCF3 from "@/ui/footer/T1.mdx";
 
 import H1 from "@/ui/hero/S1";
 import H2 from "@/ui/hero/S2";
@@ -217,6 +217,7 @@ const components = [
                 component: <F3 />,
                 code: {
                     javascript: <CF3 />,
+                    typescript: <TCF3 />
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,

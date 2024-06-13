@@ -1,85 +1,145 @@
+```tsx
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
 
-const social = [
-    {
-        title: "facebook",
-        href: "#",
-        icon: <FaFacebook className="h-6 w-6" />,
-    },
-    {
-        title: "insta",
-        href: "#",
-        icon: <FaInstagram className="h-6 w-6" />,
-    },
-    {
-        title: "twitter",
-        href: "#",
-        icon: <FaTwitter className="h-6 w-6" />,
-    },
-    {
-        title: "Youtube",
-        href: "#",
-        icon: <FaYoutube className="h-6 w-6" />,
-    },
-];
+type SubLinksProps = {
+    title: string;
+    url: string;
+};
+type SiteProps = {
+    title: string;
+    description: string;
+};
+type LinkProps = {
+    title: string;
+    sub: SubLinksProps[];
+};
+type SocialProps = {
+    title: string;
+    url: string;
+    icon: any;
+};
+type LegalProps = {
+    title: string;
+    url: string;
+};
+type Props = {
+    site: SiteProps;
+    links: LinkProps[];
+    socials: SocialProps[];
+    legals: LegalProps[];
+};
 
-const links = [
-    {
-        title: "Contacts",
-        sub: [
-            {
-                name: "+91 11111 11111",
-                href: "tel:+91 97566 20538",
-            },
-            {
-                name: "info@ui.cnippet.com",
-                href: "mailto:info@ui.cnippet.com",
-            },
-            {
-                name: "office@ui.cnippet.com",
-                href: "mailto:office@ui.cnippet.com",
-            },
-        ],
-    },
-    {
-        title: "Company",
-        sub: [
-            {
-                name: "About us",
-                href: "#",
-            },
-            {
-                name: "Contacts",
-                href: "#",
-            },
-            {
-                name: "Careers",
-                href: "#",
-            },
-        ],
-    },
-    {
-        title: "Resources",
-        sub: [
-            {
-                name: "Press info",
-                href: "#",
-            },
-            {
-                name: "Customers",
-                href: "#",
-            },
-            {
-                name: "Reviews",
-                href: "#",
-            },
-        ],
-    },
-];
+export type FooterProps = React.ComponentPropsWithoutRef<"section"> &
+    Partial<Props>;
 
-const Footer = () => {
+const FooterDefaults: Props = {
+    site: {
+        title: "Cnippet",
+        description:
+            " Travel plans are not really an instrument themselves but a delivery mechanism or strategy for other mostly",
+    },
+
+    links: [
+        {
+            title: "Contacts",
+            sub: [
+                {
+                    title: "+91 11111 11111",
+                    url: "tel:+91 97566 20538",
+                },
+                {
+                    title: "info@ui.cnippet.com",
+                    url: "mailto:info@ui.cnippet.com",
+                },
+                {
+                    title: "office@ui.cnippet.com",
+                    url: "mailto:office@ui.cnippet.com",
+                },
+            ],
+        },
+        {
+            title: "Company",
+            sub: [
+                {
+                    title: "About us",
+                    url: "#",
+                },
+                {
+                    title: "Contacts",
+                    url: "#",
+                },
+                {
+                    title: "Careers",
+                    url: "#",
+                },
+            ],
+        },
+        {
+            title: "Resources",
+            sub: [
+                {
+                    title: "Press info",
+                    url: "#",
+                },
+                {
+                    title: "Customers",
+                    url: "#",
+                },
+                {
+                    title: "Reviews",
+                    url: "#",
+                },
+            ],
+        },
+    ],
+
+    socials: [
+        {
+            title: "facebook",
+            url: "#",
+            icon: <FaFacebook className="h-6 w-6" />,
+        },
+        {
+            title: "insta",
+            url: "#",
+            icon: <FaInstagram className="h-6 w-6" />,
+        },
+        {
+            title: "twitter",
+            url: "#",
+            icon: <FaTwitter className="h-6 w-6" />,
+        },
+        {
+            title: "Youtube",
+            url: "#",
+            icon: <FaYoutube className="h-6 w-6" />,
+        },
+    ],
+
+    legals: [
+        {
+            title: "Privacy Policy",
+            url: "#",
+        },
+        {
+            title: "Terms of Services",
+            url: "#",
+        },
+        {
+            title: "Cookies Policy",
+            url: "#",
+        },
+    ],
+};
+
+const Footer: React.FC<FooterProps> = (props) => {
+    const { site, links, socials, legals } = {
+        ...FooterDefaults,
+        ...props,
+    };
+
     return (
         <footer className="relative isolate bg-black/95 py-8">
             <div className=" mx-auto max-w-full px-6 md:max-w-[95%] lg:px-8">
@@ -89,14 +149,14 @@ const Footer = () => {
                             Leading the way in adventure
                         </h3>
                         <div className="flex gap-x-3">
-                            {social.map((item, i) => (
+                            {socials.map((social, i) => (
                                 <a
                                     key={i}
-                                    href="#"
+                                    href={social.url}
                                     className="rounded-full bg-white p-3 shadow-lg"
                                 >
-                                    <span className="sr-only">{item.title}</span>
-                                    {item.icon}
+                                    <span className="sr-only">{social.title}</span>
+                                    {social.icon}
                                 </a>
                             ))}
                         </div>
@@ -140,13 +200,10 @@ const Footer = () => {
                             className="mb-4 flex items-center space-x-3 sm:mb-0 rtl:space-x-reverse"
                         >
                             <span className="self-center whitespace-nowrap text-3xl text-white">
-                                Cnippet Ui
+                                {site.title}
                             </span>
                         </a>
-                        <p className="mt-3 text-gray-400 md:w-[50%]">
-                            Travel plans are not really an instrument themselves but a
-                            delivery mechanism or strategy for other mostly
-                        </p>
+                        <p className="mt-3 text-gray-400 md:w-[50%]">{site.description}</p>
                     </div>
                     <div className="mt-10 flex w-full max-w-md flex-wrap justify-between gap-10 md:mt-5 md:max-w-none md:gap-x-32">
                         {links.map((link, i) => (
@@ -158,10 +215,10 @@ const Footer = () => {
                                     {link.sub.map((item, j) => (
                                         <li key={j}>
                                             <a
-                                                href={item.href}
+                                                href={item.url}
                                                 className="hover:text-white hover:underline"
                                             >
-                                                {item.name}
+                                                {item.title}
                                             </a>
                                         </li>
                                     ))}
@@ -174,21 +231,16 @@ const Footer = () => {
                 <div className="mx-auto max-w-full border-t border-gray-300 py-4">
                     <div className="flex flex-col justify-between space-y-4 md:flex-row md:space-y-0 ">
                         <div className="flex gap-x-4">
-                            <span className="block text-xs text-gray-400 sm:text-left md:text-sm">
-                                <a href="#" className="underline hover:text-white">
-                                    Privacy Policy
-                                </a>
-                            </span>
-                            <span className="block text-xs text-gray-400 sm:text-left md:text-sm">
-                                <a href="#" className="underline hover:text-white">
-                                    Terms of Service
-                                </a>
-                            </span>
-                            <span className="block text-xs text-gray-400 sm:text-left md:text-sm">
-                                <a href="#" className="underline hover:text-white">
-                                    Cookies Policy
-                                </a>
-                            </span>
+                            {legals.map((legal, i) => (
+                                <span
+                                    key={i}
+                                    className="block text-xs text-gray-400 sm:text-left md:text-sm"
+                                >
+                                    <a href={legal.url} className="underline hover:text-white">
+                                        {legal.title}
+                                    </a>
+                                </span>
+                            ))}
                         </div>
 
                         <div>
@@ -204,7 +256,7 @@ const Footer = () => {
                                 Designed and Maintained by:
                                 <a
                                     target="_blank"
-                                    href="https://www.cnippet.com/"
+                                    href="https://www.deepaknegi.in/"
                                     className=" text-white"
                                 >
                                     Cnippet
@@ -219,3 +271,4 @@ const Footer = () => {
 };
 
 export default Footer;
+```
