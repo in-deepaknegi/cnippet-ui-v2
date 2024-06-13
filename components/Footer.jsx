@@ -89,7 +89,7 @@ const links = [
 const Footer = () => {
     return (
         <footer className="relative isolate bg-black font-swir">
-            <div className=" mx-auto max-w-full px-6 md:max-w-[90%] lg:px-8">
+            <div className=" mx-auto max-w-full px-6 md:max-w-[90%] xl:max-w-[95%] lg:px-8">
                 <div className="mx-auto flex max-w-full flex-col items-center justify-center py-10">
                     <a href="/" className="mb-4 inline-flex items-center gap-0 sm:mb-0">
                         <Image src={L1} alt="cnippet site logo" className="w-20" />

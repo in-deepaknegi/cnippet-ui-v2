@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa6";
 
@@ -17,7 +17,7 @@ type LinkProps = {
 type SocialProps = {
     title: string;
     url: string;
-    icon: any;
+    icon: ReactNode;
 };
 type LegalProps = {
     title: string;
