@@ -59,6 +59,9 @@ import CHE2 from "@/ui/header/C2.mdx";
 import CHE3 from "@/ui/header/C3.mdx";
 import CHE4 from "@/ui/header/C4.mdx";
 import CHE5 from "@/ui/header/C5.mdx";
+import TCHE3 from "@/ui/header/T1.mdx";
+import TCHE4 from "@/ui/header/T2.mdx";
+import TCHE5 from "@/ui/header/T3.mdx";
 
 import FE1 from "@/ui/feature/S1";
 import FE2 from "@/ui/feature/S2";
@@ -182,7 +185,7 @@ const components = [
                 component: <N4 />,
                 code: {
                     javascript: <CN4 />,
-                    typescript: <TCN1 />
+                    typescript: <TCN1 />,
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
@@ -217,7 +220,7 @@ const components = [
                 component: <F3 />,
                 code: {
                     javascript: <CF3 />,
-                    typescript: <TCF3 />
+                    typescript: <TCF3 />,
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
@@ -316,21 +319,30 @@ const components = [
             {
                 title: "Pro header 1",
                 component: <HE3 />,
-                code: <CHE3 />,
+                code: {
+                    javascript: <CHE3 />,
+                    typescript: <TCHE3/>,
+                },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
             {
                 title: "Pro header 2",
                 component: <HE4 />,
-                code: <CHE4 />,
+                code: {
+                    javascript: <CHE4 />,
+                    typescript: <TCHE4/>,
+                },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
             {
                 title: "Pro header 3",
                 component: <HE5 />,
-                code: <CHE5 />,
+                code: {
+                    javascript: <CHE5 />,
+                    typescript: <TCHE5/>,
+                },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
             },
