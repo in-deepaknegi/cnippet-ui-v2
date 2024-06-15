@@ -247,7 +247,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                                 © 2024
                                 <a href="/" className="hover:underline">
                                     {" "}
-                                    Travelo™
+                                    Cnippet™
                                 </a>
                                 . All Rights Reserved.
                             </span>
