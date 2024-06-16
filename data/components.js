@@ -69,6 +69,7 @@ import FE3 from "@/ui/feature/S3";
 import CFE1 from "@/ui/feature/C1.mdx";
 import CFE2 from "@/ui/feature/C2.mdx";
 import CFE3 from "@/ui/feature/C3.mdx";
+import TCFE3 from "@/ui/feature/T1.mdx";
 
 import FL1 from "@/ui/feature-list/S1";
 import FL2 from "@/ui/feature-list/S2";
@@ -321,7 +322,7 @@ const components = [
                 component: <HE3 />,
                 code: {
                     javascript: <CHE3 />,
-                    typescript: <TCHE3/>,
+                    typescript: <TCHE3 />,
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
@@ -331,7 +332,7 @@ const components = [
                 component: <HE4 />,
                 code: {
                     javascript: <CHE4 />,
-                    typescript: <TCHE4/>,
+                    typescript: <TCHE4 />,
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
@@ -341,7 +342,7 @@ const components = [
                 component: <HE5 />,
                 code: {
                     javascript: <CHE5 />,
-                    typescript: <TCHE5/>,
+                    typescript: <TCHE5 />,
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
@@ -376,6 +377,7 @@ const components = [
                 component: <FE3 />,
                 code: {
                     javascript: <CFE3 />,
+                    typescript: <TCFE3 />,
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,

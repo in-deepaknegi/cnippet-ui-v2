@@ -34,8 +34,8 @@ const Feature1 = () => {
                         </p>
 
                         <div className="mt-10 grid max-w-xl gap-x-4 space-y-4 text-base leading-7 text-gray-600 md:grid-cols-2 md:space-y-0 lg:max-w-none">
-                            {features.map((feature) => (
-                                <div key={feature.name}>
+                            {features.map((feature, i) => (
+                                <div key={i}>
                                     {feature.svg}
                                     <h2 className="text-2x my-2 font-semibold text-gray-900">
                                         {feature.name}
