@@ -85,6 +85,9 @@ import FM3 from "@/ui/flyout-menu/S3";
 import CFM1 from "@/ui/flyout-menu/C1.mdx";
 import CFM2 from "@/ui/flyout-menu/C2.mdx";
 import CFM3 from "@/ui/flyout-menu/C3.mdx";
+import TCFM1 from "@/ui/flyout-menu/T1.mdx";
+import TCFM2 from "@/ui/flyout-menu/T2.mdx";
+import TCFM3 from "@/ui/flyout-menu/T3.mdx";
 
 import FED1 from "@/ui/feedback/S1";
 import FED2 from "@/ui/feedback/S2";
@@ -434,6 +437,7 @@ const components = [
                 component: <FM1 />,
                 code: {
                     javascript: <CFM1 />,
+                    typescript: <TCFM1/>,
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
@@ -443,6 +447,7 @@ const components = [
                 component: <FM2 />,
                 code: {
                     javascript: <CFM2 />,
+                    typescript: <TCFM2/>,
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
@@ -452,6 +457,7 @@ const components = [
                 component: <FM3 />,
                 code: {
                     javascript: <CFM3 />,
+                    typescript: <TCFM3/>,
                 },
                 tech: ["Tailwindcss", "JavaScript", "TypeScript"],
                 pro: true,
