@@ -1,9 +1,79 @@
-import React from 'react'
+import React from "react";
+import Image from "next/image";
+import { FaBuffer, FaCheckToSlot } from "react-icons/fa6";
+import Hero1 from "@/public/images/hero/h13.jpg";
 
-const test = () => {
-  return (
-    <div>test</div>
-  )
-}
+const features = [
+    {
+        name: "Short heading here",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        svg: <FaBuffer className="h-6 w-6 text-black" />,
+    },
+    {
+        name: "Short heading here",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        svg: <FaCheckToSlot className="h-6 w-6 text-black" />,
+    },
+];
+const Feature1 = () => {
+    return (
+        <section className="relative bg-white py-16 sm:py-20">
+            <div className="mx-auto max-w-full px-6 md:max-w-[97%] lg:px-8">
+                <div className="mx-auto flex h-full flex-col gap-x-0 gap-y-10 lg:flex-row lg:gap-x-10 lg:gap-y-0">
+                    <div className="order-last max-w-full lg:order-first">
+                        <h1 className="max-w-3xl text-center text-5xl font-semibold text-black md:text-left md:text-5xl">
+                            The only source of knowledge is experience
+                        </h1>
+                        <p className="mt-6 max-w-3xl text-base text-gray-700 md:text-lg">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Vulputate eu scelerisque felis imperdiet proin fermentum. Aenean
+                            et tortor at risus.
+                        </p>
 
-export default test
+                        <div className="mt-10 grid max-w-xl gap-x-4 space-y-4 text-base leading-7 text-gray-600 md:grid-cols-2 md:space-y-0 lg:max-w-none">
+                            {features.map((feature, i) => (
+                                <div key={i} className="flex-auto">
+                                    <span>{feature.svg}</span>
+                                    <h2 className="text-2x my-2 font-semibold text-gray-900">
+                                        {feature.name}
+                                    </h2>
+                                    <p>{feature.description}</p>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="mt-8 flex gap-x-6">
+                            <a
+                                href="#"
+                                className="max-w-md rounded-full bg-black px-5 py-2 text-base text-white shadow-sm"
+                            >
+                                Get started
+                            </a>
+                            <a
+                                href="#"
+                                type="submit"
+                                className="max-w-md py-2 text-base text-black"
+                            >
+                                Read more <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="relative order-first mx-auto lg:order-last lg:max-w-[45%]">
+                        <Image
+                            src={Hero1}
+                            alt="Product screenshot"
+                            quality={100}
+                            loading="eager"
+                            className="h-full w-full rounded-2xl object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Feature1;

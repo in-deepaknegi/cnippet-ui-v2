@@ -22,7 +22,7 @@ const Features = () => {
         <section className="relative isolate bg-white md:h-screen">
             <div className="absolute h-full w-1/2 bg-slate-100 md:w-1/3"></div>
             <div className="relative isolate mx-auto max-w-full px-6 md:max-w-[97%] lg:px-8">
-                <div className="mx-auto flex flex-col">
+                <div className="mx-auto flex flex-col pt-20 md:pt-0">
                     <div className="top-32 flex flex-col justify-end sm:justify-start sm:gap-2 md:absolute md:h-screen md:flex-row lg:max-w-full lg:gap-10">
                         <ul className="flex flex-row flex-wrap gap-4 md:flex-col md:gap-10">
                             {tracks.map((item, i) => (

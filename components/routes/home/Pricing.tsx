@@ -111,17 +111,17 @@ const Pricing = () => {
     const applyCoupon = () => {
         if (coupon === "WELCOME50") {
             setDiscountedAmount((parseFloat(amount) / 2).toString());
-            setCmsg('Coupon applied successfully! You got a 50% discount.');
+            setCmsg("Coupon applied successfully! You got a 50% discount.");
         } else {
             setDiscountedAmount(amount);
-            setCmsg('Invalid coupon');
+            setCmsg("Invalid coupon");
         }
     };
 
     return (
         <>
             {loading ? (
-                <div className=" mx-auto mt-10 max-w-[90%] py-20 flex items-center justify-center">
+                <div className=" mx-auto mt-10 flex max-w-[90%] items-center justify-center py-20">
                     <div className="loader"></div>
                 </div>
             ) : (
@@ -241,13 +241,13 @@ const Pricing = () => {
                                                         </span>
                                                     </p>
 
-                                                    <div className="mt-10 flex flex-col md:flex-row gap-2 w-full">
+                                                    <div className="mt-10 flex max-w-md justify-center mx-auto flex-col gap-2 md:flex-row">
                                                         <input
                                                             type="text"
                                                             value={coupon}
                                                             onChange={(e) => setCoupon(e.target.value)}
                                                             placeholder="Enter Coupon Code"
-                                                            className=" max-w-xl rounded-full placeholder:text-sm px-3 py-2 outline-none text-center text-md text-gray-900 shadow-sm"
+                                                            className=" max-w-xl rounded-full px-3 py-2 text-center text-md text-gray-900 shadow-sm outline-none placeholder:text-sm"
                                                         />
                                                         <button
                                                             type="button"
@@ -256,16 +256,13 @@ const Pricing = () => {
                                                         >
                                                             Apply Coupon
                                                         </button>
-
                                                     </div>
-                                                    <div className="mt-4 text-sm font-swir">
-                                                        {cmsg}
-                                                    </div>
+                                                    <div className="mt-4 font-swir text-sm">{cmsg}</div>
 
                                                     {email ? (
                                                         <button
                                                             type="submit"
-                                                            className="mt-6 flex w-fit items-center justify-center rounded-full bg-black px-20 py-2 text-center text-md text-white shadow-sm mx-auto hover:bg-black/85"
+                                                            className="mx-auto mt-6 flex w-fit items-center justify-center rounded-full bg-black px-20 py-2 text-center text-md text-white shadow-sm hover:bg-black/85"
                                                         >
                                                             {load && (
                                                                 <svg
@@ -294,7 +291,7 @@ const Pricing = () => {
                                                     ) : (
                                                         <a
                                                             href="/login"
-                                                            className="mt-10 flex w-fit items-center justify-center rounded-full bg-black px-20 py-2 text-center text-md text-white shadow-sm mx-auto hover:bg-black/85"
+                                                            className="mx-auto mt-10 flex w-fit items-center justify-center rounded-full bg-black px-20 py-2 text-center text-md text-white shadow-sm hover:bg-black/85"
                                                         >
                                                             {load && (
                                                                 <svg
