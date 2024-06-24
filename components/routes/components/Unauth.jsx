@@ -1,15 +1,10 @@
-"use client"
-import React,{ useState } from 'react'
-import { signIn } from "next-auth/react";
+"use client";
+import React, { useState } from "react";
 
-import GetSession from '@/atoms/library/getSession';
-import toSection from '@/atoms/library/toSection';
-
-import Login from '@/components/routes/login/Hero';
+import toSection from "@/atoms/library/toSection";
+import Login from "@/components/routes/login/Hero";
 
 const Unauth = ({ components }) => {
-    const { status, session, loading } = GetSession();
-
     const [activeTab, setActiveTab] = useState([0, 0, 0, 0, 0]);
 
     const changeTab = (index, tabIndex) => {
@@ -17,8 +12,6 @@ const Unauth = ({ components }) => {
         newActiveTab[index] = tabIndex;
         setActiveTab(newActiveTab);
     };
-
-
 
     return (
         <>
@@ -30,18 +23,29 @@ const Unauth = ({ components }) => {
                                 <h2 className="truncate text-base font-medium leading-7 text-slate-900">
                                     {component.title}
                                 </h2>
-                                <p className="ml-3 hidden whitespace-nowrap rounded-lg bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block">
-                                    TailwindCss
-                                </p>
-                                <p className="ml-3 hidden whitespace-nowrap rounded-lg bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
-                                    React
-                                </p>
+                                {component.tech.slice(0, 1).map((p, q) => (
+                                    <p
+                                        key={q}
+                                        className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block"
+                                    >
+                                        {p}
+                                    </p>
+                                ))}
+
+                                {component.tech.slice(1).map((p, q) => (
+                                    <p
+                                        key={q}
+                                        className="ml-3 hidden whitespace-nowrap rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block"
+                                    >
+                                        {p}
+                                    </p>
+                                ))}
                             </div>
                             <div className="p-0.5">
                                 <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
                                     <button
                                         onClick={() => changeTab(index, 0)}
-                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 0 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 0 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -63,8 +67,8 @@ const Unauth = ({ components }) => {
                                         </span>
                                     </button>
                                     <button
-                                        onClick={() => toSection('login')}
-                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all ease-in-out duration-500`}
+                                        onClick={() => toSection("login")}
+                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -101,12 +105,11 @@ const Unauth = ({ components }) => {
                 ))}
             </div>
 
-            <section  id='login'>
+            <section id="login">
                 <Login />
             </section>
-
         </>
-    )
-}
+    );
+};
 
-export default Unauth
+export default Unauth;

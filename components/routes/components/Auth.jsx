@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSession } from "next-auth/react";
 
 import fetchPro from "@/atoms/library/getPro";
@@ -52,7 +52,7 @@ const Auth = ({ components }) => {
                                 {component.title}
                             </h2>
 
-                            {component.tech.slice(0, 2).map((p, q) => (
+                            {component.tech.slice(0, 1).map((p, q) => (
                                 <p
                                     key={q}
                                     className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block"
@@ -61,7 +61,7 @@ const Auth = ({ components }) => {
                                 </p>
                             ))}
 
-                            {component.tech.slice(2).map((p, q) => (
+                            {component.tech.slice(1).map((p, q) => (
                                 <p
                                     key={q}
                                     className="ml-3 hidden whitespace-nowrap rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block"
@@ -140,7 +140,7 @@ const Auth = ({ components }) => {
                             <h2 className="truncate text-base font-medium leading-7 text-slate-900">
                                 {component.title}
                             </h2>
-                            {component.tech.slice(0, 2).map((p, q) => (
+                            {component.tech.slice(0, 1).map((p, q) => (
                                 <p
                                     key={q}
                                     className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block"
@@ -149,8 +149,11 @@ const Auth = ({ components }) => {
                                 </p>
                             ))}
 
-                            {component.tech.slice(2).map((p, q) => (
-                                <p key={q} className="ml-3 hidden lg:flex gap-1 whitespace-nowrap">
+                            {component.tech.slice(1).map((p, q) => (
+                                <p
+                                    key={q}
+                                    className="ml-3 hidden gap-1 whitespace-nowrap lg:flex"
+                                >
                                     <span className="rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
                                         {p}
                                     </span>
@@ -161,7 +164,7 @@ const Auth = ({ components }) => {
                             ))}
                         </div>
 
-                        <div className="flex items-center gap-4 md:gap-10 p-0.5">
+                        <div className="flex items-center gap-4 p-0.5 md:gap-10">
                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
                                 <button
                                     onClick={() => changeTab1(index, 0)}

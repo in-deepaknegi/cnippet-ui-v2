@@ -1,8 +1,11 @@
 import React from 'react'
+import L1 from '@/ui/hero/S7'
 
 const test = () => {
     return (
-        <div>test</div>
+        <>
+            <L1 />
+        </>
     )
 }
 

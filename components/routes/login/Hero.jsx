@@ -67,7 +67,7 @@ const Hero = ({ layout }) => {
                     <div className="w-full max-w-full md:block hidden">
                         <Image
                             src={H1}
-                            alt=""
+                            alt="login page"
                             className={`${layout === 'full' ? 'w-full' : 'w-[80%]'}`}
                         />
                     </div>

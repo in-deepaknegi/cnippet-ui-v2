@@ -13,7 +13,7 @@ import posts from "@/data/constants/blogs";
 const Blog4 = () => {
     return (
         <section className="relative isolate bg-white py-16 md:py-24">
-            <div className="relative mx-auto max-w-7xl">
+            <div className="relative mx-auto max-w-[90%]">
                 <div className="mx-auto max-w-2xl px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                         From the blog

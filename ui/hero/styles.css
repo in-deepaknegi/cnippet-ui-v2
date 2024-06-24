@@ -10,8 +10,8 @@
 }
 .s7 .swiper-pagination-bullet-active {
   color: #fff;
-  width: 40px;
-  height: 10px;
+  width: 10px;
+  height: 40px;
   background: #fcd34d;
 }
 
