@@ -1,11 +1,6 @@
 "use client"
 import React from "react";
-import Image from "next/image";
-import T1 from "@/public/t1.webp";
-import T2 from "@/public/t2.webp";
 import Link from "next/link";
-
-import toSection from "@/atoms/library/toSection";
 
 import { FaArrowRight } from "react-icons/fa6";
 
@@ -29,25 +24,11 @@ const Hero = () => {
                     >
                         Modern website templates, crafted with Tailwind CSS.
                     </h1>
-                    <div className="mt-4 flex flex-wrap gap-6">
-                        <div className="flex items-center text-sm text-white bg-black px-3 py-0.5 rounded-full">
-                            <span className="">React</span>
-                        </div>
-                        <div className="flex items-center text-sm text-white bg-black px-3 py-0.5 rounded-full">
-                            <span>Next.js</span>
-                        </div>
-                    </div>
+                   
                     <p className="mt-6 text-center text-lg text-gray-600 md:text-lg">
                         Visually-stunning, easy to customize site templates built with React and Next.js. The perfect starting point for your next project and the ultimate resource for learning how experts build real websites with Tailwind CSS.
                     </p>
                     <div className="mt-6 mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 md:flex-row">
-                        <button
-                            onClick={() => toSection('templates')}
-                            className="flex items-center gap-2 rounded-full bg-black text-white px-5 py-2 text-sm font-swim uppercase"
-                        >
-                            Browse templates
-                            <FaArrowRight className="h-3 w-3" />
-                        </button>
                         <Link
                             href=""
                             className="flex items-center gap-2 rounded-full text-black px-5 py-2 text-sm font-swim uppercase"
