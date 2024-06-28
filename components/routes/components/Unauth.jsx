@@ -41,11 +41,11 @@ const Unauth = ({ components }) => {
                                     </p>
                                 ))}
                             </div>
-                            <div className="p-0.5">
+                            <div className="p-0.5 font-swim">
                                 <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
                                     <button
                                         onClick={() => changeTab(index, 0)}
-                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 0 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
+                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm tracking-wide lg:pr-3 ${activeTab[index] === 0 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -57,18 +57,17 @@ const Unauth = ({ components }) => {
                                             strokeWidth="2"
                                             strokeLinecap="round"
                                             strokeLinejoin="round"
-                                            className="text-purple-600"
                                         >
                                             <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
                                             <circle cx="12" cy="12" r="3" />
                                         </svg>
-                                        <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
+                                        <span className="sr-only text-black lg:not-sr-only lg:ml-2">
                                             Preview
                                         </span>
                                     </button>
                                     <button
                                         onClick={() => toSection("login")}
-                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
+                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm tracking-wide lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +83,7 @@ const Unauth = ({ components }) => {
                                             <polyline points="16 18 22 12 16 6" />
                                             <polyline points="8 6 2 12 8 18" />
                                         </svg>
-                                        <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
+                                        <span className="sr-only text-black lg:not-sr-only lg:ml-2">
                                             Log in to view code
                                         </span>
                                     </button>

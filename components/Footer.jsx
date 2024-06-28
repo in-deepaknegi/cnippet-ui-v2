@@ -98,7 +98,9 @@ const Footer = () => {
                         </span>
                     </a>
                     <p className="mt-3 text-center text-gray-400">
-                        We&apos;re a creative agency with a taste for outstanding products.
+                        We&apos;re a product of 
+                            <a href="www.cnippet.com" className=" text-yellow-300"> Cnippet</a>.
+                         We build UI components in Next.js and Tailwindcss.
                     </p>
                 </div>
 

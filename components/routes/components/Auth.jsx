@@ -74,7 +74,7 @@ const Auth = ({ components }) => {
                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
                                 <button
                                     onClick={() => changeTab(index, 0)}
-                                    className={`flex items-center rounded-md tracking-wide py-[0.45rem] pl-2 pr-2 text-sm lg:pr-3 ${activeTab[index] === 0 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
+                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm tracking-wide lg:pr-3 ${activeTab[index] === 0 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -163,11 +163,11 @@ const Auth = ({ components }) => {
                             ))}
                         </div>
 
-                        <div className="flex items-center gap-4 p-0.5 md:gap-10">
+                        <div className="flex items-center gap-4 p-0.5 font-swim md:gap-10">
                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
                                 <button
                                     onClick={() => changeTab1(index, 0)}
-                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab1[index] === 0 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
+                                    className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm tracking-wide  lg:pr-3 ${activeTab1[index] === 0 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                 >
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -179,19 +179,18 @@ const Auth = ({ components }) => {
                                         strokeWidth="2"
                                         strokeLinecap="round"
                                         strokeLinejoin="round"
-                                        className="text-purple-600"
                                     >
                                         <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
                                         <circle cx="12" cy="12" r="3" />
                                     </svg>
-                                    <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
+                                    <span className="sr-only text-black lg:not-sr-only lg:ml-2">
                                         Preview
                                     </span>
                                 </button>
                                 {pro ? (
                                     <button
                                         onClick={() => changeTab1(index, 1)}
-                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab1[index] === 1 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
+                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm tracking-wide lg:pr-3 ${activeTab1[index] === 1 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -207,14 +206,14 @@ const Auth = ({ components }) => {
                                             <polyline points="16 18 22 12 16 6" />
                                             <polyline points="8 6 2 12 8 18" />
                                         </svg>
-                                        <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
+                                        <span className="sr-only text-black lg:not-sr-only lg:ml-2">
                                             Code
                                         </span>
                                     </button>
                                 ) : (
                                     <button
                                         onClick={() => toSection("payment")}
-                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm font-semibold lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
+                                        className={`flex items-center rounded-md py-[0.45rem] pl-2 pr-2 text-sm tracking-wide lg:pr-3 ${activeTab[index] === 1 ? "bg-white shadow" : ""} transition-all duration-500 ease-in-out`}
                                     >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -230,7 +229,7 @@ const Auth = ({ components }) => {
                                             <polyline points="16 18 22 12 16 6" />
                                             <polyline points="8 6 2 12 8 18" />
                                         </svg>
-                                        <span className="sr-only text-stone-900 lg:not-sr-only lg:ml-2">
+                                        <span className="sr-only text-black lg:not-sr-only lg:ml-2">
                                             Upgrade
                                         </span>
                                     </button>
@@ -241,7 +240,7 @@ const Auth = ({ components }) => {
                                 <select
                                     value={language[index]}
                                     onChange={(e) => handleLanguageChange(index, e.target.value)}
-                                    className="px-2 py-1 text-sm font-semibold text-slate-900"
+                                    className="px-2 py-1 text-sm tracking-wide text-slate-900"
                                 >
                                     <option value="javascript">JavaScript</option>
                                     <option value="typescript">TypeScript</option>
