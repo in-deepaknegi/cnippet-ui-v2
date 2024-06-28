@@ -1,6 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 
+import { FaAngleRight } from "react-icons/fa6";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import components from "@/data/components";
@@ -21,22 +22,29 @@ const Product = ({ params }: { params: { slug: string } }) => {
             <Navbar />
             <main>
                 <section className="relative overflow-hidden bg-white pt-16">
-                    <div className="relative mx-auto max-w-full px-4 sm:px-6 md:max-w-[97%] lg:px-8">
+                    <div className="relative mx-auto max-w-full px-4 sm:px-6 md:max-w-[95%] lg:px-8">
                         <div className="flex flex-col">
-                            <h1 className="mt-3 text-3xl font-semibold text-slate-900">
+                            <h1 className="mt-16 text-5xl font-swim text-black">
                                 {component.name}
                             </h1>
-                            <nav className="order-first flex space-x-2 font-swim text-lg">
+                            <nav className="order-first flex items-center space-x-4 text-base font-swir">
+                                <a
+                                    href="/"
+                                    className="text-slate-500 hover:text-black"
+                                >
+                                    Home
+                                </a>
+                                <FaAngleRight className="w-3 h-3 text-slate-500" />
                                 <a
                                     href="/components"
-                                    className="text-slate-500 hover:text-slate-800"
+                                    className="text-slate-500 hover:text-black"
                                 >
-                                    Ui - Components
+                                    All Components
                                 </a>
-                                <div className="select-none text-slate-400">/</div>
+                                <FaAngleRight className="w-3 h-3 text-slate-500" />
                                 <a
                                     href={`/components/${component.slug}`}
-                                    className="text-slate-500 hover:text-slate-800"
+                                    className="text-black px-3 py-0.5"
                                 >
                                     {component.name}
                                 </a>
