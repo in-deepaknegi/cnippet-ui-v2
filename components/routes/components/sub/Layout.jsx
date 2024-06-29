@@ -1,12 +1,13 @@
 "use client";
-import { useSession } from "next-auth/react";
-import React, { useEffect, useState } from "react";
+import React from "react";
+
+import GetSession from '@/atoms/library/getSession';
 
 import Related from '@/components/Related';
 import AuthContent from '@/components/routes/components/Auth';
 import UnAuthContext from '@/components/routes/components/Unauth';
+import Min from "@/components/routes/layouts/Min";
 
-import GetSession from '@/atoms/library/getSession';
 
 const Layout = ({ components, slug }) => {
 
@@ -25,6 +26,7 @@ const Layout = ({ components, slug }) => {
             <>
                 <AuthContent components={components} />
                 <Related components={components} slug={slug} />
+                <Min />
             </>
         )
     }

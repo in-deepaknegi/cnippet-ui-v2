@@ -5,7 +5,7 @@ import { FaAngleRight } from "react-icons/fa6";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import components from "@/data/components";
-import Layout from "@/components/Layout";
+import Layout from "@/components/routes/components/sub/Layout";
 
 const Product = ({ params }: { params: { slug: string } }) => {
     const id = params.slug;
