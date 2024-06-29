@@ -1,26 +1,22 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
-const Button = ({ text, color, url }) => {
+import { FiArrowUpRight } from "react-icons/fi";
 
-    let bg = 'bg-black';
-    let hbg = 'hover:bg-dusk-800';
-
-    if (color) {
-        bg = color;
-        hbg = 'hover:bg-dusk-900';
-    }
+const Button = ({ text, url, target }) => {
+    
+    let t = target ? target : "_self";
 
     return (
-        <button type="submit">
-            <Link
-                className={`rounded-full max-w-md mx-auto px-3.5 tracking-wide py-2.5 text-md text-white shadow-sm bg-indigo-700`}
-                href={`${url}`}
-            >
-                {text}
-            </Link>
-        </button>
-    )
-}
+        <Link
+            href={url}
+            target={t}
+            className="flex items-center gap-2 rounded-full bg-gradient-to-r from-yellow-300 to-rose-400 px-5 py-2 text-xl"
+        >
+            {text}
+            <FiArrowUpRight className="h-5 w-5" />
+        </Link>
+    );
+};
 
-export default Button
+export default Button;

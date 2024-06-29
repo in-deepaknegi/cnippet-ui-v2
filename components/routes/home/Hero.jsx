@@ -1,8 +1,6 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 
-import { FiArrowUpRight } from "react-icons/fi";
+import Button from "@/components/ui/Button";
 
 const Hero = () => {
     return (
@@ -29,17 +27,9 @@ const Hero = () => {
                             components and templates are perfect for starting your next
                             project and achieving a polished and professional result.
                         </p>
-                        <Link
-                            href={"/contacts#contact"}
-                            className="flex items-center gap-2 rounded-full bg-yellow-400 px-5 py-2 text-xl uppercase"
-                        >
-                            Let&apos;s talk
-                            <FiArrowUpRight className="h-5 w-5" />
-                        </Link>
+                        <Button text="LET'S TALK" url="/contacts#contact" />
                     </div>
                 </div>
-
-                {/* extra code here */}
             </div>
         </section>
     );
