@@ -19,7 +19,7 @@ const social = [
     },
     {
         title: "insta",
-        href: "https://www.instagram.com/cnippetui/",
+        href: "https://www.instagram.com/_cnippet/",
         svg: H2,
     },
 ];
@@ -99,7 +99,7 @@ const Footer = () => {
                     </a>
                     <p className="mt-3 text-center text-gray-400">
                         We&apos;re a product of 
-                            <a href="www.cnippet.com" className=" text-yellow-300"> Cnippet</a>.
+                            <a href="https://www.cnippet.com/" target="_blank" className=" underline text-yellow-300"> Cnippet</a>.
                          We build UI components in Next.js and Tailwindcss.
                     </p>
                 </div>

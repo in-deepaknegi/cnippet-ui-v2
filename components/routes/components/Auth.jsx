@@ -47,28 +47,20 @@ const Auth = ({ components }) => {
             {nonComponents.map((component, index) => (
                 <section key={index} id={`${component.title}`}>
                     <div className="grid grid-cols-[1fr,auto] items-center">
-                        <div className="flex min-w-0">
-                            <h2 className="truncate text-base font-medium leading-7 text-slate-900">
+                        <div className="flex min-w-0 font-swim">
+                            <h2 className="truncate text-base text-slate-900">
                                 {component.title}
                             </h2>
 
                             {component.tech.slice(0, 1).map((p, q) => (
                                 <p
                                     key={q}
-                                    className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block"
+                                    className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 text-[0.785rem] tracking-wide leading-6 text-slate-800 lg:block"
                                 >
                                     {p}
                                 </p>
                             ))}
 
-                            {component.tech.slice(1).map((p, q) => (
-                                <p
-                                    key={q}
-                                    className="ml-3 hidden whitespace-nowrap rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block"
-                                >
-                                    {p}
-                                </p>
-                            ))}
                         </div>
                         <div className="p-0.5 font-swim">
                             <div className="flex space-x-1 rounded-lg bg-slate-100 p-0.5">
@@ -128,6 +120,7 @@ const Auth = ({ components }) => {
                                 </div>
                             )}
                         </div>
+
                     </div>
                 </section>
             ))}
@@ -135,14 +128,15 @@ const Auth = ({ components }) => {
             {proComponents.map((component, index) => (
                 <section key={index} id={`${component.title}`}>
                     <div className="grid grid-cols-[1fr,auto] items-center">
-                        <div className="flex min-w-0">
-                            <h2 className="truncate text-base font-medium leading-7 text-slate-900">
+                        <div className="flex min-w-0 font-swim">
+                            <h2 className="truncate text-base text-slate-900">
                                 {component.title}
                             </h2>
+
                             {component.tech.slice(0, 1).map((p, q) => (
                                 <p
                                     key={q}
-                                    className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-700 lg:block"
+                                    className="ml-3 hidden whitespace-nowrap rounded-full bg-slate-200 px-2 text-[0.785rem] tracking-wide leading-6 text-slate-800 lg:block"
                                 >
                                     {p}
                                 </p>
@@ -151,12 +145,13 @@ const Auth = ({ components }) => {
                             {component.tech.slice(1).map((p, q) => (
                                 <p
                                     key={q}
-                                    className="ml-3 hidden gap-1 whitespace-nowrap lg:flex"
+                                    className="ml-3 hidden gap-1 whitespace-nowrap lg:flex relative"
                                 >
-                                    <span className="rounded-full bg-dusk-700 px-2 py-0.5 text-xs font-semibold leading-6 text-slate-100 lg:block">
+                                    <span className="rounded-full bg-gradient-to-r from-yellow-300 to-rose-300 px-2 text-[0.785rem] leading-6 text-black lg:block">
                                         {p}
                                     </span>
-                                    <sup className=" mt-2 text-xs font-semibold leading-[0] text-black">
+                                   
+                                    <sup className=" mt-2 text-xs tracking-wide leading-[0] text-black font-swim">
                                         NEW
                                     </sup>
                                 </p>

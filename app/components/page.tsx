@@ -68,12 +68,12 @@ const page = () => {
                                                     className="absolute inset-0 h-full w-full"
                                                 />
                                             </div>
-                                            <h4 className="mt-4 text-md text-slate-700 group-hover:text-black">
-                                                <a href={`components/${component.slug}`}>
+                                            <h2 className="mt-4 text-md text-slate-700 group-hover:text-black">
+                                                <a href={`/components/${component.slug}`}>
                                                     <span className="absolute -inset-2.5 z-10"></span>
                                                     <span className="relative">{component.name}</span>
                                                 </a>
-                                            </h4>
+                                            </h2>
                                             <p className="relative mt-1.5 text-sm text-slate-400 ">
                                                 {component.number}
                                             </p>
