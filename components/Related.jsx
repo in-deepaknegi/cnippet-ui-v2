@@ -44,7 +44,7 @@ const Related = ({ slug }) => {
 
     return (
         <>
-            <div className="mx-auto max-w-full md:max-w-[95%] px-6 py-28 lg:px-7">
+            <div className="mx-auto max-w-full md:max-w-[95%] px-6 pt-28 pb-16 lg:px-7">
                 <div className="max-w-2xl font-swim">
                     <p className="flex flex-row items-center justify-center gap-4 text-center text-lg text-gray-700 md:justify-start md:text-left">
                         <span className="h-0.5 w-16 bg-black"></span>
